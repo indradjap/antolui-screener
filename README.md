@@ -180,3 +180,6 @@ python tests_levels.py
 ## Important
 
 Antolui Screener is decision-support software. Pattern detection, supply/demand zones, entries, stops, targets, timing scores, news classifications, and rankings are quantitative/heuristic outputs and are not guarantees. Historical backtesting and walk-forward validation should be completed before treating scores as a proven trading edge.
+
+## V5.9 UI Refresh
+The app includes an explicit dark UI fallback inside `app.py`, so Streamlit Cloud remains readable even if the host does not apply `.streamlit/config.toml`. For the intended theme, keep `.streamlit/config.toml` in the repository.

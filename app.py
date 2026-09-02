@@ -37,103 +37,124 @@ st.markdown(
     """
 <style>
 :root {
-  --ss-bg: #09111F;
-  --ss-panel: #111B2D;
-  --ss-panel2: #0D1727;
-  --ss-border: rgba(148,163,184,.16);
-  --ss-text: #E9EFF8;
-  --ss-muted: #8FA2BA;
-  --ss-blue: #4F8CFF;
-  --ss-green: #31C48D;
-  --ss-red: #F05252;
-  --ss-amber: #F6B94A;
+  --as-bg: #07101f;
+  --as-surface: #0d1728;
+  --as-surface2: #111d31;
+  --as-surface3: #152238;
+  --as-border: rgba(148,163,184,.18);
+  --as-border-strong: rgba(148,163,184,.28);
+  --as-text: #f4f7fb;
+  --as-muted: #9aaac0;
+  --as-dim: #718198;
+  --as-blue: #5b91ff;
+  --as-green: #34d399;
+  --as-red: #fb7185;
+  --as-amber: #fbbf24;
 }
-html, body, [class*="css"] {
-  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] {
+  background: var(--as-bg) !important;
+  color: var(--as-text) !important;
 }
-.block-container {
-  padding-top: .72rem !important;
+html, body, [class*="css"], .stApp {
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+.block-container, [data-testid="stMainBlockContainer"] {
+  padding-top: .65rem !important;
   padding-bottom: 2rem !important;
-  padding-left: 1.35rem !important;
-  padding-right: 1.35rem !important;
-  max-width: 1780px;
+  padding-left: 1.15rem !important;
+  padding-right: 1.15rem !important;
+  max-width: 1540px !important;
 }
-header[data-testid="stHeader"] { height: 2.2rem; background: transparent; }
-[data-testid="stToolbar"] { top: .25rem; }
-
-h1 { font-size: 1.62rem !important; letter-spacing: -.025em; margin: .1rem 0 .2rem !important; }
-h2 { font-size: 1.12rem !important; letter-spacing: -.01em; margin: .7rem 0 .35rem !important; }
-h3 { font-size: .96rem !important; margin: .55rem 0 .25rem !important; }
-p, li, label, .stMarkdown { font-size: .84rem; line-height: 1.4; }
-small, .stCaption { color: var(--ss-muted) !important; }
-
+header[data-testid="stHeader"] { height:0 !important; min-height:0 !important; background:transparent !important; }
+[data-testid="stToolbar"] { display:none !important; }
+h1,h2,h3,h4,h5,h6,p,li,label,span,div { color: inherit; }
+h1 { font-size:1.45rem !important; margin:.1rem 0 .2rem !important; }
+h2 { font-size:1.08rem !important; margin:.65rem 0 .3rem !important; }
+h3 { font-size:.94rem !important; margin:.5rem 0 .25rem !important; }
+p, li, label, .stMarkdown { font-size:.82rem; line-height:1.38; }
+small, .stCaption, [data-testid="stCaptionContainer"] { color:var(--as-muted) !important; }
 .ss-header {
   display:flex; align-items:center; justify-content:space-between; gap:1rem;
-  padding:.62rem .8rem; border:1px solid var(--ss-border); border-radius:14px;
-  background:linear-gradient(115deg, rgba(79,140,255,.12), rgba(17,27,45,.84) 40%, rgba(17,27,45,.96));
-  margin-bottom:.55rem;
+  min-height:58px; padding:.58rem .78rem; border:1px solid var(--as-border); border-radius:14px;
+  background:linear-gradient(110deg, rgba(91,145,255,.14), rgba(13,23,40,.94) 43%, rgba(9,17,31,.98));
+  box-shadow:0 10px 30px rgba(0,0,0,.16); margin-bottom:.45rem;
 }
-.ss-brand { font-size:1.08rem; font-weight:800; letter-spacing:.08em; }
-.ss-sub { color:var(--ss-muted); font-size:.74rem; margin-top:.08rem; }
-.ss-badge {
-  display:inline-flex; align-items:center; padding:.22rem .48rem; border-radius:999px;
-  border:1px solid rgba(79,140,255,.35); color:#AFCBFF; background:rgba(79,140,255,.10);
-  font-size:.68rem; font-weight:700; white-space:nowrap;
+.ss-brand { color:var(--as-text) !important; font-size:1.02rem; font-weight:850; letter-spacing:.10em; }
+.ss-sub { color:var(--as-muted) !important; font-size:.70rem; margin-top:.05rem; }
+.ss-badge { display:inline-flex; align-items:center; padding:.20rem .46rem; border-radius:999px; border:1px solid rgba(91,145,255,.38); color:#bdd1ff !important; background:rgba(91,145,255,.10); font-size:.64rem; font-weight:750; white-space:nowrap; }
+.ss-section { display:flex; align-items:center; gap:.42rem; margin:.68rem 0 .34rem; color:#dce7f6 !important; font-size:.80rem; font-weight:760; letter-spacing:.02em; }
+.ss-section::before { content:""; width:3px; height:14px; border-radius:3px; background:var(--as-blue); }
+.ss-hero { display:grid; grid-template-columns:minmax(250px,1.2fr) minmax(430px,2fr); gap:.75rem; padding:.78rem .86rem; border:1px solid var(--as-border); border-radius:14px; background:linear-gradient(125deg, rgba(17,29,49,.96), rgba(9,17,31,.95)); box-shadow:0 12px 32px rgba(0,0,0,.18); margin:.25rem 0 .55rem; }
+.ss-identity { display:flex; flex-direction:column; justify-content:center; min-width:0; }
+.ss-ticker-line { display:flex; align-items:baseline; gap:.60rem; flex-wrap:wrap; }
+.ss-ticker { color:var(--as-text) !important; font-size:1.55rem; font-weight:850; letter-spacing:.015em; }
+.ss-price { color:var(--as-text) !important; font-size:1.55rem; font-weight:720; }
+.ss-meta { color:var(--as-muted) !important; font-size:.72rem; margin-top:.16rem; }
+.ss-status-row { display:flex; align-items:center; gap:.42rem; margin-top:.55rem; flex-wrap:wrap; }
+.ss-pill { display:inline-flex; align-items:center; border-radius:999px; padding:.27rem .55rem; font-size:.68rem; font-weight:800; letter-spacing:.02em; border:1px solid transparent; }
+.ss-pill.good { color:#b7f7dc !important; background:rgba(52,211,153,.12); border-color:rgba(52,211,153,.30); }
+.ss-pill.warn { color:#fde3a3 !important; background:rgba(251,191,36,.11); border-color:rgba(251,191,36,.30); }
+.ss-pill.bad { color:#fecdd3 !important; background:rgba(251,113,133,.11); border-color:rgba(251,113,133,.30); }
+.ss-pill.info { color:#cfe0ff !important; background:rgba(91,145,255,.12); border-color:rgba(91,145,255,.30); }
+.ss-scoregrid { display:grid; grid-template-columns:repeat(4,minmax(90px,1fr)); gap:.45rem; align-content:center; }
+.ss-score { padding:.54rem .60rem; border:1px solid var(--as-border); border-radius:10px; background:rgba(17,29,49,.72); }
+.ss-score-label { color:var(--as-muted) !important; font-size:.62rem; text-transform:uppercase; letter-spacing:.055em; }
+.ss-score-value { color:var(--as-text) !important; font-size:1.02rem; font-weight:760; margin-top:.06rem; }
+.ss-reason { grid-column:1/-1; color:#c3cfdf !important; font-size:.70rem; line-height:1.35; padding:.34rem .08rem 0; }
+.ss-entry-grid { display:grid; grid-template-columns:1.25fr 1fr 1fr 1fr 1fr; gap:.46rem; margin:.35rem 0 .50rem; }
+.ss-entry-card { padding:.58rem .65rem; border:1px solid var(--as-border); border-radius:10px; background:var(--as-surface); min-width:0; }
+.ss-entry-card.primary { border-color:rgba(91,145,255,.42); background:linear-gradient(135deg, rgba(91,145,255,.13), rgba(13,23,40,.95)); }
+.ss-entry-label { color:var(--as-muted) !important; font-size:.61rem; text-transform:uppercase; letter-spacing:.05em; }
+.ss-entry-value { color:var(--as-text) !important; font-size:1.06rem; font-weight:780; margin-top:.08rem; white-space:nowrap; }
+.ss-entry-sub { color:var(--as-dim) !important; font-size:.61rem; margin-top:.05rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ss-panel-grid { display:grid; grid-template-columns:1fr 1fr; gap:.62rem; margin:.25rem 0 .5rem; }
+.ss-panel { border:1px solid var(--as-border); border-radius:12px; background:rgba(13,23,40,.76); padding:.68rem .72rem; min-width:0; }
+.ss-panel-head { display:flex; align-items:flex-start; justify-content:space-between; gap:.8rem; padding-bottom:.48rem; border-bottom:1px solid var(--as-border); }
+.ss-panel-title { color:var(--as-text) !important; font-size:.79rem; font-weight:780; }
+.ss-panel-main { color:var(--as-text) !important; font-size:1.07rem; font-weight:780; margin-top:.10rem; }
+.ss-panel-score { color:#cfe0ff !important; font-size:.85rem; font-weight:800; white-space:nowrap; }
+.ss-kv { display:grid; grid-template-columns:1fr auto; gap:.34rem .6rem; padding-top:.48rem; }
+.ss-k { color:var(--as-muted) !important; font-size:.68rem; }
+.ss-v { color:#e8eef8 !important; font-size:.69rem; font-weight:650; text-align:right; }
+.ss-note { color:var(--as-dim) !important; font-size:.63rem; margin-top:.48rem; line-height:1.35; }
+.ss-action { padding:.48rem .65rem; border-radius:9px; border:1px solid var(--as-border); background:var(--as-surface); color:#dce6f3 !important; font-size:.74rem; line-height:1.35; margin:.18rem 0 .4rem; }
+.ss-action strong { color:var(--as-text) !important; font-size:.76rem; }
+.ss-action .ss-muted { color:var(--as-muted) !important; }
+.ss-good { border-left:3px solid var(--as-green); }
+.ss-warn { border-left:3px solid var(--as-amber); }
+.ss-bad { border-left:3px solid var(--as-red); }
+div[data-testid="stMetric"] { background:var(--as-surface) !important; border:1px solid var(--as-border) !important; border-radius:9px; padding:.42rem .55rem !important; min-height:63px; }
+[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] * { color:var(--as-muted) !important; font-size:.65rem !important; }
+[data-testid="stMetricValue"], [data-testid="stMetricValue"] * { color:var(--as-text) !important; font-size:.98rem !important; line-height:1.15 !important; }
+[data-testid="stMetricDelta"], [data-testid="stMetricDelta"] * { font-size:.62rem !important; }
+.stTabs [data-baseweb="tab-list"] { gap:.12rem; background:rgba(13,23,40,.78) !important; padding:.20rem; border-radius:10px; border:1px solid var(--as-border); }
+.stTabs [data-baseweb="tab"] { height:2.05rem; padding:0 .72rem; border-radius:7px; font-size:.73rem; color:var(--as-muted) !important; }
+.stTabs [data-baseweb="tab"] p { color:inherit !important; }
+.stTabs [aria-selected="true"] { background:rgba(91,145,255,.15) !important; color:var(--as-text) !important; }
+.stButton > button { min-height:2.15rem; padding:.31rem .72rem; font-size:.76rem; border-radius:8px; }
+.stButton > button[kind="primary"] { background:#4f7fe9 !important; border-color:#4f7fe9 !important; color:white !important; }
+[data-testid="stTextInput"] input, [data-testid="stNumberInput"] input, textarea { min-height:2.12rem; font-size:.77rem; background:var(--as-surface2) !important; color:var(--as-text) !important; border-color:var(--as-border) !important; }
+[data-baseweb="select"] > div { min-height:2.12rem; font-size:.76rem; background:var(--as-surface2) !important; color:var(--as-text) !important; border-color:var(--as-border) !important; }
+[data-baseweb="select"] * { color:var(--as-text) !important; }
+[data-testid="stFileUploader"] section { padding:.5rem; background:var(--as-surface) !important; border-color:var(--as-border) !important; }
+[data-testid="stExpander"] { border:1px solid var(--as-border) !important; border-radius:10px; background:rgba(13,23,40,.55) !important; }
+[data-testid="stExpander"] summary, [data-testid="stExpander"] summary * { color:var(--as-text) !important; font-size:.76rem; font-weight:650; }
+[data-testid="stAlert"] { padding:.48rem .65rem; font-size:.76rem; background:var(--as-surface) !important; color:var(--as-text) !important; }
+[data-testid="stDataFrame"] { border:1px solid var(--as-border); border-radius:9px; overflow:hidden; }
+[data-testid="stDataFrame"] * { font-size:.71rem !important; }
+hr { margin:.42rem 0 !important; border-color:var(--as-border) !important; }
+div[data-testid="stVerticalBlock"] { gap:.44rem; }
+[data-testid="column"] > div[data-testid="stVerticalBlock"] { gap:.30rem; }
+@media (max-width: 900px) {
+  .block-container, [data-testid="stMainBlockContainer"] { padding-left:.70rem !important; padding-right:.70rem !important; }
+  .ss-header { align-items:flex-start; }
+  .ss-sub { display:none; }
+  .ss-hero { grid-template-columns:1fr; }
+  .ss-scoregrid { grid-template-columns:repeat(2,1fr); }
+  .ss-entry-grid { grid-template-columns:repeat(2,1fr); }
+  .ss-entry-card.primary { grid-column:1/-1; }
+  .ss-panel-grid { grid-template-columns:1fr; }
 }
-.ss-section {
-  display:flex; align-items:center; gap:.42rem; margin:.62rem 0 .34rem;
-  color:#DCE7F6; font-size:.83rem; font-weight:750; letter-spacing:.02em;
-}
-.ss-section::before { content:""; width:3px; height:15px; border-radius:3px; background:var(--ss-blue); }
-.ss-action {
-  padding:.55rem .72rem; border-radius:10px; border:1px solid var(--ss-border);
-  background:var(--ss-panel2); font-size:.79rem; line-height:1.35; margin:.2rem 0 .45rem;
-}
-.ss-action strong { font-size:.82rem; }
-.ss-good { border-left:3px solid var(--ss-green); }
-.ss-warn { border-left:3px solid var(--ss-amber); }
-.ss-bad  { border-left:3px solid var(--ss-red); }
-.ss-muted { color:var(--ss-muted); }
-
-/* compact metrics */
-div[data-testid="stMetric"] {
-  background:rgba(17,27,45,.76);
-  border:1px solid var(--ss-border);
-  border-radius:10px;
-  padding:.45rem .6rem !important;
-  min-height:67px;
-}
-[data-testid="stMetricLabel"] { font-size:.67rem !important; color:var(--ss-muted) !important; }
-[data-testid="stMetricValue"] { font-size:1.03rem !important; line-height:1.15 !important; }
-[data-testid="stMetricDelta"] { font-size:.65rem !important; }
-
-/* compact tabs */
-.stTabs [data-baseweb="tab-list"] {
-  gap:.18rem; background:rgba(17,27,45,.62); padding:.2rem; border-radius:10px;
-  border:1px solid var(--ss-border);
-}
-.stTabs [data-baseweb="tab"] {
-  height:2.05rem; padding:0 .68rem; border-radius:8px; font-size:.75rem;
-}
-.stTabs [aria-selected="true"] { background:rgba(79,140,255,.14); }
-
-/* compact controls */
-.stButton > button { min-height:2.18rem; padding:.32rem .72rem; font-size:.78rem; border-radius:8px; }
-[data-testid="stTextInput"] input, [data-testid="stNumberInput"] input { min-height:2.12rem; font-size:.78rem; }
-[data-baseweb="select"] > div { min-height:2.12rem; font-size:.77rem; }
-[data-testid="stFileUploader"] section { padding:.55rem; }
-[data-testid="stExpander"] { border:1px solid var(--ss-border); border-radius:10px; background:rgba(17,27,45,.35); }
-[data-testid="stExpander"] summary { font-size:.78rem; font-weight:650; }
-
-/* dataframe/readability */
-[data-testid="stDataFrame"] { border:1px solid var(--ss-border); border-radius:9px; overflow:hidden; }
-[data-testid="stDataFrame"] * { font-size:.72rem !important; }
-[data-testid="stAlert"] { padding:.5rem .7rem; font-size:.78rem; }
-hr { margin:.45rem 0 !important; border-color:var(--ss-border) !important; }
-
-/* reduce vertical gaps */
-div[data-testid="stVerticalBlock"] { gap:.48rem; }
-[data-testid="column"] > div[data-testid="stVerticalBlock"] { gap:.34rem; }
 </style>
 """,
     unsafe_allow_html=True,
@@ -164,14 +185,38 @@ def table_height(n: int, cap: int = 500):
     return min(cap, max(150, 35 * (int(n) + 1)))
 
 
+def _tone(status: str) -> str:
+    s = str(status or "").upper()
+    if any(x in s for x in ["BUY NOW", "BUY", "SUPER", "SUPPORTIVE", "BULLISH", "UPTREND"]):
+        return "good"
+    if any(x in s for x in ["AVOID", "INVALID", "BEARISH", "UNFAVORABLE"]):
+        return "bad"
+    if any(x in s for x in ["WAIT", "HEADWIND", "EXTENDED", "NO TREND"]):
+        return "warn"
+    return "info"
+
+
+def _safe(v) -> str:
+    return html.escape(str(v if v is not None else "N/A"))
+
+
+def _score_box(label, value):
+    return f'<div class="ss-score"><div class="ss-score-label">{_safe(label)}</div><div class="ss-score-value">{_safe(value)}</div></div>'
+
+
+def _entry_box(label, value, sub="", primary=False):
+    cls = "ss-entry-card primary" if primary else "ss-entry-card"
+    return f'<div class="{cls}"><div class="ss-entry-label">{_safe(label)}</div><div class="ss-entry-value">{_safe(value)}</div><div class="ss-entry-sub">{_safe(sub)}</div></div>'
+
+
 st.markdown(
     f"""
 <div class="ss-header">
   <div>
     <div class="ss-brand">ANTOLUI SCREENER</div>
-    <div class="ss-sub">IDX technical intelligence • auto IDX-IC sector • patterns • execution • narrative</div>
+    <div class="ss-sub">IDX Technical & Entry Intelligence</div>
   </div>
-  <div class="ss-badge">V{APP_VERSION} • AUTO SECTOR</div>
+  <div class="ss-badge">V{APP_VERSION}</div>
 </div>
 """,
     unsafe_allow_html=True,
@@ -259,19 +304,17 @@ def run_single_analysis(ticker, benchmark_symbol):
 
 
 def render_single_stock():
-    # Compact input strip instead of a large sidebar.
-    with st.container():
-        c1, c2, c3 = st.columns([1.35, 1.15, .72])
-        ticker = c1.text_input("Ticker", value="VKTR", key="single_ticker")
-        benchmark_symbol = c2.text_input("Benchmark", value="^JKSE", key="single_bench")
-        c3.markdown("<div style='height:1.52rem'></div>", unsafe_allow_html=True)
-        run_clicked = c3.button("Analyze", type="primary", use_container_width=True, key="run_single")
+    c1, c2 = st.columns([4.6, 1.0])
+    ticker = c1.text_input("Ticker", value="VKTR", key="single_ticker", placeholder="Contoh: BBCA, ERAA, ANTM")
+    c2.markdown("<div style='height:1.52rem'></div>", unsafe_allow_html=True)
+    run_clicked = c2.button("Analyze", type="primary", use_container_width=True, key="run_single")
+    with st.expander("Analysis settings", expanded=False):
+        benchmark_symbol = st.text_input("Benchmark", value="^JKSE", key="single_bench", help="Default benchmark IDX Composite / IHSG.")
 
     if run_clicked:
         try:
             with st.spinner(f"Analyzing {ticker.upper()}..."):
                 st.session_state["single_result"] = run_single_analysis(ticker, benchmark_symbol)
-            # Clear previous ticker news when a new analysis is run.
             if st.session_state.get("single_news_ticker") != st.session_state["single_result"]["ticker"]:
                 st.session_state.pop("single_news_bundle", None)
         except Exception as e:
@@ -279,7 +322,7 @@ def render_single_stock():
 
     data = st.session_state.get("single_result")
     if not data:
-        st.info("Masukkan ticker lalu klik **Analyze**. Hasil akan ditata dalam Overview, Chart & Levels, News, dan Diagnostics.")
+        st.info("Masukkan ticker lalu klik **Analyze**. Antolui akan merangkum keputusan, entry, pattern, context, chart, dan level penting.")
         return
 
     ticker_full = data["ticker"]
@@ -293,117 +336,132 @@ def render_single_stock():
     entry_plan = data.get("entry_plan") or build_entry_plan(stock, technical, context, pattern, plan)
     timing_plan = data.get("timing_plan") or build_timing_plan(stock, technical, context, pattern, plan, entry_plan)
 
-    section(f"{ticker_full} — Decision Snapshot")
-    m1, m2, m3, m4, m5, m6 = st.columns(6)
-    m1.metric("Price", fmt_price(technical["price"]))
-    m2.metric("Action", decision["final_action"])
-    m3.metric("Composite", f'{decision["composite_score"]:.0f}/100')
-    m4.metric("Structure", technical["structure"]["label"])
-    m5.metric("Phase", technical["phase"]["label"])
-    m6.metric("Momentum", technical["momentum"]["label"])
-    sector_name_display = sector_info.get("sector", "Unknown")
-    sector_index_display = sector_info.get("sector_index") or "N/A"
-    sector_src_display = sector_info.get("source", data.get("sector_directory_source", "Unknown"))
-    st.caption(f'IDX-IC Sector: **{sector_name_display}** • Index: **{sector_index_display}** • Source: **{sector_src_display}**')
-    action_banner(decision["final_action"], decision["reason"])
+    active = timing_plan.get("active") or {}
+    best = entry_plan.get("best") or {}
+    active_entry = active.get("entry") if active else best.get("entry")
+    entry_low = active.get("entry_low") if active else best.get("entry_low")
+    entry_high = active.get("entry_high") if active else best.get("entry_high")
+    active_stop = active.get("stop") if active else (best.get("stop") if best else plan.get("stop_loss"))
+    active_rr = float((active.get("rr_tp2") if active else best.get("rr_tp2")) or 0)
+    market_rs = float(context.get("relative_strength", {}).get("score", 0) or 0)
 
-    section("Execution Timing")
-    active_timing = timing_plan.get("active") or {}
-    t1, t2, t3, t4, t5, t6 = st.columns(6)
-    t1.metric("Execution", timing_plan.get("status", "NO ENTRY"))
-    t2.metric("Timing", f'{timing_plan.get("score",0):.0f}/100')
-    t3.metric("Buy Entry", fmt_price(active_timing.get("entry")))
-    t4.metric("Entry Zone", f'{fmt_price(active_timing.get("entry_low"))}–{fmt_price(active_timing.get("entry_high"))}')
-    t5.metric("Stop", fmt_price(active_timing.get("stop")))
-    t6.metric("RR", f'{float(active_timing.get("rr_tp2",0) or 0):.2f}x')
-    action_banner(timing_plan.get("status", "NO ENTRY"), timing_plan.get("reason", ""))
-    st.caption(f'Execution confidence: **{timing_plan.get("confidence","LOW")}** • Confirmation score: **{float(active_timing.get("confirmation_score",0) or 0):.0f}/100**')
+    sector_name = sector_info.get("sector", "Unknown")
+    sector_index = sector_info.get("sector_index") or "N/A"
+    status = timing_plan.get("status", decision.get("final_action", "WAIT"))
+    status_tone = _tone(status)
 
-    overview_tab, chart_tab, news_tab, diag_tab = st.tabs(
-        ["Overview", "Chart & Levels", "News & Narrative", "Advanced"]
+    hero_scores = "".join([
+        _score_box("Score", f'{decision["composite_score"]:.0f}/100'),
+        _score_box("Timing", f'{timing_plan.get("score",0):.0f}/100'),
+        _score_box("Market RS", f'{market_rs:.0f}/100'),
+        _score_box("RR", f'{active_rr:.2f}x'),
+    ])
+    hero_reason = timing_plan.get("reason") or decision.get("reason", "")
+    structure_label = technical.get("structure", {}).get("label", "N/A")
+    st.markdown(
+        f'''<div class="ss-hero">
+          <div class="ss-identity">
+            <div class="ss-ticker-line"><span class="ss-ticker">{_safe(ticker_full)}</span><span class="ss-price">{_safe(fmt_price(technical["price"]))}</span></div>
+            <div class="ss-meta">{_safe(sector_name)} • {_safe(sector_index)} • {_safe(structure_label)} structure</div>
+            <div class="ss-status-row">
+              <span class="ss-pill {status_tone}">{_safe(status)}</span>
+              <span class="ss-pill info">{_safe(pattern.get("label","No pattern"))}</span>
+            </div>
+          </div>
+          <div class="ss-scoregrid">{hero_scores}<div class="ss-reason">{_safe(hero_reason)}</div></div>
+        </div>''',
+        unsafe_allow_html=True,
     )
 
+    section("Entry Plan")
+    zone_text = "N/A" if entry_low is None or entry_high is None else f"{fmt_price(entry_low)}–{fmt_price(entry_high)}"
+    ideal_entry = fmt_price(best.get("entry")) if best else "N/A"
+    entry_html = "".join([
+        _entry_box("Buy Zone", zone_text, status, primary=True),
+        _entry_box("Ideal Entry", ideal_entry, best.get("type", "Confluence") if best else "No valid entry"),
+        _entry_box("Stop", fmt_price(active_stop), "Invalidation"),
+        _entry_box("TP1", fmt_price(plan.get("tp1")), f'RR {float(plan.get("rr_tp1",0) or 0):.2f}x'),
+        _entry_box("TP2", fmt_price(plan.get("tp2")), f'RR {float(plan.get("rr_tp2",0) or 0):.2f}x'),
+    ])
+    st.markdown(f'<div class="ss-entry-grid">{entry_html}</div>', unsafe_allow_html=True)
+    st.caption(
+        f'Confidence **{timing_plan.get("confidence","LOW")}** • Confirmation **{float(active.get("confirmation_score",0) or 0):.0f}/100** • '
+        f'Trigger **{fmt_price(plan.get("breakout_trigger"))}**'
+    )
+
+    overview_tab, chart_tab, levels_tab, news_tab = st.tabs(["Overview", "Chart", "Levels & Entry", "News"])
+
     with overview_tab:
-        left, right = st.columns([1, 1])
-        with left:
-            section("Pattern & Setup")
-            p1, p2, p3 = st.columns(3)
-            p1.metric("Primary Pattern", pattern["label"])
-            p2.metric("Pattern Score", f'{pattern["score"]:.0f}/100')
-            p3.metric("Status", pattern["status"])
-            p4, p5, p6 = st.columns(3)
-            p4.metric("Pattern Pivot", fmt_price(pattern.get("pivot")))
-            tt = pattern.get("trend_template", {})
-            p5.metric("Trend", "UPTREND" if tt.get("passed") else "NO TREND", f'{tt.get("score",0):.0f}/100')
-            p6.metric("52W Leader", "YES" if pattern.get("leader_52w", {}).get("passed") else "NO")
-            if pattern.get("super_setup"):
-                action_banner("SUPER SETUP", "Multiple independent setup-quality signals are aligned near a tradable pivot.")
-            if pattern.get("matches"):
-                st.caption("Detected: " + " • ".join(pattern["matches"]))
+        tt = pattern.get("trend_template", {})
+        trend_label = "UPTREND" if tt.get("passed") else "NO TREND"
+        leader_label = "YES" if pattern.get("leader_52w", {}).get("passed") else "NO"
+        detected = " • ".join(pattern.get("matches") or []) or "No additional setup"
 
-        with right:
-            section("Market Context")
-            q1, q2, q3 = st.columns(3)
-            q1.metric("Context", context["label"], f'{context["score"]:.0f}/100')
-            q2.metric("RS vs IHSG", context["relative_strength"]["label"], f'{context["relative_strength"]["score"]:.0f}/100')
-            srs = context.get("sector_relative_strength")
-            q3.metric("RS vs Sector", "N/A" if not srs else srs["label"], None if not srs else f'{srs["score"]:.0f}/100')
-            q4, q5, q6 = st.columns(3)
-            q4.metric("IHSG", context["benchmark"]["label"], f'{context["benchmark"]["score"]:.0f}/100')
-            if context["sector"]:
-                q5.metric("Sector Regime", context["sector"]["label"], f'{context["sector"]["score"]:.0f}/100')
-            else:
-                q5.metric("IDX-IC Sector", sector_info.get("sector", "Unknown"))
-            ex20 = context["relative_strength"]["metrics"].get("excess_return_20d")
-            q6.metric("20D vs IHSG", "N/A" if ex20 is None else f"{ex20*100:+.1f}%")
-            if sector_info.get("sector_index") and not context.get("sector"):
-                st.caption(f'Sector detected automatically from {sector_info.get("source","IDX")}. Historical {sector_info.get("sector_index")} series was not available from the current Yahoo data source, so sector RS is not forced.')
+        srs = context.get("sector_relative_strength")
+        sector_rs_label = "N/A" if not srs else f'{srs.get("score",0):.0f}/100 • {srs.get("label","N/A")}'
+        ex20 = context.get("relative_strength", {}).get("metrics", {}).get("excess_return_20d")
+        ex20_text = "N/A" if ex20 is None else f"{ex20*100:+.1f}%"
+        sector_regime = context.get("sector")
+        sector_regime_text = "N/A" if not sector_regime else f'{sector_regime.get("label","N/A")} ({sector_regime.get("score",0):.0f}/100)'
 
-        section("Confluence Entry — Indicators + Pattern + Supply/Demand")
-        best = entry_plan.get("best")
-        if best:
-            e1, e2, e3, e4, e5, e6 = st.columns(6)
-            e1.metric("Ideal Entry", fmt_price(best["entry"]))
-            e2.metric("Entry Zone", f'{fmt_price(best["entry_low"])}–{fmt_price(best["entry_high"])}')
-            e3.metric("Entry Type", best["type"])
-            e4.metric("Entry Score", f'{best["score"]:.0f}/100')
-            e5.metric("Status", entry_plan.get("status",""))
-            e6.metric("RR to TP2", f'{best["rr_tp2"]:.2f}x')
-            dem = entry_plan.get("nearest_demand")
-            sup = entry_plan.get("nearest_supply")
-            dtext = "N/A" if not dem else f'{fmt_price(dem["zone_low_exec"])}–{fmt_price(dem["zone_high_exec"])} ({dem["score"]:.0f})'
-            stext = "N/A" if not sup else f'{fmt_price(sup["zone_low_exec"])}–{fmt_price(sup["zone_high_exec"])} ({sup["score"]:.0f})'
-            st.caption(f'Demand {dtext}  •  Supply {stext}  •  Confidence {entry_plan.get("confidence","LOW")}  •  {best["reason"]}')
-            with st.expander("Alternative entry candidates"):
-                cand = pd.DataFrame(entry_plan.get("candidates", []))
-                if not cand.empty:
-                    cols = [c for c in ["type","entry","entry_low","entry_high","stop","score","rr_tp2","reason"] if c in cand.columns]
-                    st.dataframe(cand[cols], hide_index=True, use_container_width=True, height=table_height(len(cand), 260))
-        else:
-            st.info("Belum ada entry confluence yang valid.")
+        pattern_panel = f'''<div class="ss-panel">
+          <div class="ss-panel-head">
+            <div><div class="ss-panel-title">Pattern</div><div class="ss-panel-main">{_safe(pattern.get("label","N/A"))}</div></div>
+            <div class="ss-panel-score">{float(pattern.get("score",0) or 0):.0f}/100</div>
+          </div>
+          <div class="ss-kv">
+            <div class="ss-k">Status</div><div class="ss-v">{_safe(pattern.get("status","N/A"))}</div>
+            <div class="ss-k">Pivot</div><div class="ss-v">{_safe(fmt_price(pattern.get("pivot")))}</div>
+            <div class="ss-k">Trend</div><div class="ss-v">{_safe(trend_label)} • {float(tt.get("score",0) or 0):.0f}/100</div>
+            <div class="ss-k">52W Leader</div><div class="ss-v">{_safe(leader_label)}</div>
+          </div>
+          <div class="ss-note">Detected: {_safe(detected)}</div>
+        </div>'''
 
-        section("Trade Plan — Executable IDX Prices")
-        t1, t2, t3, t4, t5, t6 = st.columns(6)
-        t1.metric("Trigger", fmt_price(plan["breakout_trigger"]))
-        t2.metric("Support 1", fmt_price(plan["support1"]))
-        t3.metric("Stop", fmt_price(plan["stop_loss"]))
-        t4.metric("TP1", fmt_price(plan["tp1"]), f'RR {plan["rr_tp1"]:.2f}x')
-        t5.metric("TP2", fmt_price(plan["tp2"]), f'RR {plan["rr_tp2"]:.2f}x')
-        t6.metric("Tick Cur/Trig", f'Rp{plan["idx_tick_size"]:,} / Rp{plan.get("trigger_tick_size", plan["idx_tick_size"]):,}')
-        st.caption(
-            f'Aggressive entry {fmt_price(plan["aggressive_entry_low"])}–{fmt_price(plan["aggressive_entry_high"])}  •  '
-            f'Conservative entry {fmt_price(plan["conservative_entry_low"])}–{fmt_price(plan["conservative_entry_high"])}  •  '
-            f'Resistance {fmt_price(plan["resistance1"])} / {fmt_price(plan["resistance2"])}'
-        )
+        market_panel = f'''<div class="ss-panel">
+          <div class="ss-panel-head">
+            <div><div class="ss-panel-title">Market Context</div><div class="ss-panel-main">{_safe(context.get("label","N/A"))}</div></div>
+            <div class="ss-panel-score">{float(context.get("score",0) or 0):.0f}/100</div>
+          </div>
+          <div class="ss-kv">
+            <div class="ss-k">IHSG Trend</div><div class="ss-v">{_safe(context.get("benchmark",{}).get("label","N/A"))} • {float(context.get("benchmark",{}).get("score",0) or 0):.0f}/100</div>
+            <div class="ss-k">Market RS</div><div class="ss-v">{market_rs:.0f}/100 • {_safe(context.get("relative_strength",{}).get("label","N/A"))}</div>
+            <div class="ss-k">Sector RS</div><div class="ss-v">{_safe(sector_rs_label)}</div>
+            <div class="ss-k">20D vs IHSG</div><div class="ss-v">{_safe(ex20_text)}</div>
+            <div class="ss-k">Sector</div><div class="ss-v">{_safe(sector_name)}</div>
+            <div class="ss-k">Sector Regime</div><div class="ss-v">{_safe(sector_regime_text)}</div>
+          </div>
+        </div>'''
+        st.markdown(f'<div class="ss-panel-grid">{pattern_panel}{market_panel}</div>', unsafe_allow_html=True)
+
+        if pattern.get("super_setup"):
+            action_banner("SUPER SETUP", "Multiple independent setup-quality signals are aligned near a tradable pivot.")
+
+        section("At a Glance")
+        g1, g2, g3, g4 = st.columns(4)
+        g1.metric("Structure", technical["structure"]["label"])
+        g2.metric("Phase", technical["phase"]["label"])
+        g3.metric("Momentum", technical["momentum"]["label"])
+        g4.metric("Decision", decision["final_action"])
+
+        with st.expander("Diagnostics", expanded=False):
+            d1, d2, d3, d4 = st.columns(4)
+            d1.metric("Technical", f'{decision["technical_quality"]:.0f}/100')
+            d2.metric("Context", f'{context["score"]:.0f}/100')
+            d3.metric("Pattern", f'{pattern["score"]:.0f}/100')
+            d4.metric("Composite", f'{decision["composite_score"]:.0f}/100')
+            with st.expander("Pattern engine details"):
+                st.json(pattern)
+            with st.expander("Market context details"):
+                st.json(context)
+            with st.expander("Technical engine details"):
+                st.json(technical)
 
     with chart_tab:
         section("Price Chart")
         recent = stock.tail(180)
         fig = go.Figure()
-        fig.add_trace(go.Candlestick(
-            x=recent.index, open=recent["Open"], high=recent["High"],
-            low=recent["Low"], close=recent["Close"], name="Price"
-        ))
+        fig.add_trace(go.Candlestick(x=recent.index, open=recent["Open"], high=recent["High"], low=recent["Low"], close=recent["Close"], name="Price"))
         fig.add_trace(go.Scatter(x=recent.index, y=recent["MA20"], name="MA20"))
         fig.add_trace(go.Scatter(x=recent.index, y=recent["MA50"], name="MA50"))
         fig.add_trace(go.Scatter(x=recent.index, y=recent["MA200"], name="MA200"))
@@ -421,55 +479,71 @@ def render_single_stock():
             fig.add_hrect(y0=dem["zone_low_exec"], y1=dem["zone_high_exec"], opacity=.10, line_width=0, annotation_text="Demand")
         if sup:
             fig.add_hrect(y0=sup["zone_low_exec"], y1=sup["zone_high_exec"], opacity=.08, line_width=0, annotation_text="Supply")
-        if timing_plan.get("active"):
-            b = timing_plan["active"]
-            fig.add_hrect(y0=b["entry_low"], y1=b["entry_high"], opacity=.12, line_width=0, annotation_text="Active Entry")
-            fig.add_hline(y=b["entry"], line_dash="dashdot", annotation_text="Buy Entry")
-        elif entry_plan.get("best"):
-            b = entry_plan["best"]
-            fig.add_hrect(y0=b["entry_low"], y1=b["entry_high"], opacity=.10, line_width=0, annotation_text="Ideal Entry")
+        if active and entry_low is not None and entry_high is not None:
+            fig.add_hrect(y0=entry_low, y1=entry_high, opacity=.12, line_width=0, annotation_text="Buy Zone")
+            if active_entry is not None:
+                fig.add_hline(y=active_entry, line_dash="dashdot", annotation_text="Buy Entry")
+        elif best:
+            if best.get("entry_low") is not None and best.get("entry_high") is not None:
+                fig.add_hrect(y0=best.get("entry_low"), y1=best.get("entry_high"), opacity=.10, line_width=0, annotation_text="Ideal Entry")
         fig.add_hline(y=plan["breakout_trigger"], line_dash="dash", annotation_text="Trigger")
-        stop_line = timing_plan.get("active", {}).get("stop") if timing_plan.get("active") else plan["stop_loss"]
-        fig.add_hline(y=stop_line, line_dash="dot", annotation_text="Stop")
-        fig.update_layout(
-            height=535,
-            margin=dict(l=8, r=8, t=22, b=8),
-            xaxis_rangeslider_visible=False,
-            legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0, font=dict(size=10)),
-        )
+        if active_stop is not None:
+            fig.add_hline(y=active_stop, line_dash="dot", annotation_text="Stop")
+        fig.update_layout(height=560, margin=dict(l=8, r=8, t=22, b=8), xaxis_rangeslider_visible=False, paper_bgcolor="#07101f", plot_bgcolor="#0b1526", font=dict(color="#d9e4f3", size=10), legend=dict(orientation="h", yanchor="bottom", y=1.01, xanchor="left", x=0, font=dict(size=10)))
+        fig.update_xaxes(gridcolor="rgba(148,163,184,.10)")
+        fig.update_yaxes(gridcolor="rgba(148,163,184,.10)")
         st.plotly_chart(fig, use_container_width=True)
+        st.caption("Demand / supply, buy zone, pivot, trigger, dan stop ditampilkan langsung di chart.")
+
+    with levels_tab:
+        section("Confluence Entry")
+        if best:
+            e1, e2, e3, e4 = st.columns(4)
+            e1.metric("Ideal Entry", fmt_price(best.get("entry")))
+            e2.metric("Entry Zone", f'{fmt_price(best.get("entry_low"))}–{fmt_price(best.get("entry_high"))}')
+            e3.metric("Entry Type", best.get("type", "N/A"))
+            e4.metric("Entry Score", f'{float(best.get("score",0) or 0):.0f}/100')
+            dem = entry_plan.get("nearest_demand")
+            sup = entry_plan.get("nearest_supply")
+            dtext = "N/A" if not dem else f'{fmt_price(dem["zone_low_exec"])}–{fmt_price(dem["zone_high_exec"])} • score {dem["score"]:.0f}'
+            stext = "N/A" if not sup else f'{fmt_price(sup["zone_low_exec"])}–{fmt_price(sup["zone_high_exec"])} • score {sup["score"]:.0f}'
+            st.caption(f'Demand **{dtext}** • Supply **{stext}** • Confidence **{entry_plan.get("confidence","LOW")}**')
+            with st.expander("Alternative entry candidates"):
+                cand = pd.DataFrame(entry_plan.get("candidates", []))
+                if not cand.empty:
+                    cols = [c for c in ["type","entry","entry_low","entry_high","stop","score","rr_tp2","reason"] if c in cand.columns]
+                    st.dataframe(cand[cols], hide_index=True, use_container_width=True, height=table_height(len(cand), 260))
+        else:
+            st.info("Belum ada entry confluence yang valid.")
+
+        section("Trade Plan")
+        t1, t2, t3, t4, t5 = st.columns(5)
+        t1.metric("Trigger", fmt_price(plan.get("breakout_trigger")))
+        t2.metric("Support", fmt_price(plan.get("support1")))
+        t3.metric("Stop", fmt_price(plan.get("stop_loss")))
+        t4.metric("TP1", fmt_price(plan.get("tp1")), f'RR {float(plan.get("rr_tp1",0) or 0):.2f}x')
+        t5.metric("TP2", fmt_price(plan.get("tp2")), f'RR {float(plan.get("rr_tp2",0) or 0):.2f}x')
+        st.caption(f'IDX tick current/trigger **Rp{plan["idx_tick_size"]:,} / Rp{plan.get("trigger_tick_size", plan["idx_tick_size"]):,}** • Resistance **{fmt_price(plan.get("resistance1"))} / {fmt_price(plan.get("resistance2"))}**')
 
         section("Intelligent Price Levels")
+        rows = plan["level_engine"]["all_levels"]
         if rows:
             level_df = pd.DataFrame(rows)
-            cols = ["role", "center", "zone_low", "zone_high", "score", "touches", "last_touch_bars_ago", "confluence"]
-            cols = [c for c in cols if c in level_df.columns]
-            st.dataframe(
-                level_df[cols], hide_index=True, use_container_width=True,
-                height=table_height(len(level_df), 360),
-                column_config={
-                    "role": st.column_config.TextColumn("Role", width="small"),
-                    "center": st.column_config.NumberColumn("Level", format="%.0f", width="small"),
-                    "zone_low": st.column_config.NumberColumn("Zone Low", format="%.0f", width="small"),
-                    "zone_high": st.column_config.NumberColumn("Zone High", format="%.0f", width="small"),
-                    "score": st.column_config.NumberColumn("Score", format="%.0f", width="small"),
-                    "touches": st.column_config.NumberColumn("Touches", format="%d", width="small"),
-                },
-            )
+            cols = [c for c in ["role","center","zone_low","zone_high","score","touches","last_touch_bars_ago","confluence"] if c in level_df.columns]
+            st.dataframe(level_df[cols], hide_index=True, use_container_width=True, height=table_height(len(level_df), 360), column_config={"role": st.column_config.TextColumn("Role", width="small"), "center": st.column_config.NumberColumn("Level", format="%.0f", width="small"), "zone_low": st.column_config.NumberColumn("Zone Low", format="%.0f", width="small"), "zone_high": st.column_config.NumberColumn("Zone High", format="%.0f", width="small"), "score": st.column_config.NumberColumn("Score", format="%.0f", width="small"), "touches": st.column_config.NumberColumn("Touches", format="%d", width="small")})
         else:
             st.warning("Pivot clusters belum cukup; strategy memakai fallback MA/ATR.")
 
     with news_tab:
-        section("News & Narrative Monitor")
+        section("News & Narrative")
         st.caption("Rumor dipisahkan dari berita terverifikasi dan tidak otomatis menaikkan ranking.")
         nc1, nc2 = st.columns([.75, 3.25])
         fetch_news = nc1.button("Fetch / Refresh", type="primary", use_container_width=True, key="single_fetch_news")
-        nc2.caption("Fetch hanya saat dibutuhkan agar halaman Single Stock tetap cepat dan ringkas.")
+        nc2.caption("Berita diambil on-demand supaya analisis technical tetap cepat.")
         if fetch_news:
             with st.spinner("Fetching recent public headlines..."):
                 st.session_state["single_news_bundle"] = cached_news_bundle(ticker_full)
                 st.session_state["single_news_ticker"] = ticker_full
-
         news_bundle = st.session_state.get("single_news_bundle") if st.session_state.get("single_news_ticker") == ticker_full else None
         if news_bundle:
             n1, n2, n3, n4, n5 = st.columns(5)
@@ -482,43 +556,17 @@ def render_single_stock():
             if news_bundle.get("items"):
                 news_df = pd.DataFrame(news_bundle["items"])
                 show_cols = [c for c in ["published_at", "source", "item_type", "category", "bias", "reliability_score", "title", "url"] if c in news_df.columns]
-                st.dataframe(
-                    news_df[show_cols], hide_index=True, use_container_width=True,
-                    height=table_height(len(news_df), 460),
-                    column_config={
-                        "published_at": st.column_config.TextColumn("Date", width="small"),
-                        "source": st.column_config.TextColumn("Source", width="small"),
-                        "item_type": st.column_config.TextColumn("Type", width="small"),
-                        "category": st.column_config.TextColumn("Category", width="small"),
-                        "reliability_score": st.column_config.NumberColumn("Rel.", format="%.0f", width="small"),
-                        "title": st.column_config.TextColumn("Headline", width="large"),
-                        "url": st.column_config.LinkColumn("Link", display_text="Open", width="small"),
-                    },
-                )
+                st.dataframe(news_df[show_cols], hide_index=True, use_container_width=True, height=table_height(len(news_df), 460), column_config={"published_at": st.column_config.TextColumn("Date", width="small"), "source": st.column_config.TextColumn("Source", width="small"), "item_type": st.column_config.TextColumn("Type", width="small"), "category": st.column_config.TextColumn("Category", width="small"), "reliability_score": st.column_config.NumberColumn("Rel.", format="%.0f", width="small"), "title": st.column_config.TextColumn("Headline", width="large"), "url": st.column_config.LinkColumn("Link", display_text="Open", width="small")})
             if news_bundle.get("errors"):
                 with st.expander("Source warnings"):
                     st.write(" | ".join(news_bundle["errors"]))
         else:
             st.info("Klik **Fetch / Refresh** untuk mengambil berita dan narrative terbaru ticker ini.")
 
-    with diag_tab:
-        section("Advanced Diagnostics")
-        d1, d2, d3, d4 = st.columns(4)
-        d1.metric("Technical Quality", f'{decision["technical_quality"]:.0f}/100')
-        d2.metric("Context Score", f'{context["score"]:.0f}/100')
-        d3.metric("Pattern Score", f'{pattern["score"]:.0f}/100')
-        d4.metric("Composite", f'{decision["composite_score"]:.0f}/100')
-        with st.expander("Pattern engine details", expanded=False):
-            st.json(pattern)
-        with st.expander("Market context details"):
-            st.json(context)
-        with st.expander("Technical engine details"):
-            st.json(technical)
-
 
 def render_scanner():
     section("IDX Scanner")
-    st.caption("Scan technical + pattern + market context first; enrich news only for top candidates.")
+    st.caption("Cari setup terbaik berdasarkan technical, pattern, sector/market context, entry timing, dan risk/reward.")
 
     with st.expander("1. Universe & Data", expanded=True):
         c1, c2, c3 = st.columns([1.7, 1, 1])
