@@ -137,8 +137,80 @@ div[data-testid="stMetric"] { background:var(--as-surface) !important; border:1p
 [data-baseweb="select"] > div { min-height:2.12rem; font-size:.76rem; background:var(--as-surface2) !important; color:var(--as-text) !important; border-color:var(--as-border) !important; }
 [data-baseweb="select"] * { color:var(--as-text) !important; }
 [data-testid="stFileUploader"] section { padding:.5rem; background:var(--as-surface) !important; border-color:var(--as-border) !important; }
-[data-testid="stExpander"] { border:1px solid var(--as-border) !important; border-radius:10px; background:rgba(13,23,40,.55) !important; }
-[data-testid="stExpander"] summary, [data-testid="stExpander"] summary * { color:var(--as-text) !important; font-size:.76rem; font-weight:650; }
+
+/* Streamlit Cloud widget contrast hardening */
+[data-testid="stWidgetLabel"], [data-testid="stWidgetLabel"] *,
+[data-testid="stRadio"] > label, [data-testid="stRadio"] > label *,
+[data-testid="stCheckbox"] > label, [data-testid="stCheckbox"] > label *,
+[data-testid="stSlider"] > label, [data-testid="stSlider"] > label *,
+[data-testid="stSelectSlider"] > label, [data-testid="stSelectSlider"] > label *,
+[data-testid="stTextInput"] > label, [data-testid="stTextInput"] > label *,
+[data-testid="stTextArea"] > label, [data-testid="stTextArea"] > label *,
+[data-testid="stSelectbox"] > label, [data-testid="stSelectbox"] > label *,
+[data-testid="stMultiSelect"] > label, [data-testid="stMultiSelect"] > label *,
+[data-testid="stFileUploader"] > label, [data-testid="stFileUploader"] > label * {
+  color:#aebbd0 !important;
+  opacity:1 !important;
+}
+label[data-baseweb="radio"], label[data-baseweb="radio"] *,
+label[data-baseweb="checkbox"], label[data-baseweb="checkbox"] * {
+  color:#dce6f3 !important;
+  opacity:1 !important;
+}
+[data-baseweb="radio"] p, [data-baseweb="checkbox"] p,
+[data-testid="stRadio"] p, [data-testid="stCheckbox"] p {
+  color:#dce6f3 !important;
+  opacity:1 !important;
+}
+[data-testid="stSlider"] [data-testid="stThumbValue"],
+[data-testid="stSelectSlider"] [data-testid="stThumbValue"] {
+  color:#f4f7fb !important;
+}
+
+/* Expander headers: prevent Streamlit Cloud light-theme white strips */
+[data-testid="stExpander"] {
+  border:1px solid var(--as-border) !important;
+  border-radius:10px !important;
+  background:rgba(13,23,40,.55) !important;
+  overflow:hidden !important;
+}
+[data-testid="stExpander"] details,
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] details > summary {
+  background:var(--as-surface2) !important;
+  color:var(--as-text) !important;
+}
+[data-testid="stExpander"] summary {
+  min-height:2.45rem !important;
+  padding:.52rem .72rem !important;
+  border-bottom:1px solid transparent !important;
+}
+[data-testid="stExpander"] details[open] > summary {
+  border-bottom-color:var(--as-border) !important;
+}
+[data-testid="stExpander"] summary:hover {
+  background:var(--as-surface3) !important;
+}
+[data-testid="stExpander"] summary *,
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary svg {
+  color:var(--as-text) !important;
+  fill:currentColor !important;
+  opacity:1 !important;
+  font-size:.76rem !important;
+  font-weight:700 !important;
+}
+
+/* Tabs: inactive labels must remain readable on Cloud */
+.stTabs [data-baseweb="tab"], .stTabs [data-baseweb="tab"] * {
+  color:#aebbd0 !important;
+  opacity:1 !important;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"],
+.stTabs [data-baseweb="tab"][aria-selected="true"] * {
+  color:#f4f7fb !important;
+}
+
 [data-testid="stAlert"] { padding:.48rem .65rem; font-size:.76rem; background:var(--as-surface) !important; color:var(--as-text) !important; }
 [data-testid="stDataFrame"] { border:1px solid var(--as-border); border-radius:9px; overflow:hidden; }
 [data-testid="stDataFrame"] * { font-size:.71rem !important; }
