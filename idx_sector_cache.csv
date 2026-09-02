@@ -1,0 +1,963 @@
+Ticker,Sector Code,Sector,IDX Sector,Sector Index,Subsector,Industry,Subindustry,Company Name,Source
+AADI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Adaro Andalan Indonesia Tbk,IDX Live
+AALI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Astra Agro Lestari Tbk,IDX Live
+ABBA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penerbitan,Mahaka Media Tbk,IDX Live
+ABDA,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,PT Asuransi Bina Dana Arta Tbk,IDX Live
+ABMM,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,ABM Investama Tbk,IDX Live
+ACES,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Barang Rumah Tangga,PT Aspirasi Hidup Indonesia Tbk,IDX Live
+ACRO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Samcro Hyosung Adilestari Tbk.,IDX Live
+ACST,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Acset Indonusa Tbk.,IDX Live
+ADCP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Adhi Commuter Properti Tbk,IDX Live
+ADES,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Ringan,Akasha Wira International Tbk  Tbk,IDX Live
+ADHI,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Adhi Karya (Persero) Tbk.,IDX Live
+ADMF,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,Adira Dinamika Multi Finance Tbk,IDX Live
+ADMG,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Polychem Indonesia Tbk,IDX Live
+ADMR,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Alamtri Minerals Indonesia Tbk,IDX Live
+ADRO,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Alamtri Resources Indonesia Tbk,IDX Live
+AEGS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT Anugerah Spareparts Sejahtera Tbk.,IDX Live
+AGAR,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Asia Sejahtera Mina Tbk,IDX Live
+AGII,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Samator Indo Gas Tbk,IDX Live
+AGRO,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Raya Indonesia Tbk,IDX Live
+AGRS,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank IBK Indonesia Tbk.,IDX Live
+AHAP,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Asuransi Harta Aman Pratama Tbk,IDX Live
+AIMS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Artha Mahiya Investama Tbk,IDX Live
+AISA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT FKS Food Sejahtera Tbk,IDX Live
+AKKU,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Anugerah Kagum Karya Utama Tbk,IDX Live
+AKPI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Khusus,Argha Karya Prima Ind. Tbk,IDX Live
+AKRA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT AKR Corporindo Tbk.,IDX Live
+AKSI,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Mineral Sumberdaya Mandiri Tbk,IDX Live
+ALDO,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Alkindo Naratama Tbk,IDX Live
+ALII,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Ancara Logistics Indonesia Tbk,IDX Live
+ALKA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Alumunium,Alakasa Industrindo Tbk,IDX Live
+ALMI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Alumunium,Alumindo Light Metal Industry Tbk,IDX Live
+ALTO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Ringan,Tri Banyan Tirta Tbk,IDX Live
+AMAG,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Asuransi Multi Artha Guna Tbk,IDX Live
+AMAN,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Makmur Berkah Amanda Tbk.,IDX Live
+AMAR,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Amar Indonesia Tbk.,IDX Live
+AMFG,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Asahimas Flat Glass Tbk,IDX Live
+AMIN,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin & Komponen Perindustrian,PT Ateliers Mecaniques D Indonesie Tbk.,IDX Live
+AMMN,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Tembaga,PT Amman Mineral Internasional Tbk.,IDX Live
+AMMS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Agung Menjangan Mas Tbk,IDX Live
+AMOR,G,Financials,Keuangan,IDXFINANCE,Jasa Investasi,Jasa Investasi,Manajemen Investasi,PT Ashmore Asset Management Indonesia Tbk.,IDX Live
+AMRT,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Supermarket,PT Sumber Alfaria Trijaya Tbk.,IDX Live
+ANDI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Andira Agro Tbk,IDX Live
+ANJT,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Austindo Nusantara Jaya Tbk.,IDX Live
+ANTM,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT ANTAM (Persero) Tbk,IDX Live
+APEX,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara",Jasa Pengeboran Minyak & Gas,Apexindo Pratama Duta Tbk,IDX Live
+APIC,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PACIFIC STRATEGIC FINANCIAL Tbk,IDX Live
+APII,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin & Komponen Perindustrian,PT Arita Prima Indonesia Tbk.,IDX Live
+APLI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Khusus,Asiaplast Industries Tbk,IDX Live
+APLN,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Agung Podomoro Land Tbk.,IDX Live
+ARCI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Emas,PT Archi Indonesia Tbk,IDX Live
+AREA,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT Dunia Virtual Online Tbk,IDX Live
+ARGO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,Argo Pantes Tbk,IDX Live
+ARII,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Atlas Resources Tbk,IDX Live
+ARKA,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin & Komponen Perindustrian,PT Arkha Jayanti Persada Tbk.,IDX Live
+ARKO,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Arkora Hydro Tbk.,IDX Live
+ARMY,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Armidian Karyatama Tbk,IDX Live
+ARNA,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Arwana Citramulia Tbk,IDX Live
+ARTA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",Arthavest Tbk,IDX Live
+ARTI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",Ratu Prabu Energi Tbk,IDX Live
+ARTO,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Jago Tbk.,IDX Live
+ASBI,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Asuransi Bintang Tbk,IDX Live
+ASDM,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Asuransi Dayin Mitra Tbk,IDX Live
+ASGR,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Jasa Pendukung Bisnis,Astra Graphia Tbk,IDX Live
+ASHA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Cilacap Samudera Fishing Industry Tbk,IDX Live
+ASII,C,Industrials,Perindustrian,IDXINDUST,Perusahaan Holding Multi Sektor,Perusahaan Holding Multi-sektor,Perusahaan Holding Multi-sektor,Astra International Tbk,IDX Live
+ASJT,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Asuransi Jasa Tania Tbk,IDX Live
+ASLC,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Otomotif,PT Autopedia Sukses Lestari Tbk,IDX Live
+ASLI,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Asri Karya Lestari Tbk.,IDX Live
+ASMI,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,PT Asuransi Maximus Graha Persada Tbk.,IDX Live
+ASPI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Andalan Sakti Primaindo Tbk.,IDX Live
+ASPR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Asia Pramulia Tbk,IDX Live
+ASRI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,ALAM SUTERA REALTY Tbk,IDX Live
+ASRM,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Asuransi Ramayana Tbk,IDX Live
+ASSA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,Adi Sarana Armada Tbk,IDX Live
+ATAP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Trimitra Prawara Goldland Tbk ,IDX Live
+ATIC,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT Anabatic Technologies Tbk,IDX Live
+ATLA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Atlantis Subsea Indonesia Tbk,IDX Live
+AUTO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,Astra Otoparts Tbk,IDX Live
+AVIA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Khusus,PT Avia Avian Tbk,IDX Live
+AWAN,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Era Digital Media Tbk,IDX Live
+AXIO,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,Perangkat Komputer,Perangkat Komputer,PT Tera Data Indonusa Tbk,IDX Live
+AYAM,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Janu Putra Sejahtera Tbk.,IDX Live
+AYLS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Arkayana Lestari Grup Tbk,IDX Live
+BABP,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank MNC Internasional Tbk.,IDX Live
+BABY,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Pakaian & Tekstil,PT Multitrend Indo Tbk.,IDX Live
+BACA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Capital Indonesia Tbk,IDX Live
+BACH,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Perdagangan Aneka Barang Perindustrian,Perdagangan Aneka Barang Perindustrian,PT Bach Multi Global Tbk,IDX Live
+BAIK,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Bersama Mencapai Puncak Tbk.,IDX Live
+BAJA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,Saranacentral Bajatama Tbk,IDX Live
+BALI,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Bali Towerindo Sentra Tbk. ,IDX Live
+BANK,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Aladin Syariah Tbk,IDX Live
+BAPA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Bekasi Asri Pemula Tbk,IDX Live
+BAPI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Bhakti Agung Propertindo Tbk.,IDX Live
+BATA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Alas Kaki,Sepatu Bata Tbk,IDX Live
+BATR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Benteng Api Technic Tbk,IDX Live
+BAUT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Barang Rumah Tangga,PT Mitra Angkasa Sejahtera Tbk,IDX Live
+BAYU,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Agen Perjalanan,Bayu Buana Tbk,IDX Live
+BBCA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Central Asia Tbk.,IDX Live
+BBHI,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Allo Bank Indonesia Tbk,IDX Live
+BBKP,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank KB Indonesia Tbk,IDX Live
+BBLD,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,Buana Finance Tbk,IDX Live
+BBMD,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Mestika Dharma Tbk.,IDX Live
+BBNI,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Negara Indonesia (Persero) Tbk,IDX Live
+BBRI,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Rakyat Indonesia (Persero) Tbk,IDX Live
+BBRM,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,Pelayaran Nasional Bina Buana Raya Tbk,IDX Live
+BBSI,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Krom Bank Indonesia Tbk,IDX Live
+BBSS,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Bumi Benowo Sukses Sejahtera Tbk,IDX Live
+BBTN,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Tabungan Negara (Persero) Tbk,IDX Live
+BBYB,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Neo Commerce Tbk.,IDX Live
+BCAP,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,MNC Kapital Indonesia Tbk,IDX Live
+BCIC,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank JTrust Indonesia Tbk. ,IDX Live
+BCIP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Bumi Citra Permai Tbk,IDX Live
+BDKR,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Berdikari Pondasi Perkasa Tbk.,IDX Live
+BDMN,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Danamon Indonesia Tbk,IDX Live
+BEBS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Berkah Beton Sadaya Tbk,IDX Live
+BEEF,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Estika Tata Tiara Tbk.,IDX Live
+BEER,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Keras,PT Jobubu Jarum Minahasa Tbk,IDX Live
+BEKS,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Pembangunan Daerah Banten Tbk.,IDX Live
+BELI,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Global Digital Niaga Tbk,IDX Live
+BELL,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Trisula Textile Industries Tbk,IDX Live
+BESS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Batulicin Nusantara Maritim Tbk.,IDX Live
+BEST,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Bekasi Fajar Industrial Estate Tbk,IDX Live
+BFIN,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,BFI Finance Indonesia Tbk,IDX Live
+BGTG,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Ganesha Tbk.,IDX Live
+BHAT,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Jiwa,PT Bhakti Multi Artha Tbk.,IDX Live
+BHIT,C,Industrials,Perindustrian,IDXINDUST,Perusahaan Holding Multi Sektor,Perusahaan Holding Multi-sektor,Perusahaan Holding Multi-sektor,PT MNC Asia Holding Tbk,IDX Live
+BIKA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Binakarya Jaya Abadi Tbk.,IDX Live
+BIKE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rekreasi,Peralatan Olah Raga & Barang Hobi,Peralatan Olah Raga & Barang Hobi,PT Bhineka Inovasi Ketahanan Energi Tbk,IDX Live
+BIMA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Alas Kaki,Primarindo Asia Infrastructure Tbk,IDX Live
+BINA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Ina Perdana Tbk.,IDX Live
+BINO,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Peralatan Kantor,PT Perma Plasindo Tbk ,IDX Live
+BIPI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Astrindo Nusantara Infrastruktur Tbk.,IDX Live
+BIPP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Bhuwanatala Indah Permai Tbk,IDX Live
+BIRD,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,PT Blue Bird Tbk,IDX Live
+BISI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,BISI INTERNATIONAL Tbk,IDX Live
+BJBR,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Pembangunan Daerah Jawa Barat dan Banten Tbk,IDX Live
+BJTM,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Pembangunan Daerah Jawa Timur Tbk,IDX Live
+BKDP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Bukit Darmo Property Tbk,IDX Live
+BKSL,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Sentul City Tbk,IDX Live
+BKSW,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank QNB Indonesia Tbk,IDX Live
+BLES,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Superior Prima Sukses Tbk,IDX Live
+BLOG,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Trimitra Trans Persada Tbk,IDX Live
+BLTA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,Berlian Laju Tanker Tbk,IDX Live
+BLTZ,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Fasilitas Rekreasi & Olah Raga,PT Graha Layar Prima Tbk.,IDX Live
+BLUE,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Peralatan Kantor,PT Berkah Prima Perkasa Tbk,IDX Live
+BMAS,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Kasikorn Indonesia Tbk,IDX Live
+BMBL,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pendidikan & Jasa Penunjang,Jasa Pendidikan,PT Lavender Bina Cendikia Tbk,IDX Live
+BMHS,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Bundamedik Tbk,IDX Live
+BMRI,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Mandiri (Persero) Tbk,IDX Live
+BMSR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Bintang Mitra Semestaraya Tbk,IDX Live
+BMTR,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Periklanan,PT Global Mediacom Tbk,IDX Live
+BNBA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Bumi Arta Tbk,IDX Live
+BNBR,C,Industrials,Perindustrian,IDXINDUST,Perusahaan Holding Multi Sektor,Perusahaan Holding Multi-sektor,Perusahaan Holding Multi-sektor,Bakrie & Brothers Tbk,IDX Live
+BNGA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank CIMB Niaga Tbk,IDX Live
+BNII,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Maybank Indonesia Tbk,IDX Live
+BNLI,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Permata Tbk,IDX Live
+BOAT,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Newport Marine Services Tbk,IDX Live
+BOBA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Formosa Ingredient Factory Tbk,IDX Live
+BOGA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Otomotif,PT Apollo Global Interactive Tbk,IDX Live
+BOLA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Fasilitas Rekreasi & Olah Raga,PT Bali Bintang Sejahtera Tbk.,IDX Live
+BOLT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT Garuda Metalindo Tbk.,IDX Live
+BOSS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Borneo Olah Sarana Sukses Tbk.,IDX Live
+BPFI,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,PT Woori Finance Indonesia Tbk,IDX Live
+BPII,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Batavia Prosperindo Internasional Tbk.,IDX Live
+BPTR,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,PT Batavia Prosperindo Trans Tbk.,IDX Live
+BRAM,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Ban,Indo Kordsa Tbk,IDX Live
+BREN,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Barito Renewables Energy Tbk.,IDX Live
+BRIS,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Syariah Indonesia (Persero) Tbk,IDX Live
+BRMS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,Bumi Resources Minerals Tbk,IDX Live
+BRNA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Berlina Tbk,IDX Live
+BRPT,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Barito Pacific Tbk,IDX Live
+BRRC,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Raja Roti Cemerlang Tbk,IDX Live
+BSBK,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Wulandari Bangun Laksana Tbk,IDX Live
+BSDE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Bumi Serpong Damai Tbk,IDX Live
+BSIM,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Sinarmas Tbk,IDX Live
+BSML,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Bintang Samudera Mandiri Lines Tbk,IDX Live
+BSSR,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Baramulti Suksessarana Tbk,IDX Live
+BSWD,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank of India Indonesia Tbk,IDX Live
+BTEK,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Bumi Teknokultura Unggul Tbk,IDX Live
+BTEL,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,Bakrie Telecom Tbk,IDX Live
+BTON,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,Betonjaya Manunggal Tbk,IDX Live
+BTPN,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank SMBC Indonesia Tbk,IDX Live
+BTPS,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank BTPN Syariah Tbk.,IDX Live
+BUAH,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Makanan,PT Segar Kumala Indonesia Tbk,IDX Live
+BUDI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Budi Starch & Sweetener Tbk.,IDX Live
+BUKA,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Bukalapak.com Tbk,IDX Live
+BUKK,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,Bukaka Teknik Utama Tbk,IDX Live
+BULL,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Buana Lintas Lautan Tbk.,IDX Live
+BUMI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Bumi Resources Tbk,IDX Live
+BUVA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Bukit Uluwatu Villa Tbk,IDX Live
+BVIC,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Victoria International Tbk,IDX Live
+BWPT,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Eagle High Plantations Tbk,IDX Live
+BYAN,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Bayan Resources Tbk,IDX Live
+CAKK,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,PT Cahayaputra Asa Keramik Tbk.,IDX Live
+CAMP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Produk Susu Olahan,PT Campina Ice Cream Industry Tbk.,IDX Live
+CANI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Capitol Nusantara Indonesia Tbk.,IDX Live
+CARE,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Metro Healthcare Indonesia Tbk,IDX Live
+CARS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Otomotif,PT Industri dan Perdagangan Bintraco Dharma Tbk,IDX Live
+CASA,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Capital Financial Indonesia Tbk,IDX Live
+CASH,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Cashlez Worldwide Indonesia Tbk.,IDX Live
+CASS,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Bandar Udara,Cahaya Aero Services Tbk,IDX Live
+CBDK,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Bangun Kosambi Sukses Tbk,IDX Live
+CBMF,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT Cahaya Bintang Medan Tbk,IDX Live
+CBPE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Citra Buana Prasida Tbk,IDX Live
+CBRE,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Cakra Buana Resources Energi Tbk,IDX Live
+CBUT,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Citra Borneo Utama Tbk,IDX Live
+CCSI,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Kelistrikan,Komponen & Peralatan Kelistrikan,PT Communication Cable Systems Indonesia Tbk.,IDX Live
+CDIA,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Chandra Daya Investasi Tbk,IDX Live
+CEKA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Wilmar Cahaya Indonesia Tbk.,IDX Live
+CENT,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Centratama Telekomunikasi Indonesia Tbk.,IDX Live
+CFIN,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,Clipan Finance Indonesia Tbk,IDX Live
+CGAS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Citra Nusantara Gemilang Tbk.,IDX Live
+CHEK,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Diastika Biotekindo Tbk,IDX Live
+CHEM,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Chemstar Indonesia Tbk,IDX Live
+CHIP,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,"Perangkat, Instrumen & Komponen Elektronik",Perangkat & Instrumen Elektronik,PT Pelita Teknologi Global Tbk,IDX Live
+CINT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT Chitose Internasional Tbk,IDX Live
+CITA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Alumunium,Cita Mineral Investindo Tbk,IDX Live
+CITY,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Natura City Developments Tbk.,IDX Live
+CLAY,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Citra Putra Realty Tbk,IDX Live
+CLEO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Ringan,PT Sariguna Primatirta Tbk,IDX Live
+CLPI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Khusus,Colorpak Indonesia Tbk,IDX Live
+CMNP,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Jalan Tol & Rel,Citra Marga Nusaphala Persada Tbk,IDX Live
+CMNT,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Cemindo Gemilang Tbk,IDX Live
+CMPP,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Maskapai Penerbangan,Maskapai Penerbangan,PT AirAsia Indonesia Tbk,IDX Live
+CMRY,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Produk Susu Olahan,PT Cisarua Mountain Dairy Tbk,IDX Live
+CNKO,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,Exploitasi Energi Indonesia Tbk,IDX Live
+CNMA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Fasilitas Rekreasi & Olah Raga,PT Nusantara Sejahtera Raya Tbk,IDX Live
+COAL,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Black Diamond Resources Tbk,IDX Live
+COCO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Wahana Interfood Nusantara Tbk.,IDX Live
+COIN,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Indokripto Koin Semesta Tbk,IDX Live
+COWL,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,COWELL DEVELOPMENT Tbk,IDX Live
+CPIN,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",Charoen Pokphand Indonesia Tbk,IDX Live
+CPRI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Capri Nusa Satu Properti Tbk.,IDX Live
+CPRO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",Central Proteina Prima Tbk,IDX Live
+CRAB,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Toba Surimi Industries Tbk,IDX Live
+CRSN,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Profesional,Jasa Penelitian & Konsultasi,PT Carsurin Tbk,IDX Live
+CSAP,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Barang Rumah Tangga,Catur Sentosa Adiprana Tbk,IDX Live
+CSIS,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Cahayasakti Investindo Sukses Tbk,IDX Live
+CSMI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Cipta Selera Murni Tbk.,IDX Live
+CSRA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Cisadane Sawit Raya Tbk.,IDX Live
+CTBN,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,Citra Tubindo Tbk,IDX Live
+CTRA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Ciputra Development Tbk,IDX Live
+CTTH,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Citatah Tbk,IDX Live
+CUAN,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Petrindo Jaya Kreasi Tbk,IDX Live
+CYBR,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT ITSEC Asia Tbk.,IDX Live
+DAAZ,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Daaz Bara Lestari Tbk,IDX Live
+DADA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Diamond Citra Propertindo Tbk.,IDX Live
+DART,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Duta Anggada Realty Tbk,IDX Live
+DATA,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Kabel,PT Remala Abadi Tbk,IDX Live
+DAYA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Obat-obatan,PT Duta Intidaya Tbk.,IDX Live
+DCII,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT DCI Indonesia Tbk,IDX Live
+DEAL,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Dewata Freightinternational Tbk.,IDX Live
+DEFI,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Investasi,Danasupra Erapacific Tbk,IDX Live
+DEPO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Barang Rumah Tangga,PT Caturkarda Depo Bangunan Tbk,IDX Live
+DEWA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",Darma Henwa Tbk,IDX Live
+DEWI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Dewi Shri Farmindo Tbk,IDX Live
+DFAM,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Dafam Property Indonesia Tbk,IDX Live
+DGIK,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,Nusa Konstruksi Enjiniring  Tbk,IDX Live
+DGNS,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Diagnos Laboratorium Utama Tbk,IDX Live
+DGWG,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Pertanian,PT Delta Giri Wacana Tbk,IDX Live
+DIGI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penerbitan,PT Arkadia Digital Media Tbk,IDX Live
+DILD,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Intiland Development Tbk,IDX Live
+DIVA,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Distribusi Voucher Nusantara Tbk,IDX Live
+DKFT,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,Central Omega Resources Tbk,IDX Live
+DKHH,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Cipta Sarana Medika Tbk,IDX Live
+DLTA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Keras,Delta Djakarta Tbk,IDX Live
+DMAS,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Puradelta Lestari Tbk.,IDX Live
+DMMX,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT Digital Mediatama Maxima Tbk,IDX Live
+DMND,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Makanan,PT Diamond Food Indonesia Tbk.,IDX Live
+DNAR,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Oke Indonesia Tbk.,IDX Live
+DNET,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Investasi,PT Indoritel Makmur Internasional Tbk.,IDX Live
+DOID,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT BUMA Internasional Grup Tbk,IDX Live
+DOOH,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Periklanan,PT Era Media Sejahtera Tbk,IDX Live
+DOSS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rekreasi,Barang Elektronik Konsumen,Barang Elektronik Konsumen,PT Global Sukses Digital Tbk,IDX Live
+DPNS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Khusus,Duta Pertiwi Nusantara Tbk,IDX Live
+DPUM,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Dua Putra Utama Makmur Tbk.,IDX Live
+DRMA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT Dharma Polimetal Tbk,IDX Live
+DSFI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",Dharma Samudera Fishing Ind. Tbk,IDX Live
+DSNG,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Dharma Satya Nusantara Tbk.,IDX Live
+DSSA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Dian Swastatika Sentosa Tbk,IDX Live
+DUCK,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Jaya Bersama Indo Tbk.,IDX Live
+DUTI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Duta Pertiwi Tbk,IDX Live
+DVLA,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,Darya-Varia Laboratoria Tbk,IDX Live
+DWGL,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Dwi Guna Laksana Tbk,IDX Live
+DYAN,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Jasa Pendukung Bisnis,PT Dyandra Media International Tbk.,IDX Live
+EAST,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Eastparc Hotel Tbk,IDX Live
+ECII,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Elektronik,PT Electronic City Indonesia Tbk.,IDX Live
+EDGE,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Jasa & Konsultan TI,PT Indointernet Tbk.,IDX Live
+EKAD,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Khusus,Ekadharma International Tbk,IDX Live
+ELIT,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT Data Sinergitama Jaya Tbk,IDX Live
+ELPI,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Pelayaran Nasional Ekalya Purnamasari Tbk,IDX Live
+ELSA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara",Jasa Pengeboran Minyak & Gas,Elnusa Tbk,IDX Live
+ELTY,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Bakrieland Development Tbk,IDX Live
+EMAS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Emas,PT Merdeka Gold Resources Tbk,IDX Live
+EMDE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Megapolitan Developments Tbk,IDX Live
+EMMI,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Peralatan Kesehatan,PT Esa Medika Mandiri Tbk,IDX Live
+EMTK,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,Elang Mahkota Teknologi Tbk,IDX Live
+ENAK,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Champ Resto Indonesia Tbk,IDX Live
+ENRG,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Produksi & Penyulingan Minyak & Gas,Energi Mega Persada Tbk,IDX Live
+ENVY,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT Envy Technologies Indonesia Tbk,IDX Live
+ENZO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Morenzo Abadi Perkasa Tbk,IDX Live
+EPAC,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Megalestari Epack Sentosaraya Tbk.,IDX Live
+EPMT,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Obat-obatan,Enseval Putera Megatrading Tbk,IDX Live
+ERAA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Elektronik,Erajaya Swasembada Tbk,IDX Live
+ERAL,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Elektronik,PT Sinar Eka Selaras Tbk,IDX Live
+ERTX,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,"Pakaian, Aksesoris, & Tas",Eratex Djaja Tbk,IDX Live
+ESIP,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Sinergi Inti Plastindo Tbk.,IDX Live
+ESSA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,ESSA Industries Indonesia Tbk,IDX Live
+ESTA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Esta Multi Usaha Tbk.,IDX Live
+ESTI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,Ever Shine Textile Industry Tbk,IDX Live
+ETWA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Eterindo Wahanatama Tbk,IDX Live
+EURO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,PT Estee Gold Feet Tbk,IDX Live
+EXCL,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT XLSMART Telecom Sejahtera Tbk,IDX Live
+FAPA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT FAP Agri Tbk,IDX Live
+FAST,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Fast Food Indonesia Tbk,IDX Live
+FASW,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Fajar Surya Wisesa Tbk,IDX Live
+FILM,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Hiburan & Film,Hiburan & Film,PT MD Entertainment Tbk,IDX Live
+FIMP,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Fimperkasa Utama Tbk,IDX Live
+FIRE,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Alfa Energi Investama Tbk.,IDX Live
+FISH,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,FKS Multi Agro Tbk,IDX Live
+FITT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Fortune Resources Investment Tbk,IDX Live
+FLMC,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,PT Falmaco Nonwoven Industri Tbk,IDX Live
+FMII,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Fortune Mate Indonesia Tbk,IDX Live
+FOLK,C,Industrials,Perindustrian,IDXINDUST,Perusahaan Holding Multi Sektor,Perusahaan Holding Multi-sektor,Perusahaan Holding Multi-sektor,PT Multi Garam Utama Tbk.,IDX Live
+FOOD,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Sentra Food Indonesia Tbk.,IDX Live
+FORE,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Ringan,PT Fore Kopi Indonesia Tbk,IDX Live
+FORU,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Periklanan,Fortune Indonesia Tbk,IDX Live
+FPNI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Lotte Chemical Titan Tbk.,IDX Live
+FUJI,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,PT Fuji Finance Indonesia Tbk.,IDX Live
+FUTR,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Periklanan,PT Futura Energi Global Tbk,IDX Live
+FWCT,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kayu,PT Wijaya Cahaya Timber Tbk,IDX Live
+GAMA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Aksara Global Development Tbk,IDX Live
+GDST,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,Gunawan Dianjaya Steel Tbk,IDX Live
+GDYR,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Ban,Goodyear Indonesia Tbk,IDX Live
+GEMA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,Gema Grahasarana Tbk,IDX Live
+GEMS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Golden Energy Mines Tbk,IDX Live
+GGRM,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Rokok,Rokok,Rokok,Gudang Garam Tbk,IDX Live
+GGRP,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,PT Gunung Raja Paksi Tbk.,IDX Live
+GHON,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Gihon Telekomunikasi Indonesia Tbk,IDX Live
+GIAA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Maskapai Penerbangan,Maskapai Penerbangan,Garuda Indonesia (Persero) Tbk,IDX Live
+GJTL,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Ban,Gajah Tunggal Tbk,IDX Live
+GLOB,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Elektronik,PT Globe Kita Terang Tbk,IDX Live
+GLVA,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,"Perangkat, Instrumen & Komponen Elektronik",Perangkat & Instrumen Elektronik,PT Galva Technologies Tbk,IDX Live
+GMFI,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Bandar Udara,PT Garuda Maintenance Facility Aero Asia Tbk.,IDX Live
+GMTD,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Gowa Makassar Tourism Development Tbk,IDX Live
+GOLD,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Visi Telekomunikasi Infrastruktur Tbk.,IDX Live
+GOLF,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Fasilitas Rekreasi & Olah Raga,PT Intra GolfLink Resorts Tbk,IDX Live
+GOLL,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Golden Plantation Tbk,IDX Live
+GOOD,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Garudafood Putra Putri Jaya Tbk.,IDX Live
+GOTO,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT GoTo Gojek Tokopedia Tbk,IDX Live
+GPRA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Perdana Gapura Prima Tbk,IDX Live
+GPSO,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin & Komponen Perindustrian,PT Geoprima Solusi Tbk,IDX Live
+GRIA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Ingria Pratama Capitalindo Tbk,IDX Live
+GRPH,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Griptha Putra Persada Tbk.,IDX Live
+GRPM,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Ringan,PT Graha Prima Mentari Tbk.,IDX Live
+GSMF,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,Equity Development Investment Tbk,IDX Live
+GTBO,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Garda Tujuh Buana Tbk,IDX Live
+GTRA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Grahaprima Suksesmandiri Tbk,IDX Live
+GTSI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT GTS Internasional Tbk,IDX Live
+GULA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Aman Agrindo Tbk,IDX Live
+GUNA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Gunanusa Eramandiri Tbk,IDX Live
+GWSA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Greenwood Sejahtera Tbk,IDX Live
+GZCO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Gozco Plantations Tbk,IDX Live
+HADE,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Gas,Utilitas Gas,PT Himalaya Energi Perkasa Tbk,IDX Live
+HAIS,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Hasnur Internasional Shipping Tbk,IDX Live
+HAJJ,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Agen Perjalanan,PT Arsy Buana Travelindo Tbk,IDX Live
+HALO,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Haloni Jane Tbk,IDX Live
+HATM,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Habco Trans Maritima Tbk,IDX Live
+HBAT,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Minahasa Membangun Hebat Tbk,IDX Live
+HDFA,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,Radana Bhaskara Finance Tbk,IDX Live
+HDIT,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Hensel Davest Indonesia Tbk,IDX Live
+HEAL,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Medikaloka Hermina Tbk.,IDX Live
+HELI,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Maskapai Penerbangan,Maskapai Penerbangan,PT Jaya Trishindo Tbk,IDX Live
+HERO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Supermarket,PT DFI Retail Nusantara Tbk,IDX Live
+HEXA,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,Hexindo Adiperkasa Tbk,IDX Live
+HGII,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Hero Global Investment Tbk,IDX Live
+HILL,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Hillcon Tbk,IDX Live
+HITS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,Humpuss Intermoda Transportasi Tbk,IDX Live
+HKMU,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Alumunium,PT HK Metals Utama Tbk,IDX Live
+HMSP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Rokok,Rokok,Rokok,HM Sampoerna Tbk,IDX Live
+HOKI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Buyung Poetra Sembada Tbk.,IDX Live
+HOME,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",Hotel Mandarine Regency Tbk,IDX Live
+HOMI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Grand House Mulia Tbk,IDX Live
+HOPE,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,PT Harapan Duta Pertiwi Tbk.,IDX Live
+HOTL,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",Saraswati Griya Lestari Tbk,IDX Live
+HRME,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Menteng Heritage Realty Tbk.,IDX Live
+HRTA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,"Pakaian, Aksesoris, & Tas",PT Hartadinata Abadi Tbk,IDX Live
+HRUM,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Harum Energy Tbk,IDX Live
+HUMI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Humpuss Maritim Internasional Tbk,IDX Live
+HYGN,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Jasa Pengelolaan Lingkungan & Sarana,PT Ecocare Indo Pasifik Tbk.,IDX Live
+IATA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Karya Pacific Energy Tbk,IDX Live
+IBFN,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,PT Intan Baru Prana Tbk,IDX Live
+IBOS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Indo Boga Sukses Tbk,IDX Live
+IBST,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,Inti Bangun Sejahtera Tbk,IDX Live
+ICBP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Indofood CBP Sukses Makmur Tbk,IDX Live
+ICON,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Jasa Pendukung Bisnis,Island Concepts Indonesia Tbk,IDX Live
+IDEA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pendidikan & Jasa Penunjang,Jasa Pendidikan,PT Idea Indonesia Akademi Tbk,IDX Live
+IDPR,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Indonesia Pondasi Raya Tbk.,IDX Live
+IFII,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kayu,PT Indonesia Fibreboard Industry Tbk,IDX Live
+IFSH,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Ifishdeco Tbk.,IDX Live
+IGAR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Champion Pacific Indonesia Tbk,IDX Live
+IIKP,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rekreasi,Peralatan Olah Raga & Barang Hobi,Peralatan Olah Raga & Barang Hobi,Inti Agri Resources Tbk,IDX Live
+IKAI,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Intikeramik Alamasri Industri Tbk,IDX Live
+IKAN,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Era Mandiri Cemerlang Tbk,IDX Live
+IKBI,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Kelistrikan,Komponen & Peralatan Kelistrikan,Sumi Indo Kabel Tbk,IDX Live
+IKPM,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Ikapharmindo Putramas Tbk.,IDX Live
+IMAS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Otomotif,Indomobil Sukses Internasional Tbk,IDX Live
+IMJS,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,PT Indomobil Multi Jasa Tbk.,IDX Live
+IMPC,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,PT Impack Pratama Industri Tbk,IDX Live
+INAF,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,Indofarma Tbk.,IDX Live
+INAI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Alumunium,Indal Aluminium Industry Tbk,IDX Live
+INCF,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Produk Hutan Lainnya,PT Indo Komoditi Korpora Tbk,IDX Live
+INCI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Intanwijaya Internasional Tbk,IDX Live
+INCO,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,Vale Indonesia Tbk,IDX Live
+INDF,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Indofood Sukses Makmur Tbk,IDX Live
+INDO,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Jasa Real Estat,PT Royalindo Investa Wijaya Tbk,IDX Live
+INDR,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Indo-Rama Synthetics Tbk,IDX Live
+INDS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,Indospring Tbk,IDX Live
+INDX,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Profesional,Jasa Penelitian & Konsultasi,Tanah Laut Tbk,IDX Live
+INDY,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Indika Energy Tbk,IDX Live
+INET,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Kabel,PT Sinergi Inti Andalan Prima Tbk.,IDX Live
+INKP,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kertas,Indah Kiat Pulp & Paper Tbk,IDX Live
+INOV,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Inocycle Technology Group Tbk.,IDX Live
+INPC,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Artha Graha Internasional Tbk,IDX Live
+INPP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Indonesian Paradise Property Tbk,IDX Live
+INPS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Indah Prakasa Sentosa Tbk.,IDX Live
+INRU,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kertas,Toba Pulp Lestari Tbk,IDX Live
+INTA,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,Intraco Penta Tbk,IDX Live
+INTD,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kertas,Inter-Delta Tbk,IDX Live
+INTP,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,Indocement Tunggal Prakarsa Tbk,IDX Live
+IOTF,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,"Perangkat, Instrumen & Komponen Elektronik",Perangkat & Instrumen Elektronik,PT Sumber Sinergi Makmur Tbk,IDX Live
+IPAC,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Era Graharealty Tbk,IDX Live
+IPCC,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Pelabuhan,PT Indonesia Kendaraan Terminal Tbk.,IDX Live
+IPCM,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Pelabuhan,PT Jasa Armada Indonesia Tbk.,IDX Live
+IPOL,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Indopoly Swakarsa Industry Tbk,IDX Live
+IPPE,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Indo Pureco Pratama Tbk,IDX Live
+IPTV,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran Berbayar,PT MNC Vision Networks Tbk.,IDX Live
+IRRA,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Itama Ranoraya Tbk.,IDX Live
+IRSX,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Perangkat Lunak,Perangkat Lunak,PT Folago Global Nusantara Tbk,IDX Live
+ISAP,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT Isra Presisi Indonesia Tbk,IDX Live
+ISAT,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Indosat Tbk,IDX Live
+ISEA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Indo American Seafoods Tbk,IDX Live
+ISSP,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,PT Steel Pipe Industry of Indonesia Tbk,IDX Live
+ITIC,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Rokok,Rokok,Rokok,PT Indonesian Tobacco Tbk.,IDX Live
+ITMA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",SUMBER ENERGI ANDALAN Tbk,IDX Live
+ITMG,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Indo Tambangraya Megah Tbk,IDX Live
+JARR,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Jhonlin Agro Raya Tbk,IDX Live
+JAST,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Kabel,PT Jasnita Telekomindo Tbk. ,IDX Live
+JATI,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Informasi Teknologi Indonesia Tbk.,IDX Live
+JAWA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Jaya Agra Wattie Tbk,IDX Live
+JAYA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Armada Berjaya Trans Tbk.,IDX Live
+JECC,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Kelistrikan,Komponen & Peralatan Kelistrikan,Jembo Cable Company Tbk,IDX Live
+JECX,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Nitrasanata Dharma Tbk,IDX Live
+JELI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Niramas Utama Tbk,IDX Live
+JGLE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Graha Andrasentra Propertindo Tbk.,IDX Live
+JIHD,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",Jakarta International Hotels & Development Tbk,IDX Live
+JKON,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,Jaya Konstruksi Manggala Pratama Tbk,IDX Live
+JMAS,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Jiwa,PT Asuransi Jiwa Syariah Jasa Mitra Abadi Tbk,IDX Live
+JPFA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",JAPFA Comfeed Indonesia Tbk,IDX Live
+JRPT,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Jaya Real Property Tbk,IDX Live
+JSKY,A,Energy,Energi,IDXENERGY,Energi Alternatif,Peralatan Energi Alternatif,Peralatan Energi Alternatif,PT Sky Energy Indonesia Tbk.,IDX Live
+JSMR,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Jalan Tol & Rel,PT Jasa Marga Tbk,IDX Live
+JSPT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",Jakarta Setiabudi Internasional Tbk,IDX Live
+JTPE,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Percetakan Komersial,Jasuindo Tiga Perkasa Tbk,IDX Live
+KAEF,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Kimia Farma (Persero) Tbk,IDX Live
+KAQI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT Jantra Grupo Indonesia Tbk,IDX Live
+KARW,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Pelabuhan,Meratus Jasa Prima Tbk,IDX Live
+KAYU,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kayu,PT Darmi Bersaudara Tbk.,IDX Live
+KBAG,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Karya Bersama Anugerah Tbk,IDX Live
+KBLI,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Kelistrikan,Komponen & Peralatan Kelistrikan,KMI Wire and Cable Tbk,IDX Live
+KBLM,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Kelistrikan,Komponen & Peralatan Kelistrikan,Kabelindo Murni Tbk,IDX Live
+KBLV,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Kabel,First Media Tbk,IDX Live
+KBRI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kertas,Kertas Basuki Rachmat Indonesia Tbk,IDX Live
+KDSI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Kedawung Setia Industrial Tbk,IDX Live
+KDTN,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Puri Sentul Permai Tbk,IDX Live
+KEEN,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Kencana Energi Lestari Tbk. ,IDX Live
+KEJU,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Produk Susu Olahan,PT Mulia Boga Raya Tbk,IDX Live
+KETR,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Kabel,PT Ketrosden Triasmitra Tbk,IDX Live
+KIAS,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Keramika Indonesia Assosiasi Tbk,IDX Live
+KICI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Perlengkapan Rumah Tangga,Kedaung Indah Can Tbk,IDX Live
+KIJA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Kawasan Industri Jababeka Tbk,IDX Live
+KING,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Profesional,Jasa Personalia,PT Hoffmen Cleanindo Tbk,IDX Live
+KINO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,PT Kino Indonesia Tbk,IDX Live
+KIOS,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Kioson Komersial Indonesia Tbk.,IDX Live
+KJEN,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Krida Jaringan Nusantara Tbk.,IDX Live
+KKES,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Kusuma Kemindo Sentosa Tbk,IDX Live
+KKGI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Resource Alam Indonesia Tbk,IDX Live
+KLAS,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Pelayaran Kurnia Lautan Semesta Tbk,IDX Live
+KLBF,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,Kalbe Farma Tbk,IDX Live
+KLIN,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Barang Rumah Tangga,PT Klinko Karya Imaji Tbk,IDX Live
+KMDS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Makanan,PT Kurniamitra Duta Sentosa Tbk.,IDX Live
+KMTR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Produk Hutan Lainnya,PT Kirana Megatara Tbk.,IDX Live
+KOBX,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,Kobexindo Tractors Tbk,IDX Live
+KOCI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Kokoh Exa Nusantara,IDX Live
+KOIN,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Kokoh Inti Arebama Tbk,IDX Live
+KOKA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Koka Indonesia Tbk.,IDX Live
+KONI,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Peralatan Kantor,Perdana Bangun Pusaka Tbk,IDX Live
+KOPI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Mitra Energi Persada Tbk,IDX Live
+KOTA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT DMS Propertindo Tbk.,IDX Live
+KPIG,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",MNC Tourism Indonesia Tbk,IDX Live
+KRAS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,Krakatau Steel (Persero) Tbk,IDX Live
+KREN,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Quantum Clovera Investama Tbk.,IDX Live
+KRYA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Bangun Karya Perkasa Jaya Tbk,IDX Live
+KSIX,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Kentanix Supra International Tbk,IDX Live
+KUAS,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,PT Ace Oldfields Tbk,IDX Live
+LABA,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin & Komponen Perindustrian,PT Green Power Group Tbk,IDX Live
+LABS,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT UBC Medical Indonesia Tbk,IDX Live
+LAJU,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Jasa Berdikari Logistics Tbk,IDX Live
+LAND,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Trimitra Propertindo Tbk.,IDX Live
+LAPD,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Supermarket,Leyand International Tbk,IDX Live
+LCGP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Eureka Prima Jakarta Tbk.,IDX Live
+LCKM,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT LCK Global Kedaton Tbk,IDX Live
+LEAD,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Logindo Samudramakmur Tbk.,IDX Live
+LFLO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT Imago Mulia Persada Tbk,IDX Live
+LIFE,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Jiwa,PT MSIG Life Insurance Indonesia Tbk.,IDX Live
+LINK,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Kabel,PT Link Net Tbk.,IDX Live
+LION,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Peralatan Kantor,Lion Metal Works Tbk,IDX Live
+LIVE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Perlengkapan Rumah Tangga,PT Homeco Victoria Makmur Tbk,IDX Live
+LMAS,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,Limas Indonesia Makmur Tbk,IDX Live
+LMAX,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT Lupromax Pelumas Indonesia Tbk.,IDX Live
+LMPI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Perlengkapan Rumah Tangga,Langgeng Makmur Industri Tbk,IDX Live
+LMSH,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,Lionmesh Prima Tbk,IDX Live
+LOPI,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Logisticsplus International Tbk,IDX Live
+LPCK,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Lippo Cikarang Tbk,IDX Live
+LPGI,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Lippo General Insurance Tbk,IDX Live
+LPIN,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,Multi Prima Sejahtera Tbk,IDX Live
+LPKR,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Lippo Karawaci Tbk,IDX Live
+LPLI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Star Pacific Tbk,IDX Live
+LPPF,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Department Store,Department Store,PT MDS Retailing Tbk,IDX Live
+LPPS,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Investasi,PT Lenox Pasifik Investama Tbk,IDX Live
+LRNA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,PT Eka Sari Lorena Transport Tbk.,IDX Live
+LSIP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PP London Sumatra Indonesia Tbk,IDX Live
+LTLS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Lautan Luas Tbk,IDX Live
+LUCK,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,Perangkat Komputer,Perangkat Komputer,PT Sentral Mitra Informatika Tbk.,IDX Live
+LUCY,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Lima Dua Lima Tiga Tbk,IDX Live
+MABA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Marga Abhinaya Abadi Tbk,IDX Live
+MAGP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Multi Agro Gemilang Plantation Tbk,IDX Live
+MAHA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Mandiri Herindo Adiperkasa Tbk,IDX Live
+MAIN,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",Malindo Feedmill Tbk,IDX Live
+MANG,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Manggung Polahraya Tbk,IDX Live
+MAPA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Pakaian & Tekstil,PT Map Aktif Adiperkasa Tbk,IDX Live
+MAPB,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Map Boga Adiperkasa Tbk,IDX Live
+MAPI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Pakaian & Tekstil,PT Mitra Adiperkasa Tbk,IDX Live
+MARI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran,PT Mahaka Radio Integra Tbk.,IDX Live
+MARK,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin & Komponen Perindustrian,PT Mark Dynamics Indonesia Tbk.,IDX Live
+MASB,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Multiarta Sentosa Tbk,IDX Live
+MAXI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Maxindo Karya Anugerah Tbk,IDX Live
+MAYA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Mayapada Internasional Tbk,IDX Live
+MBAP,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Mitrabara Adiperdana Tbk,IDX Live
+MBMA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Merdeka Battery Materials Tbk,IDX Live
+MBSS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,Mitrabahtera Segara Sejati Tbk,IDX Live
+MBTO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,Martina Berto Tbk,IDX Live
+MCAS,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT M Cash Integrasi Tbk,IDX Live
+MCOL,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Prima Andalan Mandiri Tbk,IDX Live
+MCOR,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank China Construction Bank Indonesia Tbk,IDX Live
+MDIA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran,PT Intermedia Capital Tbk.,IDX Live
+MDIY,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Barang Rumah Tangga,PT Daya Intiguna Yasa Tbk,IDX Live
+MDKA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Merdeka Copper Gold Tbk.,IDX Live
+MDKI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Emdeki Utama Tbk,IDX Live
+MDLA,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Medela Potentia Tbk,IDX Live
+MDLN,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Modernland Realty Tbk.,IDX Live
+MDRN,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Peralatan Kantor,Modern Internasional Tbk,IDX Live
+MEDC,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Produksi & Penyulingan Minyak & Gas,PT Medco Energi Internasional Tbk,IDX Live
+MEDS,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Hetzer Medical Indonesia Tbk,IDX Live
+MEGA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Mega Tbk,IDX Live
+MEJA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT Harta Djaya Karya Tbk,IDX Live
+MENN,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,"Perangkat, Instrumen & Komponen Elektronik",Perangkat & Instrumen Elektronik,PT Menn Teknologi Indonesia Tbk.,IDX Live
+MERI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pendidikan & Jasa Penunjang,Jasa Pendidikan,PT Merry Riana Edukasi Tbk,IDX Live
+MERK,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,Merck Tbk,IDX Live
+META,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Jalan Tol & Rel,Nusantara Infrastructure Tbk,IDX Live
+MFMI,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Jasa Pendukung Bisnis,Multifiling Mitra Indonesia Tbk,IDX Live
+MGLV,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT NexAI Digital Infrastruktur Tbk,IDX Live
+MGNA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Magna Investama Mandiri Tbk,IDX Live
+MGRO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Mahkota Group Tbk.,IDX Live
+MHKI,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Jasa Pengelolaan Lingkungan & Sarana,PT Multi Hanna Kreasindo Tbk,IDX Live
+MICE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Perlengkapan Rumah Tangga,Multi Indocitra Tbk,IDX Live
+MIDI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Supermarket,Midi Utama Indonesia Tbk,IDX Live
+MIKA,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Mitra Keluarga Karyasehat Tbk.,IDX Live
+MINA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Sanurhasta Mitra Tbk.,IDX Live
+MINE,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Sinar Terang Mandiri Tbk,IDX Live
+MIRA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,Mitra International Resources Tbk,IDX Live
+MITI,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,Mitra Investindo Tbk,IDX Live
+MKAP,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Multikarya Asia Pasifik Raya Tbk,IDX Live
+MKNT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Distributor Barang Konsumen,Distributor Barang Konsumen,PT Mitra Komunikasi Nusantara Tbk.,IDX Live
+MKPI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Metropolitan Kentjana Tbk,IDX Live
+MKTR,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Menthobi Karyatama Raya Tbk,IDX Live
+MLBI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Keras,Multi Bintang Indonesia Tbk,IDX Live
+MLIA,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Mulia Industrindo Tbk,IDX Live
+MLPL,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Supermarket,Multipolar Tbk,IDX Live
+MLPT,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT Multipolar Technology Tbk.,IDX Live
+MMIX,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Multi Medika Internasional Tbk,IDX Live
+MMLP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Mega Manunggal Property Tbk.,IDX Live
+MNCN,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran,Media Nusantara Citra Tbk,IDX Live
+MOLI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Madusari Murni Indah Tbk.,IDX Live
+MORA,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Kabel,PT Ekamas Mora Republik Tbk,IDX Live
+MPIX,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Mitra Pedagang Indonesia Tbk.,IDX Live
+MPMX,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Otomotif,PT Mitra Pinasthika Mustika Tbk.,IDX Live
+MPOW,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Megapower Makmur Tbk.,IDX Live
+MPPA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Supermarket,Matahari Putra Prima Tbk,IDX Live
+MPRO,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Maha Properti Indonesia Tbk.,IDX Live
+MPXL,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT MPX Logistics International Tbk,IDX Live
+MRAT,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,Mustika Ratu Tbk,IDX Live
+MREI,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Reasuransi,Maskapai Reasuransi Indonesia Tbk,IDX Live
+MSIE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Multisarana Intan Eduka Tbk,IDX Live
+MSIN,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Hiburan & Film,Hiburan & Film,PT MNC Digital Entertainment Tbk,IDX Live
+MSJA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,PT Multi Spunindo Jaya Tbk.,IDX Live
+MSKY,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran Berbayar,MNC Sky Vision Tbk,IDX Live
+MSTI,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,Peralatan Jaringan,Peralatan Jaringan,PT Mastersystem Infotama Tbk.,IDX Live
+MTDL,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,Perangkat Komputer,Perangkat Komputer,Metrodata Electronics Tbk,IDX Live
+MTEL,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Dayamitra Telekomunikasi Tbk,IDX Live
+MTFN,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,Capitalinc Investment Tbk,IDX Live
+MTLA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Metropolitan Land Tbk,IDX Live
+MTMH,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Murni Sadar Tbk,IDX Live
+MTPS,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Meta Epsi Tbk.,IDX Live
+MTRA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Mitra Pemuda Tbk.,IDX Live
+MTSM,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Metro Realty Tbk,IDX Live
+MTWI,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,PT Malacca Trust Wuwungan Insurance Tbk.,IDX Live
+MUTU,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Profesional,Jasa Penelitian & Konsultasi,PT Mutuagung Lestari Tbk,IDX Live
+MYOH,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",Samindo Resources Tbk,IDX Live
+MYOR,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Mayora Indah Tbk,IDX Live
+MYTX,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Asia Pacific Investama Tbk.,IDX Live
+NAIK,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Perdagangan Aneka Barang Perindustrian,Perdagangan Aneka Barang Perindustrian,PT Adiwarna Anugerah Abadi Tbk,IDX Live
+NANO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,PT Nanotech Indonesia Global Tbk,IDX Live
+NASA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Andalan Perkasa Abadi Tbk,IDX Live
+NASI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Wahana Inti Makmur Tbk,IDX Live
+NATO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Olympus Strategic Indonesia Tbk,IDX Live
+NAYZ,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Hassana Boga Sejahtera Tbk,IDX Live
+NCKL,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Trimegah Bangun Persada Tbk.,IDX Live
+NELY,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,Pelayaran Nelly Dwi Putri Tbk,IDX Live
+NEST,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Esta Indonesia Tbk,IDX Live
+NETV,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran,PT MDTV Media Technologies Tbk,IDX Live
+NFCX,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT NFC Indonesia Tbk,IDX Live
+NICE,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Adhi Kartiko Pratama Tbk,IDX Live
+NICK,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Investasi,PT Charnic Capital Tbk.,IDX Live
+NICL,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT PAM Mineral Tbk,IDX Live
+NIKL,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,Pelat Timah Nusantara Tbk,IDX Live
+NINE,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,Perangkat Komputer,Perangkat Komputer,PT Techno9 Indonesia Tbk,IDX Live
+NIRO,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,City Retail Developments Tbk,IDX Live
+NISP,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank OCBC NISP Tbk,IDX Live
+NOBU,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Nationalnobu Tbk.,IDX Live
+NPGF,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Pertanian,PT Nusa Palapa Gemilang Tbk,IDX Live
+NRCA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Nusa Raya Cipta Tbk.,IDX Live
+NSSS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Nusantara Sawit Sejahtera Tbk,IDX Live
+NTBK,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,PT Nusatama Berkah Tbk,IDX Live
+NUSA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Sinergi Megah Internusa Tbk,IDX Live
+NZIA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,"PT Nusantara Almazia, Tbk.",IDX Live
+OASA,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Maharaksa Biru Energi Tbk,IDX Live
+OBAT,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Brigit Biofarmaka Teknologi Tbk,IDX Live
+OBMD,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Khusus,PT OBM Drilchem Tbk,IDX Live
+OCAP,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,ONIX CAPITAL Tbk,IDX Live
+OILS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Indo Oil Perkasa Tbk,IDX Live
+OKAS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Ancora Indonesia Resources Tbk,IDX Live
+OLIV,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT Atlas Nexus Group Tbk,IDX Live
+OMED,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Jayamas Medica Industri Tbk,IDX Live
+OMRE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Indonesia Prima Property Tbk,IDX Live
+OPMS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Baja & Besi,PT Optima Prima Metal Sinergi Tbk.,IDX Live
+PACK,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Abadi Nusantara Hijau Investama Tbk,IDX Live
+PADA,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Profesional,Jasa Personalia,PT Personel Alih Daya Tbk,IDX Live
+PADI,G,Financials,Keuangan,IDXFINANCE,Jasa Investasi,Jasa Investasi,Bank Investasi & Perantara Perdagangan,Minna Padi Investama Sekuritas Tbk,IDX Live
+PALM,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Investasi,PT Provident Investasi Bersama Tbk,IDX Live
+PAMG,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Bima Sakti Pertiwi Tbk,IDX Live
+PANI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Pantai Indah Kapuk Dua Tbk.,IDX Live
+PANR,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Agen Perjalanan,Panorama Sentrawisata Tbk,IDX Live
+PANS,G,Financials,Keuangan,IDXFINANCE,Jasa Investasi,Jasa Investasi,Bank Investasi & Perantara Perdagangan,Panin Sekuritas Tbk,IDX Live
+PART,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT Cipta Perdana Lancar Tbk,IDX Live
+PBID,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Panca Budi Idaman Tbk,IDX Live
+PBRX,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,"Pakaian, Aksesoris, & Tas",Pan Brothers Tbk,IDX Live
+PBSA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Paramita Bangun Sarana Tbk,IDX Live
+PCAR,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Makanan,PT Prima Cakrawala Abadi Tbk,IDX Live
+PDES,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Agen Perjalanan,Destinasi Tirta Nusantara Tbk,IDX Live
+PDPP,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Primadaya Plastisindo Tbk,IDX Live
+PEGE,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Panca Global Kapital Tbk.,IDX Live
+PEHA,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Phapros Tbk,IDX Live
+PEVE,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Penta Valent Tbk,IDX Live
+PGAS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Perusahaan Gas Negara (Persero) Tbk,IDX Live
+PGEO,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Pertamina Geothermal Energy Tbk,IDX Live
+PGJO,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Bahtera Bumi Raya Tbk,IDX Live
+PGLI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,Pembangunan Graha Lestari Indah Tbk,IDX Live
+PGUN,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Pradiksi Gunatama Tbk,IDX Live
+PICO,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Pelangi Indah Canindo Tbk,IDX Live
+PIPA,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,PT Oxala Energy International Tbk,IDX Live
+PJAA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Fasilitas Rekreasi & Olah Raga,Pembangunan Jaya Ancol Tbk,IDX Live
+PJHB,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Pelayaran Jaya Hidup Baru Tbk,IDX Live
+PKPK,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",Paragon Karya Perkasa Tbk,IDX Live
+PLAN,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Planet Properindo Jaya Tbk,IDX Live
+PLAS,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,Polaris Investama Tbk,IDX Live
+PLIN,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Plaza Indonesia Realty Tbk,IDX Live
+PMJS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Otomotif,PT Putra Mandiri Jembar Tbk,IDX Live
+PMMP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Panca Mitra Multiperdana Tbk.,IDX Live
+PMUI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Distributor Barang Konsumen,Distributor Barang Konsumen,PT Prima Multi Usaha Indonesia Tbk,IDX Live
+PNBN,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,Bank Pan Indonesia Tbk,IDX Live
+PNBS,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Panin Dubai Syariah Tbk.,IDX Live
+PNGO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT AEP Pinago Plantations Tbk,IDX Live
+PNIN,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,Paninvest Tbk,IDX Live
+PNLF,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Jiwa,Panin Financial Tbk,IDX Live
+PNSE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",Pudjiadi & Sons Tbk,IDX Live
+POLA,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,PT Pool Advista Finance Tbk.,IDX Live
+POLI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Pollux Hotels Group Tbk,IDX Live
+POLL,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Pollux Properties Indonesia Tbk.,IDX Live
+POLU,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,"Pakaian, Aksesoris, & Tas",PT Golden Flower Tbk.,IDX Live
+POLY,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,Asia Pacific Fibers Tbk,IDX Live
+POOL,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,Pool Advista Indonesia Tbk,IDX Live
+PORT,J,Infrastructures,Infrastruktur,IDXINFRA,Infrastruktur Transportasi,Operator Infrastruktur Transportasi,Operator Pelabuhan,PT Nusantara Pelabuhan Handal Tbk.,IDX Live
+POSA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Bliss Properti Indonesia Tbk.,IDX Live
+POWR,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Cikarang Listrindo Tbk.,IDX Live
+PPGL,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Prima Globalindo Logistik Tbk.,IDX Live
+PPRE,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT PP Presisi Tbk.,IDX Live
+PPRI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Paperocks Indonesia Tbk.,IDX Live
+PPRO,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT PP Properti Tbk.,IDX Live
+PRAY,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Famon Awal Bros Sedaya Tbk,IDX Live
+PRDA,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Prodia Widyahusada Tbk.,IDX Live
+PRDL,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Prodia Diagnostic Line Tbk,IDX Live
+PRIM,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Royal Prima Tbk.,IDX Live
+PSAB,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Emas,J RESOURCES ASIA PASIFIK Tbk,IDX Live
+PSAT,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Pancaran Samudera Transport Tbk,IDX Live
+PSDN,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Prasidha Aneka Niaga Tbk,IDX Live
+PSGO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Palma Serasih Tbk.,IDX Live
+PSKT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Red Planet Indonesia Tbk,IDX Live
+PSSI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT IMC Pelita Logistik Tbk,IDX Live
+PTBA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT Bukit Asam (Persero) Tbk,IDX Live
+PTDU,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Djasa Ubersakti Tbk,IDX Live
+PTIS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,Indo Straits Tbk,IDX Live
+PTMP,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin & Komponen Perindustrian,PT Mitra Pack Tbk.,IDX Live
+PTMR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Master Print Tbk,IDX Live
+PTPP,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PP (Persero) Tbk,IDX Live
+PTPS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Pulau Subur Tbk.,IDX Live
+PTPW,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Pratama Widya Tbk.,IDX Live
+PTRO,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",Petrosea Tbk,IDX Live
+PTSN,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,Peralatan Jaringan,Peralatan Jaringan,Sat Nusapersada Tbk,IDX Live
+PTSP,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,Pioneerindo Gourmet International Tbk,IDX Live
+PUDP,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Pudjiadi Prestige Tbk,IDX Live
+PURA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Putra Rajawali Kencana Tbk.,IDX Live
+PURE,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Trinitan Metals and Minerals Tbk,IDX Live
+PURI,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Puri Global Sukses Tbk,IDX Live
+PWON,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Pakuwon Jati Tbk,IDX Live
+PYFA,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Pyridam Farma Tbk,IDX Live
+PZZA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Sarimelati Kencana Tbk.,IDX Live
+RAAM,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Hiburan & Film,Hiburan & Film,PT Tripar Multivision Plus Tbk.,IDX Live
+RAFI,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,Rumah Makan,PT Sari Kreasi Boga Tbk,IDX Live
+RAJA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,Rukun Raharja Tbk,IDX Live
+RALS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Department Store,Department Store,Ramayana Lestari Sentosa Tbk,IDX Live
+RANC,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Supermarket,Supra Boga Lestari Tbk,IDX Live
+RANS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Hiburan & Film,Hiburan & Film,PT Rans Entertainmen Indonesia Tbk,IDX Live
+RATU,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Produksi & Penyulingan Minyak & Gas,PT Raharja Energi Cepu Tbk,IDX Live
+RBMS,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Ristia Bintang Mahkotasejati Tbk,IDX Live
+RCCC,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Utama Radar Cahaya Tbk,IDX Live
+RDTX,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Roda Vivatex Tbk,IDX Live
+REAL,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Repower Asia Indonesia Tbk.,IDX Live
+RELF,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Graha Mitra Asia Tbk. ,IDX Live
+RELI,G,Financials,Keuangan,IDXFINANCE,Jasa Investasi,Jasa Investasi,Bank Investasi & Perantara Perdagangan,Reliance Sekuritas Indonesia Tbk,IDX Live
+RGAS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Kian Santang Muliatama Tbk.,IDX Live
+RICY,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,"Pakaian, Aksesoris, & Tas",Ricky Putra Globalindo Tbk,IDX Live
+RIGS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,Rig Tenders Tbk,IDX Live
+RIMO,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Rimo International Lestari Tbk.,IDX Live
+RISE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Jaya Sukses Makmur Sentosa Tbk.,IDX Live
+RLCO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Abadi Lestari Indonesia Tbk,IDX Live
+RMKE,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT RMK Energy Tbk,IDX Live
+RMKO,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Royaltama Mulia Kontraktorindo Tbk.,IDX Live
+ROCK,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Rockfields Properti Indonesia Tbk.,IDX Live
+RODA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Pikko Land Development Tbk,IDX Live
+RONY,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Aracord Nusantara Group Tbk,IDX Live
+ROTI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Nippon Indosari Corpindo Tbk,IDX Live
+RSCH,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Charlie Hospital Semarang Tbk.,IDX Live
+RSGK,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Kedoya Adyaraya Tbk,IDX Live
+RUIS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",Radiant Utama Interinsco Tbk,IDX Live
+RUNS,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Perangkat Lunak,Perangkat Lunak,PT Global Sukses Solusi Tbk,IDX Live
+SAFE,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,Steady Safe Tbk,IDX Live
+SAGE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Saptausaha Gemilangindah Tbk,IDX Live
+SAME,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,Sarana Meditama Metropolitan Tbk,IDX Live
+SAMF,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Pertanian,PT Saraswanti Anugerah Makmur Tbk.,IDX Live
+SAPX,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Satria Antaran Prima Tbk.,IDX Live
+SATU,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Kota Satu Properti Tbk.,IDX Live
+SBAT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Sejahtera Bintang Abadi Textile Tbk.,IDX Live
+SBMA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Surya Biru Murni Acetylene Tbk,IDX Live
+SCCO,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Kelistrikan,Komponen & Peralatan Kelistrikan,PT Supreme Cable Manufacturing & Commerce Tbk,IDX Live
+SCMA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran,Surya Citra Media Tbk,IDX Live
+SCNP,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Peralatan Rumah Tangga,PT Selaras Citra Nusantara Perkasa Tbk,IDX Live
+SCPI,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Organon Pharma Indonesia Tbk,IDX Live
+SDMU,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,Sidomulyo Selaras Tbk,IDX Live
+SDPC,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Obat-obatan,Millennium Pharmacon International Tbk,IDX Live
+SDRA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Bank Woori Saudara Indonesia 1906 Tbk,IDX Live
+SEMA,A,Energy,Energi,IDXENERGY,Energi Alternatif,Peralatan Energi Alternatif,Peralatan Energi Alternatif,PT Semacom Integrated Tbk,IDX Live
+SFAN,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Surya Fajar Capital Tbk,IDX Live
+SGER,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Sumber Global Energy Tbk.,IDX Live
+SGRO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Prime Agri Resources Tbk,IDX Live
+SHID,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",Hotel Sahid Jaya Tbk,IDX Live
+SHIP,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Sillo Maritime Perdana Tbk,IDX Live
+SICO,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Sigma Energy Compressindo Tbk,IDX Live
+SIDO,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Industri Jamu Dan Farmasi Sido Muncul Tbk,IDX Live
+SILO,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,PT Siloam International Hospitals Tbk.,IDX Live
+SIMA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Siwani Makmur Tbk,IDX Live
+SIMP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Salim Ivomas Pratama Tbk,IDX Live
+SINI,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,PT Singaraja Putra Tbk.,IDX Live
+SIPD,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Sreeya Sewu Indonesia Tbk,IDX Live
+SKBM,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Sekar Bumi Tbk,IDX Live
+SKLT,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Sekar Laut Tbk,IDX Live
+SKRN,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,PT Superkrane Mitra Utama Tbk,IDX Live
+SKYB,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Perangkat Lunak,Perangkat Lunak,PT Northcliff Citranusa Indonesia Tbk.,IDX Live
+SLIS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Elektronik,PT Gaya Abadi Sempurna Tbk,IDX Live
+SMAR,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Sinar Mas Agro Resources and Technology Tbk,IDX Live
+SMBR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Semen Baturaja (Persero) Tbk,IDX Live
+SMCB,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Solusi Bangun Indonesia Tbk,IDX Live
+SMDM,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,Suryamas Dutamakmur Tbk,IDX Live
+SMDR,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,Samudera Indonesia Tbk,IDX Live
+SMGA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Sumber Mineral Global Abadi Tbk,IDX Live
+SMGR,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,Semen Indonesia (Persero) Tbk,IDX Live
+SMIL,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,PT Sarana Mitra Luas Tbk,IDX Live
+SMKL,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Satyamitra Kemas Lestari Tbk,IDX Live
+SMKM,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Sumber Mas Konstruksi Tbk,IDX Live
+SMLE,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Sinergi Multi Lestarindo Tbk,IDX Live
+SMMA,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Sinar Mas Multiartha Tbk,IDX Live
+SMMT,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,GOLDEN EAGLE ENERGY Tbk,IDX Live
+SMRA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Summarecon Agung Tbk,IDX Live
+SMRU,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",SMR Utama Tbk,IDX Live
+SMSM,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,Selamat Sempurna Tbk,IDX Live
+SNLK,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Sunter Lakeside Hotel Tbk.,IDX Live
+SOCI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Penyimpanan & Distribusi Minyak & Gas,PT Soechi Lines Tbk. ,IDX Live
+SOFA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT Solusi Environment Asia Tbk,IDX Live
+SOHO,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,PT Soho Global Health Tbk,IDX Live
+SOLA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Xolare RCR Energy Tbk,IDX Live
+SONA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Department Store,Department Store,Sona Topas Tourism Industry Tbk,IDX Live
+SOSS,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Profesional,Jasa Personalia,PT ALSOK Indonesia Services Tbk,IDX Live
+SOTS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Satria Mega Kencana Tbk.,IDX Live
+SOUL,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Ringan,PT Mitra Tirta Buwana Tbk,IDX Live
+SPMA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Suparma Tbk,IDX Live
+SPRE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Soraya Berjaya Indonesia Tbk,IDX Live
+SPTO,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,PT Surya Pertiwi Tbk,IDX Live
+SQMI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Emas,Wilton Makmur Indonesia Tbk,IDX Live
+SRAJ,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Penyedia Jasa Kesehatan,Penyedia Jasa Kesehatan,Sejahteraraya Anugrahjaya Tbk,IDX Live
+SRIL,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,PT Sri Rejeki Isman Tbk,IDX Live
+SRSN,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Indo Acidatama Tbk,IDX Live
+SRTG,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Investasi,PT Saratoga Investama Sedaya Tbk.,IDX Live
+SSIA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Surya Semesta Internusa Tbk,IDX Live
+SSMS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Sawit Sumbermas Sarana Tbk. ,IDX Live
+SSTM,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,Sunson Textile Manufacturer Tbk,IDX Live
+STAA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Sumber Tani Agung Resources Tbk,IDX Live
+STAR,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Buana Artha Anugerah Tbk.,IDX Live
+STRK,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Keras,PT Lovina Beach Brewery Tbk.,IDX Live
+STTP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Siantar Top Tbk,IDX Live
+SUGI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Produksi & Penyulingan Minyak & Gas,Sugih Energy Tbk,IDX Live
+SULI,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kayu,PT SLJ Global Tbk,IDX Live
+SUNI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Sunindo Pratama Tbk,IDX Live
+SUPA,G,Financials,Keuangan,IDXFINANCE,Bank,Bank,Bank,PT Super Bank Indonesia Tbk,IDX Live
+SUPR,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,Solusi Tunas Pratama Tbk,IDX Live
+SURE,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Minyak & Gas,Produksi & Penyulingan Minyak & Gas,PT Super Energy Tbk.,IDX Live
+SURI,F,Healthcare,Kesehatan,IDXHEALTH,Jasa & Peralatan Kesehatan,Peralatan & Perlengkapan Kesehatan,Penyedia & Distribusi Perlengkapan Kesehatan,PT Maja Agung Latexindo Tbk.,IDX Live
+SWAT,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kertas,PT Sriwahana Adityakarta Tbk.,IDX Live
+SWID,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Jasa Konsumen,Pariwisata & Rekreasi,"Hotel, Resor & Kapal Pesiar",PT Saraswanti Indoland Development Tbk,IDX Live
+TALF,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,PT Tunas Alfin Tbk,IDX Live
+TAMA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Lancartama Sejati Tbk.,IDX Live
+TAMU,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Pelayaran Tamarin Samudra Tbk.,IDX Live
+TAPG,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Triputra Agro Persada Tbk.,IDX Live
+TARA,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Agung Semesta Sejahtera Tbk,IDX Live
+TAXI,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,Express Transindo Utama Tbk,IDX Live
+TAYS,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Jaya Swarasa Agung Tbk,IDX Live
+TBIG,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,PT Tower Bersama Infrastructure Tbk,IDX Live
+TBLA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Tunas Baru Lampung Tbk,IDX Live
+TBMS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Tembaga,Tembaga Mulia Semanan Tbk,IDX Live
+TCID,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,Mandom Indonesia Tbk,IDX Live
+TCPI,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Transcoal Pacific Tbk.,IDX Live
+TDPM,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Tianrong Chemicals Industry Tbk,IDX Live
+TEBE,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,PT Dana Brata Luhur Tbk.,IDX Live
+TECH,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Jasa & Konsultan TI,Jasa & Konsultan TI,PT Indosterling Technomedia Tbk,IDX Live
+TELE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Distributor Barang Konsumen,Distributor Barang Konsumen,PT Omni Inovasi Indonesia Tbk,IDX Live
+TFAS,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Telefast Indonesia Tbk.,IDX Live
+TFCO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,Tifico Fiber Indonesia Tbk,IDX Live
+TGKA,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,Tigaraksa Satria Tbk,IDX Live
+TGRA,J,Infrastructures,Infrastruktur,IDXINFRA,Utilitas,Utilitas Listrik,Utilitas Listrik,PT Terregra Asia Energy,IDX Live
+TGUK,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Produk Susu Olahan,PT Platinum Wahab Nusantara Tbk.,IDX Live
+TIFA,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,KDB Tifa Finance Tbk,IDX Live
+TINS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT TIMAH (Persero) Tbk,IDX Live
+TIRA,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Perdagangan Aneka Barang Perindustrian,Perdagangan Aneka Barang Perindustrian,Tira Austenite Tbk,IDX Live
+TIRT,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kayu,Tirta Mahakam Resources Tbk,IDX Live
+TKIM,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Perhutanan & Kertas,Kertas,Pabrik Kertas Tjiwi Kimia Tbk,IDX Live
+TLDN,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,PT Teladan Prima Agro Tbk,IDX Live
+TLKM,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi,Jasa Telekomunikasi Terintegrasi,PT Telkom Indonesia (Persero) Tbk,IDX Live
+TMAS,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Temas Tbk.,IDX Live
+TMPO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penerbitan,Tempo Inti Media Tbk,IDX Live
+TNCA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Trimuda Nuansa Citra Tbk.,IDX Live
+TOBA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,PT TBS Energi Utama Tbk,IDX Live
+TOOL,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Barang Rumah Tangga,PT Rohartindo Nusantara Luas Tbk,IDX Live
+TOPS,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Totalindo Eka Persada Tbk.,IDX Live
+TOSK,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Topindo Solusi Komunika Tbk.,IDX Live
+TOTL,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,Total Bangun Persada Tbk,IDX Live
+TOTO,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Produk & Perlengkapan Bangunan,Produk & Perlengkapan Bangunan,Surya Toto Indonesia Tbk,IDX Live
+TOWR,J,Infrastructures,Infrastruktur,IDXINFRA,Telekomunikasi,Jasa Telekomunikasi Nirkabel,Jasa Telekomunikasi Nirkabel,Sarana Menara Nusantara Tbk,IDX Live
+TOYS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rekreasi,Peralatan Olah Raga & Barang Hobi,Peralatan Olah Raga & Barang Hobi,PT Sunindo Adipersada Tbk.,IDX Live
+TPIA,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,PT Chandra Asri Pacific Tbk,IDX Live
+TPMA,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Distribusi Batu Bara,Trans Power Marine Tbk,IDX Live
+TRAM,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara",Batu Bara,Produksi Batu Bara,Trada Alam Minera Tbk.,IDX Live
+TRGU,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Cerestar Indonesia Tbk,IDX Live
+TRIL,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Perdagangan Aneka Barang Perindustrian,Perdagangan Aneka Barang Perindustrian,Triwira Insanlestari Tbk,IDX Live
+TRIM,G,Financials,Keuangan,IDXFINANCE,Jasa Investasi,Jasa Investasi,Bank Investasi & Perantara Perdagangan,PT Trimegah Sekuritas Indonesia Tbk,IDX Live
+TRIN,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Perintis Triniti Properti Tbk,IDX Live
+TRIO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Elektronik,Trikomsel Oke Tbk,IDX Live
+TRIS,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,"Pakaian, Aksesoris, & Tas",Trisula International Tbk,IDX Live
+TRJA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,PT Transkon Jaya Tbk.,IDX Live
+TRON,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Perangkat Lunak,Perangkat Lunak,PT Teknologi Karya Digital Nusa Tbk.,IDX Live
+TRST,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Trias Sentosa Tbk,IDX Live
+TRUE,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Triniti Dinamik Tbk,IDX Live
+TRUK,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT Guna Timur Raya Tbk.,IDX Live
+TRUS,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,Trust Finance Indonesia Tbk,IDX Live
+TSPC,F,Healthcare,Kesehatan,IDXHEALTH,Farmasi & Riset Kesehatan,Farmasi,Farmasi,Tempo Scan Pacific Tbk,IDX Live
+TUGU,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,PT Asuransi Tugu Pratama Indonesia Tbk,IDX Live
+TYRE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Ban,PT King Tire Indonesia Tbk.,IDX Live
+UANG,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Pakuan Tbk,IDX Live
+UCID,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,PT Uni-Charm Indonesia Tbk.,IDX Live
+UDNG,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Agro Bahari Nusantara Tbk,IDX Live
+UFOE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Elektronik,PT Damai Sejahtera Abadi Tbk,IDX Live
+ULTJ,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Produk Susu Olahan,PT Ultrajaya Milk Industry & Trading Company Tbk,IDX Live
+UNIC,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Barang Kimia,Barang Kimia Dasar,Unggul Indah Cahaya Tbk,IDX Live
+UNIQ,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Ulima Nitra Tbk,IDX Live
+UNIT,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Pakaian & Barang Mewah,Pakaian & Barang Mewah,Tekstil,Nusantara Inti Corpora Tbk,IDX Live
+UNSP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Bakrie Sumatera Plantations Tbk,IDX Live
+UNTD,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rekreasi,Peralatan Olah Raga & Barang Hobi,Peralatan Olah Raga & Barang Hobi,PT Terang Dunia Internusa Tbk.,IDX Live
+UNTR,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,United Tractors Tbk,IDX Live
+UNVR,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,Unilever Indonesia Tbk,IDX Live
+URBN,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Urban Jakarta Propertindo Tbk.,IDX Live
+UVCR,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Trimegah Karya Pratama Tbk.,IDX Live
+VAST,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Vastland Indonesia Tbk,IDX Live
+VERN,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Hiburan & Film,Hiburan & Film,PT Verona Indah Pictures Tbk,IDX Live
+VICI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Produk Rumah Tangga Tidak Tahan Lama,Produk Perawatan Tubuh,Produk Perawatan Tubuh,PT Victoria Care Indonesia Tbk,IDX Live
+VICO,G,Financials,Keuangan,IDXFINANCE,Perusahaan Holding & Investasi,Perusahaan Holding & Investasi,Perusahaan Holding Keuangan,PT Victoria Investama Tbk.,IDX Live
+VINS,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,PT Victoria Insurance Tbk.,IDX Live
+VISI,C,Industrials,Perindustrian,IDXINDUST,Jasa Perindustrian,Jasa Komersial,Peralatan Kantor,PT Satu Visi Putra Tbk.,IDX Live
+VIVA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Media & Hiburan,Media,Penyiaran,PT Visi Media Asia Tbk,IDX Live
+VKTR,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Otomotif & Komponen Otomotif,Komponen Otomotif,Suku Cadang Otomotif,PT VKTR Teknologi Mobilitas Tbk,IDX Live
+VOKS,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Kelistrikan,Komponen & Peralatan Kelistrikan,Voksel Electric Tbk,IDX Live
+VRNA,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,PT Mizuho Leasing Indonesia Tbk,IDX Live
+VTNY,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,PT Venteny Fortuna International Tbk,IDX Live
+WAPO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,Perkebunan & Tanaman Pangan,Wahana Pronatural Tbk,IDX Live
+WBSA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Logistik & Pengantaran,Logistik & Pengantaran,Logistik & Pengantaran,PT BSA Logistics Indonesia Tbk,IDX Live
+WEGE,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Wijaya Karya Bangunan Gedung Tbk.,IDX Live
+WEHA,K,Transportation & Logistics,Transportasi & Logistik,IDXTRANS,Transportasi,Pengangkutan Darat Penumpang,Transportasi Jalanan,PT WEHA Transportasi Indonesia Tbk,IDX Live
+WGSH,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Perangkat Lunak,Perangkat Lunak,PT Wira Global Solusi Tbk,IDX Live
+WICO,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Perdagangan Ritel Barang Primer,Perdagangan Ritel Barang Primer,Ritel & Distributor Makanan,Wicaksana Overseas International Tbk,IDX Live
+WIDI,C,Industrials,Perindustrian,IDXINDUST,Barang Perindustrian,Mesin,Mesin Konstruksi & Kendaraan Berat,PT Widiant Jaya Krenindo Tbk.,IDX Live
+WIFI,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Aplikasi & Jasa Internet,Aplikasi & Jasa Internet,PT Solusi Sinergi Digital Tbk,IDX Live
+WIIM,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Rokok,Rokok,Rokok,Wismilak Inti Makmur Tbk,IDX Live
+WIKA,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Wijaya Karya (Persero) Tbk,IDX Live
+WINE,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Minuman,Minuman Keras,PT Hatten Bali Tbk,IDX Live
+WINR,H,Properties & Real Estate,Properti & Real Estat,IDXPROPERT,Properti & Real Estat,Pengelola & Pengembang Real Estat,Pengembang & Operator Real Estat,PT Winner Nusantara Jaya Tbk,IDX Live
+WINS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",Wintermar Offshore Marine Tbk,IDX Live
+WIRG,I,Technology,Teknologi,IDXTECHNO,Perangkat Lunak & Jasa TI,Perangkat Lunak,Perangkat Lunak,PT WIR ASIA Tbk,IDX Live
+WMPP,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Widodo Makmur Perkasa Tbk,IDX Live
+WMUU,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Produk Makanan Pertanian,"Ikan, Daging & Produk Unggas",PT Widodo Makmur Unggas Tbk,IDX Live
+WOMF,G,Financials,Keuangan,IDXFINANCE,Jasa Pembiayaan,Pembiayaan Konsumen,Pembiayaan Konsumen,PT Wahana Ottomitra Multiartha Tbk,IDX Live
+WOOD,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Barang Rumah Tangga,Barang Rumah Tangga,Produsen Furnitur Rumah,PT Integra Indocabinet Tbk,IDX Live
+WOWS,A,Energy,Energi,IDXENERGY,"Minyak, Gas & Batu Bara","Pendukung Minyak, Gas & Batu Bara","Jasa & Perlengkapan Minyak, Gas & Batu Bara",PT Ginting Jaya Energi Tbk,IDX Live
+WSBP,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,PT Waskita Beton Precast Tbk.,IDX Live
+WSKT,J,Infrastructures,Infrastruktur,IDXINFRA,Konstruksi Bangunan,Konstruksi Bangunan,Konstruksi Bangunan,PT Waskita Karya (Persero) Tbk,IDX Live
+WTON,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Material Konstruksi,Material Konstruksi,Wijaya Karya Beton,IDX Live
+YELO,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Distributor Barang Konsumen,Distributor Barang Konsumen,PT Yelooo Integra Datanet Tbk.,IDX Live
+YOII,G,Financials,Keuangan,IDXFINANCE,Asuransi,Asuransi,Asuransi Umum,PT Asuransi Digital Bersama Tbk,IDX Live
+YPAS,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Wadah & Kemasan,Wadah & Kemasan,Yanaprima Hastapersada Tbk,IDX Live
+YULE,G,Financials,Keuangan,IDXFINANCE,Jasa Investasi,Jasa Investasi,Bank Investasi & Perantara Perdagangan,Yulie Sekuritas Indonesia Tbk,IDX Live
+YUPI,D,Consumer Non-Cyclicals,Barang Konsumen Primer,IDXNONCYC,Makanan & Minuman,Makanan Olahan,Makanan Olahan,PT Yupi Indo Jelly Gum Tbk,IDX Live
+ZATA,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Pakaian & Tekstil,PT Bersama Zatta Jaya Tbk,IDX Live
+ZBRA,C,Industrials,Perindustrian,IDXINDUST,Perusahaan Holding Multi Sektor,Perusahaan Holding Multi-sektor,Perusahaan Holding Multi-sektor,PT Dosni Roha Indonesia Tbk,IDX Live
+ZINC,B,Basic Materials,Barang Baku,IDXBASIC,Barang Baku,Logam & Mineral,Logam & Mineral Lainnya,PT Kapuas Prima Coal Tbk,IDX Live
+ZONE,E,Consumer Cyclicals,Barang Konsumen Non-Primer,IDXCYCLIC,Perdagangan Ritel,Ritel Khusus,Ritel Pakaian & Tekstil,PT Mega Perintis Tbk.,IDX Live
+ZYRX,I,Technology,Teknologi,IDXTECHNO,Perangkat Keras & Peralatan Teknologi,Perangkat Komputer,Perangkat Komputer,PT Zyrexindo Mandiri Buana Tbk,IDX Live
