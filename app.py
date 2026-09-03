@@ -25,7 +25,7 @@ from sector_data import (
 )
 
 
-APP_VERSION = "6.2.4"
+APP_VERSION = "6.2.5"
 
 st.set_page_config(
     page_title=f"Antolui Screener V{APP_VERSION}",
@@ -924,7 +924,7 @@ def render_scanner():
         section("Scan Summary")
         s1, s2, s3, s4, s5, s6 = st.columns(6)
         s1.metric("Universe", meta["universe"])
-        s2.metric("Downloaded", meta["downloaded"])
+        s2.metric("Data OK", meta["downloaded"], f'{meta["downloaded"]}/{meta["universe"]}')
         s3.metric("Candidates", meta["passed"])
         s4.metric("IHSG", meta["benchmark_label"])
         s5.metric("IHSG Score", f'{meta["benchmark_score"]:.0f}/100')
@@ -1061,7 +1061,7 @@ def render_scanner():
     else:
         max_top = min(100, len(view))
         # Streamlit sliders require min_value < max_value.
-        # When exactly 5 rows survive the filters, V6.2.3 produced
+        # When exactly 5 rows survive the filters, the older scanner produced
         # min=5 and max=5 which raises StreamlitInvalidMinMaxError.
         if max_top <= 5:
             top_n = max_top

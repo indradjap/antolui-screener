@@ -43,12 +43,38 @@ def load_benchmark(symbol: str = "^JKSE", period: str = "2y"):
     return load_symbol(symbol, period=period, add_jk_suffix=False)
 
 
-def download_universe(tickers, period: str = "2y", chunk_size: int = 60):
-    """Batch-download many IDX symbols efficiently.
+def _clean_downloaded_frame(raw: pd.DataFrame, symbol: str | None = None, single: bool = False) -> pd.DataFrame:
+    """Normalize one yf.download response without changing the V5.9 fetch method."""
+    required = ["Open", "High", "Low", "Close", "Volume"]
+    df = raw.copy()
+    if isinstance(df.columns, pd.MultiIndex):
+        if symbol is not None:
+            lvl0 = set(map(str, df.columns.get_level_values(0)))
+            lvl1 = set(map(str, df.columns.get_level_values(1)))
+            if symbol in lvl1:
+                df = df.xs(symbol, axis=1, level=1).copy()
+            elif symbol in lvl0:
+                df = df.xs(symbol, axis=1, level=0).copy()
+            elif single:
+                df.columns = df.columns.get_level_values(0)
+            else:
+                raise KeyError("symbol not present in batch response")
+        elif single:
+            df.columns = df.columns.get_level_values(0)
+    missing = [c for c in required if c not in df.columns]
+    if missing:
+        raise ValueError(f"missing columns {missing}")
+    df = df[required].dropna(how="any")
+    df = df[df["Close"] > 0]
+    return df
 
-    Returns (frames, errors), where frames maps normalized Yahoo symbols to OHLCV frames.
-    The scanner can therefore download hundreds of symbols in chunks instead of one HTTP
-    request per stock.
+
+def download_universe(tickers, period: str = "2y", chunk_size: int = 60):
+    """V5.9 Yahoo fetch + recovery for partial batch responses.
+
+    Primary path remains exactly the V5.9 yf.download batch call. Yahoo can occasionally
+    return only part of a large batch on Streamlit Cloud. Any missing symbol is therefore
+    retried individually using the same yf.download method used by V5.9 Single Stock.
     """
     symbols = []
     seen = set()
@@ -60,7 +86,7 @@ def download_universe(tickers, period: str = "2y", chunk_size: int = 60):
 
     frames = {}
     errors = {}
-    required = ["Open", "High", "Low", "Close", "Volume"]
+    scanner_min_bars = 60
 
     for start in range(0, len(symbols), max(int(chunk_size), 1)):
         chunk = symbols[start:start + max(int(chunk_size), 1)]
@@ -81,38 +107,40 @@ def download_universe(tickers, period: str = "2y", chunk_size: int = 60):
 
         if raw is None or raw.empty:
             for s in chunk:
-                errors[s] = "empty download"
+                errors[s] = "empty batch download"
             continue
 
         for s in chunk:
             try:
-                if isinstance(raw.columns, pd.MultiIndex):
-                    lvl0 = set(map(str, raw.columns.get_level_values(0)))
-                    lvl1 = set(map(str, raw.columns.get_level_values(1)))
-                    if s in lvl1:
-                        df = raw.xs(s, axis=1, level=1).copy()
-                    elif s in lvl0:
-                        df = raw.xs(s, axis=1, level=0).copy()
-                    elif len(chunk) == 1:
-                        df = raw.copy()
-                        df.columns = df.columns.get_level_values(0)
-                    else:
-                        raise KeyError("symbol not present in batch response")
-                else:
-                    if len(chunk) != 1:
-                        raise KeyError("unexpected non-MultiIndex batch response")
-                    df = raw.copy()
-
-                missing = [c for c in required if c not in df.columns]
-                if missing:
-                    raise ValueError(f"missing columns {missing}")
-                df = df[required].dropna(how="any")
-                df = df[df["Close"] > 0]
-                if len(df) < 220:
+                df = _clean_downloaded_frame(raw, symbol=s, single=(len(chunk) == 1))
+                if len(df) < scanner_min_bars:
                     raise ValueError(f"only {len(df)} bars")
                 frames[s] = df
+                errors.pop(s, None)
             except Exception as e:
                 errors[s] = str(e)
+
+    # Streamlit/Yahoo occasionally returns a partial MultiIndex batch. Recover only the
+    # missing symbols, still with the original V5.9 yf.download path (no alternate API).
+    missing_symbols = [s for s in symbols if s not in frames]
+    for s in missing_symbols:
+        try:
+            raw = yf.download(
+                s,
+                period=period,
+                interval="1d",
+                auto_adjust=False,
+                progress=False,
+            )
+            if raw is None or raw.empty:
+                raise ValueError("empty individual retry")
+            df = _clean_downloaded_frame(raw, symbol=s, single=True)
+            if len(df) < scanner_min_bars:
+                raise ValueError(f"only {len(df)} bars")
+            frames[s] = df
+            errors.pop(s, None)
+        except Exception as e:
+            errors[s] = f"individual retry: {e}"
 
     return frames, errors
 
