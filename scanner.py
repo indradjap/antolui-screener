@@ -14,6 +14,8 @@ from market_context import build_market_context
 from decision import combine_decision
 from scanner_scoring import liquidity_score, rank_candidate
 from patterns import detect_patterns
+from quick_pick import build_quick_pick
+from analyst_intelligence import build_analyst_intelligence
 
 
 def liquidity_metrics(raw_df: pd.DataFrame) -> Dict[str, Any]:
@@ -50,6 +52,7 @@ def analyze_frame(
     include_bearish: bool = False,
     sector_map: Optional[Dict[str, dict]] = None,
     sector_proxies: Optional[Dict[str, pd.DataFrame]] = None,
+    scan_mode: str = "Antolui Ranking",
 ) -> tuple[dict | None, str | None]:
     liq = liquidity_metrics(raw_df)
     if liq["avg_value_20"] < min_avg_value:
@@ -67,7 +70,10 @@ def analyze_frame(
             return None, "technical AVOID"
 
         plan = build_trade_plan(stock, technical["phase"]["label"])
-        if float(plan.get("rr_tp2", 0) or 0) < min_rr2:
+        # Antolui Ranking uses the normal structural plan RR gate. Quick Pick can
+        # build a different setup-specific stop/entry (for example MA20 reclaim),
+        # so its RR is validated after the Quick Pick plan is created.
+        if scan_mode != "Quick Pick" and float(plan.get("rr_tp2", 0) or 0) < min_rr2:
             return None, f"RR2 < {min_rr2:.1f}"
 
         ticker_code = str(ticker).upper().replace(".JK", "")
@@ -85,6 +91,13 @@ def analyze_frame(
         pattern = detect_patterns(stock)
         entry_plan = build_entry_plan(stock, technical, context, pattern, plan)
         timing_plan = build_timing_plan(stock, technical, context, pattern, plan, entry_plan)
+        quick_pick = build_quick_pick(stock, technical, context, pattern, plan, entry_plan, timing_plan)
+        analyst_ai = build_analyst_intelligence(stock, technical, context, pattern, plan, entry_plan, timing_plan, quick_pick)
+        if scan_mode == "Quick Pick":
+            if analyst_ai.get("setup") in {None, "NONE"}:
+                return None, "no nearby actionable Quick Pick setup"
+            if float(analyst_ai.get("rr_tp2", 0) or 0) < min_rr2:
+                return None, f"Quick RR < {min_rr2:.1f}"
         rank = rank_candidate(technical, context, decision, plan, liq, ticker=ticker, pattern=pattern)
 
         x = stock.iloc[-1]
@@ -156,6 +169,53 @@ def analyze_frame(
             "Supply Low": entry_plan.get("nearest_supply",{}).get("zone_low_exec") if entry_plan.get("nearest_supply") else None,
             "Supply High": entry_plan.get("nearest_supply",{}).get("zone_high_exec") if entry_plan.get("nearest_supply") else None,
             "Supply Score": entry_plan.get("nearest_supply",{}).get("score") if entry_plan.get("nearest_supply") else None,
+            "Quick Eligible": "YES" if quick_pick.get("eligible") else "NO",
+            "Quick Score": quick_pick.get("score", 0),
+            "Quick Setup": quick_pick.get("setup", "NONE"),
+            "Quick Status": quick_pick.get("status", "NO SETUP"),
+            "Quick Entry": quick_pick.get("entry"),
+            "Quick Entry Low": quick_pick.get("entry_low"),
+            "Quick Entry High": quick_pick.get("entry_high"),
+            "Quick Trigger": quick_pick.get("trigger"),
+            "Major Confirm": quick_pick.get("major_confirmation"),
+            "Quick Stop": quick_pick.get("stop"),
+            "Quick TP1": quick_pick.get("tp1"),
+            "Quick TP2": quick_pick.get("tp2"),
+            "Quick TP3": quick_pick.get("tp3"),
+            "Quick RR": quick_pick.get("rr_tp2", 0),
+            "Quick Dist %": quick_pick.get("distance_pct"),
+            "Quick Volume": quick_pick.get("volume_label", "N/A"),
+            "Quick Volume Score": quick_pick.get("volume_score", 0),
+            "Quick Momentum Score": quick_pick.get("momentum_score", 0),
+            "Stoch RSI": quick_pick.get("stoch_rsi", "N/A"),
+            "Quick Reason": quick_pick.get("reason", ""),
+            "Quick Note": quick_pick.get("setup_note", ""),
+            "AI Eligible": "YES" if analyst_ai.get("eligible") else "NO",
+            "Conviction Score": analyst_ai.get("conviction", 0),
+            "Analyst Score": analyst_ai.get("analyst_score", 0),
+            "Edge Score": analyst_ai.get("edge_score", 0),
+            "AI Setup": analyst_ai.get("setup", "NONE"),
+            "AI Status": analyst_ai.get("status", "NO SETUP"),
+            "Entry Style": analyst_ai.get("entry_style", "N/A"),
+            "AI Entry": analyst_ai.get("entry"),
+            "AI Entry Low": analyst_ai.get("entry_low"),
+            "AI Entry High": analyst_ai.get("entry_high"),
+            "AI Trigger": analyst_ai.get("trigger"),
+            "AI Major Confirm": analyst_ai.get("major_confirmation"),
+            "AI Stop": analyst_ai.get("stop"),
+            "AI TP1": analyst_ai.get("tp1"),
+            "AI TP2": analyst_ai.get("tp2"),
+            "AI TP3": analyst_ai.get("tp3"),
+            "AI RR": analyst_ai.get("rr_tp2", 0),
+            "AI Dist %": analyst_ai.get("distance_pct"),
+            "MACD State": (analyst_ai.get("macd") or {}).get("label", "N/A"),
+            "Stoch State": (analyst_ai.get("stoch") or {}).get("label", "N/A"),
+            "Trendline Score": (analyst_ai.get("trendline") or {}).get("score", 0),
+            "Trendline Support": (analyst_ai.get("trendline") or {}).get("support"),
+            "Rejection Score": analyst_ai.get("rejection_score", 0),
+            "Pullback Score": analyst_ai.get("pullback_score", 0),
+            "AI Reason": analyst_ai.get("reason", ""),
+            "AI Note": analyst_ai.get("note", ""),
             "Final Action": decision["final_action"],
             "Structure": technical["structure"]["label"],
             "Phase": technical["phase"]["label"],
@@ -203,6 +263,7 @@ def scan_frames(
     progress_callback: Optional[Callable[[int, int, str], None]] = None,
     sector_map: Optional[Dict[str, dict]] = None,
     sector_proxies: Optional[Dict[str, pd.DataFrame]] = None,
+    scan_mode: str = "Antolui Ranking",
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     rows, skipped = [], []
     items = list(frames.items())
@@ -217,6 +278,7 @@ def scan_frames(
             include_bearish=include_bearish,
             sector_map=sector_map,
             sector_proxies=sector_proxies,
+            scan_mode=scan_mode,
         )
         if row is not None:
             rows.append(row)
@@ -229,10 +291,18 @@ def scan_frames(
         result["_super_sort"] = result["Super Setup"].eq("YES").astype(int)
         result["_priority_sort"] = result["Priority"].eq("YES").astype(int)
         result["_buy_now_sort"] = result["Execution"].eq("BUY NOW").astype(int)
-        result = result.sort_values(
-            ["_eligible_sort", "_buy_now_sort", "Timing Score", "_super_sort", "_priority_sort", "Scanner Score", "Pattern Score"],
-            ascending=[False, False, False, False, False, False, False],
-        ).drop(columns=["_eligible_sort", "_buy_now_sort", "_super_sort", "_priority_sort"]).reset_index(drop=True)
+        if scan_mode == "Quick Pick" and "Conviction Score" in result.columns:
+            result["_ai_ready_sort"] = result["AI Status"].eq("READY").astype(int)
+            result["_ai_eligible_sort"] = result["AI Eligible"].eq("YES").astype(int)
+            result = result.sort_values(
+                ["_ai_eligible_sort", "_ai_ready_sort", "Conviction Score", "Analyst Score", "Edge Score", "AI RR", "Scanner Score"],
+                ascending=[False, False, False, False, False, False, False],
+            ).drop(columns=["_eligible_sort", "_buy_now_sort", "_super_sort", "_priority_sort", "_ai_ready_sort", "_ai_eligible_sort"]).reset_index(drop=True)
+        else:
+            result = result.sort_values(
+                ["_eligible_sort", "_buy_now_sort", "Timing Score", "_super_sort", "_priority_sort", "Scanner Score", "Quick Score", "Pattern Score"],
+                ascending=[False, False, False, False, False, False, False, False],
+            ).drop(columns=["_eligible_sort", "_buy_now_sort", "_super_sort", "_priority_sort"]).reset_index(drop=True)
         result.insert(0, "Rank", range(1, len(result) + 1))
 
     return result, pd.DataFrame(skipped)
@@ -249,6 +319,7 @@ def scan_universe(
     progress_callback: Optional[Callable[[int, int, str], None]] = None,
     sector_map: Optional[Dict[str, dict]] = None,
     sector_proxies: Optional[Dict[str, pd.DataFrame]] = None,
+    scan_mode: str = "Antolui Ranking",
 ):
     frames, download_errors = download_universe(tickers, period=period, chunk_size=chunk_size)
     result, skipped = scan_frames(
@@ -260,6 +331,7 @@ def scan_universe(
         progress_callback=progress_callback,
         sector_map=sector_map,
         sector_proxies=sector_proxies,
+        scan_mode=scan_mode,
     )
     err_rows = [{"Ticker": k.replace(".JK", ""), "Reason": v} for k, v in download_errors.items()]
     if err_rows:

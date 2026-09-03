@@ -1,4 +1,27 @@
-# Antolui Screener V5.9 — Consolidated Build
+# Antolui Screener V6.0 — Analyst Intelligence
+
+V6.0 upgrades **Quick Pick** from a universal technical score into a **setup-adaptive reasoning system**. It was designed from the recurring decision hierarchy observed in analyst stock-pick examples supplied by the user, while preserving an independent Antolui validation layer rather than blindly copying any broker call.
+
+## V6.0 Analyst Intelligence
+
+Quick Pick now reasons in two layers:
+
+1. **Analyst-style layer (62%)** — price structure first, then the confirmation that is relevant to that particular setup. Breakouts care more about volume; MA20 reclaims care more about momentum turns; support/trendline rebounds care more about location, MACD state, Stoch RSI exhaustion, rejection and pullback quality.
+2. **Independent Antolui Edge layer (38%)** — Relative Strength, IHSG/sector context, technical trend quality, execution timing, RR, entry location and nearby supply. This layer can cap conviction when a visually attractive setup has poor asymmetric risk or bad context.
+
+Supported setup families include **Pivot Breakout, Resistance Breakout, MA20 Reclaim, Support Hold Rebound, Pullback Pivot Hold, Trendline Support Rebound, and Base Retest**.
+
+The main scanner ranking in Quick Pick mode is now **Conviction Score**, with separate **Analyst Score** and **Edge Score** for explainability. Trade path output includes Entry Style (EARLY/TRIGGER/RETEST), Entry Zone, Trigger, Major Confirmation, Stop, TP1/TP2/TP3 and RR.
+
+### Research / learning loop
+
+`analyst_pick_history.csv` stores analyst examples and later outcomes. `analyst_learning.py` deliberately does **not** treat selection frequency as proof of edge. Outcome-based Bayesian calibration stays neutral until a setup family has at least 10 resolved examples, and any learned score adjustment is capped at ±5 points. This is intended to prevent overfitting while the one-month research sample grows.
+
+See `ANTOLUI_ANALYST_INTELLIGENCE_V6.md` and `TEST_RESULTS_V6_ANALYST_INTELLIGENCE.md`.
+
+---
+
+## Previous V5.9 consolidated notes
 
 V5.9 is the single consolidated build of Antolui Screener. It combines the latest technical, pattern, execution, market-context, news, and UI changes in one package.
 
@@ -130,6 +153,14 @@ Outputs:
 - Distance to Entry
 - Supply Headroom
 
+
+### 10. Quick Pick universe scanner
+Quick Pick is an execution-first mode for finding stocks that are actionable near the current price. It looks for Pivot Breakout, MA20 Reclaim, Base Retest, Resistance Breakout, and Pullback Rebound setups. Price structure defines the trade; volume, momentum, Stoch RSI, RS and market context act as confirmation.
+
+Quick Pick outputs `Quick Score | Setup | Status | Entry Zone | Trigger | Major Confirm | SL | TP1 | TP2 | TP3 | Volume | Stoch RSI | RS | RR`.
+
+See `QUICK_PICK_V5_9.md`.
+
 ## Compact scanner UI
 
 The main scanner intentionally prioritizes only high-value fields:
@@ -146,13 +177,12 @@ The main scanner intentionally prioritizes only high-value fields:
 2. Strict Tier rules: **ON**
 3. Min Avg Traded Value: **Rp5B** baseline
 4. Min RR: **1.5–2.0** depending on strictness
-5. Start with presets:
-   - BUY NOW
-   - SUPER SETUP
-   - WAIT BREAKOUT
-   - WAIT RETEST
-6. Prioritize strong RS, realistic RR, good liquidity, and valid entry timing.
-7. Enrich only top candidates with News/Narrative to keep the scanner responsive.
+5. Choose scanner mode:
+   - **Quick Pick** for actionable near-term setups
+   - **Antolui Ranking** for overall setup quality
+6. In Antolui Ranking, useful presets include BUY NOW, SUPER SETUP, WAIT BREAKOUT and WAIT RETEST.
+7. Prioritize strong RS, realistic RR, good liquidity, and valid entry timing.
+8. Enrich only top candidates with News/Narrative to keep the scanner responsive.
 
 ## Run
 
@@ -164,6 +194,7 @@ streamlit run app.py
 ## Tests
 
 ```bash
+python tests_quick_pick.py
 python tests_ticks.py
 python tests_patterns.py
 python tests_patterns_v57.py

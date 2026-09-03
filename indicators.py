@@ -24,6 +24,15 @@ def add_indicators(df):
 
     df["RSI14"] = RSIIndicator(df["Close"], 14).rsi()
 
+    # Stochastic RSI confirmation for execution-style / Quick Pick setups.
+    # Price structure remains primary; this is only a momentum confirmation.
+    rsi_low = df["RSI14"].rolling(14).min()
+    rsi_high = df["RSI14"].rolling(14).max()
+    stoch_den = (rsi_high - rsi_low).replace(0, pd.NA)
+    df["StochRSI"] = ((df["RSI14"] - rsi_low) / stoch_den) * 100.0
+    df["StochRSI_K"] = df["StochRSI"].rolling(3).mean()
+    df["StochRSI_D"] = df["StochRSI_K"].rolling(3).mean()
+
     m = MACD(df["Close"], 26, 12, 9)
     df["MACD"] = m.macd()
     df["MACD_signal"] = m.macd_signal()

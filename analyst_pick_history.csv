@@ -1,0 +1,7 @@
+date,ticker,broker,setup_family,entry_low,entry_high,trigger,major_confirmation,stop,tp1,tp2,tp3,explicit_indicators,analyst_note,tp1_before_sl,tp2_before_sl,tp3_before_sl,sl_before_tp1
+2026-09-02,DEWA,Phintraco,PIVOT BREAKOUT,452,456,456,490,440,480,500,520,"Volume spike","Pivot breakout opens rebound continuation; 490 confirms bullish continuation.",,,,
+2026-09-02,AMMN,Phintraco,SUPPORT HOLD REBOUND,4360,4360,,4520,4200,4700,5000,,"MACD positive area","Correction held above 4300 support; breakout 4520 confirms continuation.",,,,
+2026-09-02,CDIA,Phintraco,MA20 RECLAIM,680,695,680,,665,735,760,,"Stoch RSI golden cross; MA20 breakout","MA20 breakout confirms rebound continuation.",,,,
+2026-09-02,PTRO,Phintraco,BASE RETEST,5200,5200,5200,,5000,5500,5800,6000,"Bullish pennant","Returned to prior base; previous trading plan reused.",,,,
+2026-09-03,BUVA,Phintraco,PULLBACK PIVOT HOLD,750,750,,800,720,795,840,,"MACD golden cross","Normal pullback after testing 800; hold 750 pivot; >800 confirms rebound.",,,,
+2026-09-03,MBMA,Phintraco,TRENDLINE SUPPORT REBOUND,525,525,,,510,560,585,615,"Stoch RSI oversold; MACD positive area","Testing trendline support 520; hold implies early rebound.",,,,

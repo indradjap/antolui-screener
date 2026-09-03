@@ -15,14 +15,17 @@ from scanner import scan_frames
 from universe import load_seed_universe, load_quality_200, parse_ticker_text, parse_uploaded_csv
 from quality_universe import tier_counts
 from patterns import detect_patterns
+from quick_pick import build_quick_pick
+from analyst_intelligence import build_analyst_intelligence
 from news_narrative import fetch_news_bundle, enrich_rows_with_news
+from analyst_learning import research_summary
 from sector_data import (
     fetch_idx_sector_directory, resolve_sector_info, sector_map_for_tickers,
     build_equal_weight_sector_proxies, load_official_sector_index_history,
 )
 
 
-APP_VERSION = "5.9"
+APP_VERSION = "6.0"
 
 st.set_page_config(
     page_title=f"Antolui Screener V{APP_VERSION}",
@@ -358,6 +361,8 @@ def run_single_analysis(ticker, benchmark_symbol):
     decision = combine_decision(technical, context)
     entry_plan = build_entry_plan(stock, technical, context, pattern, plan)
     timing_plan = build_timing_plan(stock, technical, context, pattern, plan, entry_plan)
+    quick_pick = build_quick_pick(stock, technical, context, pattern, plan, entry_plan, timing_plan)
+    analyst_ai = build_analyst_intelligence(stock, technical, context, pattern, plan, entry_plan, timing_plan, quick_pick)
 
     return {
         "ticker": ticker_full,
@@ -369,6 +374,8 @@ def run_single_analysis(ticker, benchmark_symbol):
         "decision": decision,
         "entry_plan": entry_plan,
         "timing_plan": timing_plan,
+        "quick_pick": quick_pick,
+        "analyst_ai": analyst_ai,
         "sector_info": sector_info.to_dict(),
         "sector_history_symbol": sector_history_symbol,
         "sector_directory_source": sector_dir_source,
@@ -407,6 +414,8 @@ def render_single_stock():
     sector_info = data.get("sector_info") or {}
     entry_plan = data.get("entry_plan") or build_entry_plan(stock, technical, context, pattern, plan)
     timing_plan = data.get("timing_plan") or build_timing_plan(stock, technical, context, pattern, plan, entry_plan)
+    quick_pick = data.get("quick_pick") or build_quick_pick(stock, technical, context, pattern, plan, entry_plan, timing_plan)
+    analyst_ai = data.get("analyst_ai") or build_analyst_intelligence(stock, technical, context, pattern, plan, entry_plan, timing_plan, quick_pick)
 
     active = timing_plan.get("active") or {}
     best = entry_plan.get("best") or {}
@@ -460,6 +469,25 @@ def render_single_stock():
         f'Confidence **{timing_plan.get("confidence","LOW")}** • Confirmation **{float(active.get("confirmation_score",0) or 0):.0f}/100** • '
         f'Trigger **{fmt_price(plan.get("breakout_trigger"))}**'
     )
+
+    section("Analyst Intelligence")
+    a1, a2, a3, a4, a5, a6 = st.columns(6)
+    a1.metric("Conviction", f'{float(analyst_ai.get("conviction",0) or 0):.0f}/100')
+    a2.metric("Analyst", f'{float(analyst_ai.get("analyst_score",0) or 0):.0f}/100')
+    a3.metric("Edge", f'{float(analyst_ai.get("edge_score",0) or 0):.0f}/100')
+    a4.metric("Setup", analyst_ai.get("setup","NONE"))
+    a5.metric("Status", analyst_ai.get("status","NO SETUP"))
+    a6.metric("RR", f'{float(analyst_ai.get("rr_tp2",0) or 0):.2f}x')
+    if analyst_ai.get("setup") not in {None, "NONE"}:
+        st.caption(
+            f'Style **{analyst_ai.get("entry_style","N/A")}** • Entry **{fmt_price(analyst_ai.get("entry_low"))}–{fmt_price(analyst_ai.get("entry_high"))}** • '
+            f'Trigger **{fmt_price(analyst_ai.get("trigger"))}** • Major Confirm **{fmt_price(analyst_ai.get("major_confirmation"))}** • '
+            f'SL **{fmt_price(analyst_ai.get("stop"))}** • TP **{fmt_price(analyst_ai.get("tp1"))} / {fmt_price(analyst_ai.get("tp2"))} / {fmt_price(analyst_ai.get("tp3"))}**'
+        )
+        st.caption(
+            f'MACD **{(analyst_ai.get("macd") or {}).get("label","N/A")}** • Stoch **{(analyst_ai.get("stoch") or {}).get("label","N/A")}** • '
+            f'{analyst_ai.get("reason","")}'
+        )
 
     overview_tab, chart_tab, levels_tab, news_tab = st.tabs(["Overview", "Chart", "Levels & Entry", "News"])
 
@@ -640,6 +668,28 @@ def render_scanner():
     section("IDX Scanner")
     st.caption("Cari setup terbaik berdasarkan technical, pattern, sector/market context, entry timing, dan risk/reward.")
 
+    scanner_mode = st.radio(
+        "Scanner Mode",
+        ["Antolui Ranking", "Quick Pick"],
+        horizontal=True,
+        help=(
+            "Antolui Ranking mencari setup terbaik secara keseluruhan. "
+            "Quick Pick memakai setup-adaptive analyst reasoning: tiap setup dinilai dengan confirmation yang berbeda, lalu divalidasi lagi oleh RS, sector/market context, timing, supply headroom, dan RR."
+        ),
+        key="scanner_mode",
+    )
+    if scanner_mode == "Quick Pick":
+        st.markdown(
+            '<div class="ss-action ss-good"><strong>QUICK PICK • ANALYST INTELLIGENCE</strong> &nbsp; '
+            'Setup-first reasoning + independent Antolui edge checks. Breakout, support rebound, MA20 reclaim, pivot pullback, trendline rebound, dan base retest memakai confirmation yang berbeda.</div>',
+            unsafe_allow_html=True,
+        )
+        _research = research_summary()
+        st.caption(
+            f'Research memory: **{_research.get("examples",0)} analyst examples** • **{_research.get("resolved",0)} resolved outcomes**. '
+            'Outcome-based learning stays neutral until a setup has enough resolved examples; it never treats selection frequency as proof of edge.'
+        )
+
     with st.expander("1. Universe & Data", expanded=True):
         c1, c2, c3 = st.columns([1.7, 1, 1])
         with c1:
@@ -682,7 +732,10 @@ def render_scanner():
 
     scan_c1, scan_c2 = st.columns([.8, 3.2])
     scan_clicked = scan_c1.button("SCAN UNIVERSE", type="primary", disabled=(len(tickers) == 0), use_container_width=True)
-    scan_c2.caption("Recommended baseline: Quality 200 • Min liquidity Rp5B • RR ≥1.5 • Strict Tier ON")
+    if scanner_mode == "Quick Pick":
+        scan_c2.caption("Quick Pick baseline: Quality 200 • Min liquidity Rp5B • RR ≥1.5 • Conviction ≥65 • Strict Tier ON")
+    else:
+        scan_c2.caption("Recommended baseline: Quality 200 • Min liquidity Rp5B • RR ≥1.5 • Strict Tier ON")
 
     if scan_clicked:
         try:
@@ -719,6 +772,7 @@ def render_scanner():
                 progress_callback=on_progress,
                 sector_map=scan_sector_map,
                 sector_proxies=sector_proxies,
+                scan_mode=scanner_mode,
             )
 
             if download_errors:
@@ -735,6 +789,7 @@ def render_scanner():
                 "sector_source": sector_source,
                 "sector_mapped": sum(1 for v in scan_sector_map.values() if v.get("sector_code")),
                 "sector_proxies": len(sector_proxies),
+                "scanner_mode": scanner_mode,
             }
         except Exception as e:
             st.exception(e)
@@ -744,6 +799,14 @@ def render_scanner():
     meta = st.session_state.get("scan_meta")
 
     if not isinstance(result, pd.DataFrame):
+        return
+
+    if meta and meta.get("scanner_mode") and meta.get("scanner_mode") != scanner_mode:
+        st.info(f'Result terakhir dibuat dengan mode **{meta.get("scanner_mode")}**. Klik **SCAN UNIVERSE** untuk menjalankan mode **{scanner_mode}**.')
+        return
+
+    if scanner_mode == "Quick Pick" and "Conviction Score" not in result.columns:
+        st.info("Quick Pick Analyst Intelligence belum tersedia pada hasil scan lama. Jalankan **SCAN UNIVERSE** lagi.")
         return
 
     if meta:
@@ -785,18 +848,31 @@ def render_scanner():
             result = enriched
 
     section("Top Setups")
-    preset = st.selectbox(
-        "Screener Preset",
-        [
-            "All Setups", "SUPER SETUP", "VCP / Early VCP", "Flat Base", "Cup & Handle",
-            "Darvas Box", "Bull Flag", "High Tight Flag", "Volatility Squeeze / NR7",
-            "EMA20/50 Golden Cross", "Pre-Golden Cross", "Ascending Triangle",
-            "Pattern Breakout", "Uptrend", "52W Leader", "Priority Setup",
-            "BUY NOW", "WAIT RETEST", "WAIT BREAKOUT", "TOO EXTENDED",
-            "Hot Narrative", "Bullish Catalyst", "Bearish Catalyst", "Rumor Watch"
-        ],
-        help="Pattern preset uses all detected matches, not only the primary pattern."
-    )
+    if scanner_mode == "Quick Pick":
+        preset = "Quick Pick"
+        q1, q2 = st.columns([1, 2])
+        min_quick_score = q1.slider("Min Conviction", 50, 90, 65, 1, help="Conviction blends setup-adaptive analyst reasoning (62%) with independent Antolui edge checks (38%).")
+        quick_statuses = q2.multiselect(
+            "Quick Status",
+            ["READY", "NEAR ENTRY", "WAIT BREAKOUT", "WAIT RECLAIM", "WAIT SUPPORT", "WAIT RETEST", "TOO EXTENDED"],
+            default=["READY", "NEAR ENTRY", "WAIT BREAKOUT", "WAIT RECLAIM", "WAIT SUPPORT", "WAIT RETEST"],
+            help="READY = both analyst-style setup reasoning and Antolui edge checks align near the intended entry area.",
+        )
+    else:
+        min_quick_score = 0
+        quick_statuses = []
+        preset = st.selectbox(
+            "Screener Preset",
+            [
+                "All Setups", "SUPER SETUP", "VCP / Early VCP", "Flat Base", "Cup & Handle",
+                "Darvas Box", "Bull Flag", "High Tight Flag", "Volatility Squeeze / NR7",
+                "EMA20/50 Golden Cross", "Pre-Golden Cross", "Ascending Triangle",
+                "Pattern Breakout", "Uptrend", "52W Leader", "Priority Setup",
+                "BUY NOW", "WAIT RETEST", "WAIT BREAKOUT", "TOO EXTENDED",
+                "Hot Narrative", "Bullish Catalyst", "Bearish Catalyst", "Rumor Watch"
+            ],
+            help="Pattern preset uses all detected matches, not only the primary pattern."
+        )
 
     with st.expander("Result filters", expanded=False):
         f1, f2, f3, f4 = st.columns(4)
@@ -815,7 +891,16 @@ def render_scanner():
         result["Pattern"].isin(patterns) & result["Final Action"].isin(actions) & result["Execution"].isin(executions)
     ].copy()
 
-    if preset == "SUPER SETUP":
+    if scanner_mode == "Quick Pick":
+        view = view[
+            view["AI Eligible"].eq("YES") &
+            (pd.to_numeric(view["Conviction Score"], errors="coerce").fillna(0) >= float(min_quick_score)) &
+            view["AI Status"].isin(quick_statuses)
+        ].copy()
+        status_order = {"READY": 7, "NEAR ENTRY": 6, "WAIT BREAKOUT": 5, "WAIT RECLAIM": 5, "WAIT SUPPORT": 4, "WAIT RETEST": 3, "TOO EXTENDED": 1}
+        view["_quick_status_sort"] = view["AI Status"].map(status_order).fillna(0)
+        view = view.sort_values(["_quick_status_sort", "Conviction Score", "Analyst Score", "Edge Score", "AI RR"], ascending=[False, False, False, False, False]).drop(columns=["_quick_status_sort"])
+    elif preset == "SUPER SETUP":
         view = view[view["Super Setup"].eq("YES")].copy()
     elif preset == "VCP / Early VCP":
         view = view[view["Pattern Matches"].str.contains("VCP", na=False)].copy()
@@ -866,22 +951,65 @@ def render_scanner():
         max_top = min(100, len(view))
         top_n = st.slider("Rows", 5, max(5, max_top), min(20, max(5, max_top)), 5) if max_top >= 5 else max_top
 
-        compact_cols = [
-            "Rank", "Ticker", "Sector", "Tier", "Scanner Score", "Pattern", "Execution", "Timing Score",
-            "Buy Entry", "Buy Entry Type", "Combined RS Score", "Buy Entry RR", "Buy Stop", "TP2"
-        ]
-        for c in ["Narrative Heat", "Catalyst Bias", "Rumor Risk"]:
-            if c in view.columns:
-                compact_cols.append(c)
-        compact_cols = [c for c in compact_cols if c in view.columns]
-        compact = view.head(top_n)[compact_cols]
+        if scanner_mode == "Quick Pick":
+            quick_view = view.head(top_n).copy()
+            quick_view.insert(0, "Quick Rank", range(1, len(quick_view) + 1))
+            quick_view["Entry Zone"] = quick_view.apply(
+                lambda r: f'{fmt_price(r.get("AI Entry Low"))}–{fmt_price(r.get("AI Entry High"))}', axis=1
+            )
+            compact_cols = [
+                "Quick Rank", "Ticker", "Sector", "Conviction Score", "Analyst Score", "Edge Score", "AI Setup", "AI Status", "Entry Style",
+                "Entry Zone", "AI Trigger", "AI Major Confirm", "AI Stop", "AI TP1", "AI TP2", "AI TP3",
+                "MACD State", "Stoch State", "Combined RS Score", "AI RR"
+            ]
+            compact_cols = [c for c in compact_cols if c in quick_view.columns]
+            compact = quick_view[compact_cols]
+        else:
+            compact_cols = [
+                "Rank", "Ticker", "Sector", "Tier", "Scanner Score", "Pattern", "Execution", "Timing Score",
+                "Buy Entry", "Buy Entry Type", "Combined RS Score", "Buy Entry RR", "Buy Stop", "TP2"
+            ]
+            for c in ["Narrative Heat", "Catalyst Bias", "Rumor Risk"]:
+                if c in view.columns:
+                    compact_cols.append(c)
+            compact_cols = [c for c in compact_cols if c in view.columns]
+            compact = view.head(top_n)[compact_cols]
 
         st.dataframe(
             compact, hide_index=True, use_container_width=True,
             height=table_height(len(compact), 560),
             column_config={
                 "Rank": st.column_config.NumberColumn("#", width="small", format="%d"),
+                "Quick Rank": st.column_config.NumberColumn("#", width="small", format="%d"),
                 "Ticker": st.column_config.TextColumn("Ticker", width="small"),
+                "Conviction Score": st.column_config.NumberColumn("Conv.", width="small", format="%.0f"),
+                "Analyst Score": st.column_config.NumberColumn("Analyst", width="small", format="%.0f"),
+                "Edge Score": st.column_config.NumberColumn("Edge", width="small", format="%.0f"),
+                "AI Setup": st.column_config.TextColumn("Setup", width="medium"),
+                "AI Status": st.column_config.TextColumn("Status", width="medium"),
+                "Entry Style": st.column_config.TextColumn("Style", width="small"),
+                "AI Trigger": st.column_config.NumberColumn("Trigger", width="small", format="%.0f"),
+                "AI Major Confirm": st.column_config.NumberColumn("Confirm", width="small", format="%.0f"),
+                "AI Stop": st.column_config.NumberColumn("SL", width="small", format="%.0f"),
+                "AI TP1": st.column_config.NumberColumn("TP1", width="small", format="%.0f"),
+                "AI TP2": st.column_config.NumberColumn("TP2", width="small", format="%.0f"),
+                "AI TP3": st.column_config.NumberColumn("TP3", width="small", format="%.0f"),
+                "AI RR": st.column_config.NumberColumn("RR", width="small", format="%.2f"),
+                "MACD State": st.column_config.TextColumn("MACD", width="medium"),
+                "Stoch State": st.column_config.TextColumn("Stoch", width="medium"),
+                "Quick Score": st.column_config.NumberColumn("Q.Score", width="small", format="%.0f"),
+                "Quick Setup": st.column_config.TextColumn("Setup", width="medium"),
+                "Quick Status": st.column_config.TextColumn("Status", width="medium"),
+                "Entry Zone": st.column_config.TextColumn("Entry Zone", width="medium"),
+                "Quick Trigger": st.column_config.NumberColumn("Trigger", width="small", format="%.0f"),
+                "Major Confirm": st.column_config.NumberColumn("Confirm", width="small", format="%.0f"),
+                "Quick Stop": st.column_config.NumberColumn("SL", width="small", format="%.0f"),
+                "Quick TP1": st.column_config.NumberColumn("TP1", width="small", format="%.0f"),
+                "Quick TP2": st.column_config.NumberColumn("TP2", width="small", format="%.0f"),
+                "Quick TP3": st.column_config.NumberColumn("TP3", width="small", format="%.0f"),
+                "Quick Volume": st.column_config.TextColumn("Volume", width="small"),
+                "Stoch RSI": st.column_config.TextColumn("Stoch RSI", width="medium"),
+                "Quick RR": st.column_config.NumberColumn("RR", width="small", format="%.2f"),
                 "Sector": st.column_config.TextColumn("Sector", width="medium"),
                 "Tier": st.column_config.TextColumn("Tier", width="small"),
                 "Scanner Score": st.column_config.NumberColumn("Score", width="small", format="%.1f"),
@@ -919,6 +1047,12 @@ def render_scanner():
                 "Rank", "Ticker", "Sector", "Sector Code", "Sector Index", "Sector Source", "Tier", "Top Eligible", "Super Setup", "Priority", "Scanner Score", "Grade", "Setup",
                 "Pattern", "Pattern Score", "Pattern Status", "Pattern Pivot", "Pattern Dist %", "Trend", "Trend Score",
                 "52W Leader", "52W Dist %", "NR7", "Volume Dry-Up",
+                "Quick Eligible", "Quick Score", "Quick Setup", "Quick Status", "Quick Entry", "Quick Entry Low", "Quick Entry High",
+                "Quick Trigger", "Major Confirm", "Quick Stop", "Quick TP1", "Quick TP2", "Quick TP3", "Quick RR", "Quick Dist %",
+                "Quick Volume", "Quick Volume Score", "Quick Momentum Score", "Stoch RSI", "Quick Reason", "Quick Note",
+                "AI Eligible", "Conviction Score", "Analyst Score", "Edge Score", "AI Setup", "AI Status", "Entry Style",
+                "AI Entry", "AI Entry Low", "AI Entry High", "AI Trigger", "AI Major Confirm", "AI Stop", "AI TP1", "AI TP2", "AI TP3", "AI RR", "AI Dist %",
+                "MACD State", "Stoch State", "Trendline Score", "Trendline Support", "Rejection Score", "Pullback Score", "AI Reason", "AI Note",
                 "Entry", "Entry Low", "Entry High", "Entry Score", "Entry Type", "Entry Status", "Entry Confidence",
                 "Execution", "Timing Score", "Timing Confidence", "Buy Entry", "Buy Entry Low", "Buy Entry High", "Buy Entry Type", "Buy Stop",
                 "Confirmation Score", "Entry Distance %", "Supply Headroom %",
@@ -933,31 +1067,59 @@ def render_scanner():
 
         st.download_button(
             "Download results CSV", data=result.to_csv(index=False).encode("utf-8"),
-            file_name="antolui_screener_v5_9_scanner_results.csv", mime="text/csv"
+            file_name="antolui_screener_v6_0_scanner_results.csv", mime="text/csv"
         )
 
-        section("Quick Drilldown")
+        section("Ticker Drilldown")
         pick = st.selectbox("Ticker detail", view["Ticker"].tolist(), key="scanner_pick")
         row = view[view["Ticker"] == pick].iloc[0]
         d1, d2, d3, d4, d5, d6 = st.columns(6)
-        d1.metric("Tier / Grade", f'{row["Tier"]} / {row["Grade"]}')
-        d2.metric("Scanner", f'{row["Scanner Score"]:.1f}')
-        d3.metric("Execution", row.get("Execution", "N/A"))
-        d4.metric("Timing", f'{float(row.get("Timing Score",0) or 0):.0f}/100')
-        d5.metric("Buy Entry", fmt_price(row.get("Buy Entry")))
-        d6.metric("RR", f'{float(row.get("Buy Entry RR",0) or 0):.2f}x')
-        action_banner(row.get("Execution", row["Final Action"]), row.get("Timing Reason", row["Reason"]))
+        if scanner_mode == "Quick Pick":
+            d1.metric("Conviction", f'{float(row.get("Conviction Score",0) or 0):.0f}/100')
+            d2.metric("Analyst", f'{float(row.get("Analyst Score",0) or 0):.0f}/100')
+            d3.metric("Edge", f'{float(row.get("Edge Score",0) or 0):.0f}/100')
+            d4.metric("Setup", row.get("AI Setup", "N/A"))
+            d5.metric("Status", row.get("AI Status", "N/A"))
+            d6.metric("RR", f'{float(row.get("AI RR",0) or 0):.2f}x')
+            action_banner(row.get("AI Status", "N/A"), row.get("AI Reason", ""))
+        else:
+            d1.metric("Tier / Grade", f'{row["Tier"]} / {row["Grade"]}')
+            d2.metric("Scanner", f'{row["Scanner Score"]:.1f}')
+            d3.metric("Execution", row.get("Execution", "N/A"))
+            d4.metric("Timing", f'{float(row.get("Timing Score",0) or 0):.0f}/100')
+            d5.metric("Buy Entry", fmt_price(row.get("Buy Entry")))
+            d6.metric("RR", f'{float(row.get("Buy Entry RR",0) or 0):.2f}x')
+            action_banner(row.get("Execution", row["Final Action"]), row.get("Timing Reason", row["Reason"]))
 
         dl, dr = st.columns([1, 1])
         with dl:
-            st.caption(
-                f'Sector: **{row.get("Sector","Unknown")}** • Phase: **{row["Phase"]}** • Momentum: **{row["Momentum"]}** • '
-                f'Pattern: **{row["Pattern Score"]:.0f}** • RS: **{float(row.get("Combined RS Score", row.get("RS Score",0)) or 0):.0f}**'
-            )
-            st.caption(
-                f'Active entry {fmt_price(row.get("Buy Entry Low"))}–{fmt_price(row.get("Buy Entry High"))} • Demand {fmt_price(row.get("Demand Low"))}–{fmt_price(row.get("Demand High"))} • Stop {fmt_price(row.get("Buy Stop"))} • TP2 {fmt_price(row.get("TP2"))}'
-            )
+            if scanner_mode == "Quick Pick":
+                st.caption(
+                    f'Style **{row.get("Entry Style","N/A")}** • Entry **{fmt_price(row.get("AI Entry Low"))}–{fmt_price(row.get("AI Entry High"))}** • '
+                    f'Trigger **{fmt_price(row.get("AI Trigger"))}** • Major Confirm **{fmt_price(row.get("AI Major Confirm"))}** • SL **{fmt_price(row.get("AI Stop"))}**'
+                )
+                st.caption(
+                    f'TP1 **{fmt_price(row.get("AI TP1"))}** • TP2 **{fmt_price(row.get("AI TP2"))}** • TP3 **{fmt_price(row.get("AI TP3"))}** • '
+                    f'MACD **{row.get("MACD State","N/A")}** • Stoch **{row.get("Stoch State","N/A")}** • RS **{float(row.get("Combined RS Score",0) or 0):.0f}**'
+                )
+                st.caption(row.get("AI Note", ""))
+            else:
+                st.caption(
+                    f'Sector: **{row.get("Sector","Unknown")}** • Phase: **{row["Phase"]}** • Momentum: **{row["Momentum"]}** • '
+                    f'Pattern: **{row["Pattern Score"]:.0f}** • RS: **{float(row.get("Combined RS Score", row.get("RS Score",0)) or 0):.0f}**'
+                )
+                st.caption(
+                    f'Active entry {fmt_price(row.get("Buy Entry Low"))}–{fmt_price(row.get("Buy Entry High"))} • Demand {fmt_price(row.get("Demand Low"))}–{fmt_price(row.get("Demand High"))} • Stop {fmt_price(row.get("Buy Stop"))} • TP2 {fmt_price(row.get("TP2"))}'
+                )
         with dr:
+            if scanner_mode == "Quick Pick":
+                st.caption(
+                    f'Analyst-style **{float(row.get("Analyst Score",0) or 0):.0f}** • Independent Edge **{float(row.get("Edge Score",0) or 0):.0f}** • '
+                    f'Trendline **{float(row.get("Trendline Score",0) or 0):.0f}** • Pullback **{float(row.get("Pullback Score",0) or 0):.0f}** • Rejection **{float(row.get("Rejection Score",0) or 0):.0f}**'
+                )
+                st.caption(
+                    'Quick Pick V6 does not apply the same indicator recipe to every stock. Each setup uses its own relevant confirmations; the independent Edge layer then checks RS, market/sector context, timing, RR and nearby supply.'
+                )
             news_details = st.session_state.get("scan_news_details", {})
             bundle = news_details.get(str(pick)) if isinstance(news_details, dict) else None
             if bundle:
