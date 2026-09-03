@@ -1,4 +1,6 @@
-# Antolui Screener V6.0 — Analyst Intelligence
+> V6.1 refines V6 with a more resilient data layer, degraded-mode market context, support-reversal/candlestick intelligence, gap-fill targets, base-formation logic, and psychological-level confluence.
+
+# Antolui Screener V6.1 — Refined Analyst Intelligence
 
 V6.0 upgrades **Quick Pick** from a universal technical score into a **setup-adaptive reasoning system**. It was designed from the recurring decision hierarchy observed in analyst stock-pick examples supplied by the user, while preserving an independent Antolui validation layer rather than blindly copying any broker call.
 

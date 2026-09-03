@@ -105,6 +105,89 @@ def _candle_rejection_score(df: pd.DataFrame) -> float:
     return round(_clamp(45.0 * close_loc + 35.0 * lower_wick + 20.0 * bullish_body), 1)
 
 
+def _candle_state(df: pd.DataFrame) -> Dict[str, Any]:
+    x = df.iloc[-1]
+    p = df.iloc[-2] if len(df) > 1 else x
+    hi, lo, close, opn = (_num(x.get("High")), _num(x.get("Low")), _num(x.get("Close")), _num(x.get("Open")))
+    rng = max(hi - lo, 1e-9)
+    body = abs(close - opn) / rng
+    lower_wick = (min(opn, close) - lo) / rng
+    upper_wick = (hi - max(opn, close)) / rng
+    spinning = body <= 0.28 and lower_wick >= 0.18 and upper_wick >= 0.12
+    hammer = lower_wick >= 0.48 and body <= 0.35 and upper_wick <= 0.25
+    prev_open, prev_close = _num(p.get("Open")), _num(p.get("Close"))
+    engulf = close > opn and prev_close < prev_open and close >= prev_open and opn <= prev_close
+    if hammer:
+        label, score = "HAMMER", 94.0
+    elif engulf:
+        label, score = "BULLISH ENGULFING", 96.0
+    elif spinning:
+        label, score = "SPINNING BOTTOM", 86.0
+    else:
+        label, score = "NONE", _candle_rejection_score(df)
+    return {"label": label, "score": round(score, 1), "spinning": spinning, "hammer": hammer, "engulfing": engulf}
+
+
+def _nearest_psychological_level(price: float) -> Dict[str, Any]:
+    price = max(_num(price), 1.0)
+    if price < 200:
+        step = 10
+    elif price < 500:
+        step = 25
+    elif price < 1000:
+        step = 50
+    elif price < 5000:
+        step = 100
+    elif price < 10000:
+        step = 250
+    else:
+        step = 500
+    level = round(price / step) * step
+    dist_pct = abs(price / max(level, 1e-9) - 1.0) * 100.0
+    return {"level": float(level), "step": float(step), "distance_pct": round(dist_pct, 2), "near": bool(dist_pct <= 2.5)}
+
+
+def _open_gap_above(df: pd.DataFrame, lookback: int = 80) -> Dict[str, Any]:
+    """Nearest still-open downside gap above current price; useful as a gap-fill objective."""
+    if len(df) < 3:
+        return {"found": False, "target": None}
+    w = df.tail(min(lookback, len(df))).reset_index(drop=True)
+    price = _num(w.iloc[-1].get("Close"))
+    gaps = []
+    for i in range(1, len(w) - 1):
+        prev_low = _num(w.iloc[i-1].get("Low"))
+        cur_high = _num(w.iloc[i].get("High"))
+        if prev_low <= 0 or cur_high <= 0 or cur_high >= prev_low * 0.992:
+            continue
+        gap_low, gap_high = cur_high, prev_low
+        subsequent_high = _num(w.iloc[i+1:]["High"].max(), 0)
+        # Full gap remains open if later trading has not reached the old low.
+        if subsequent_high < gap_high and gap_high > price * 1.01:
+            gaps.append((gap_high, gap_low, i))
+    if not gaps:
+        return {"found": False, "target": None}
+    gaps.sort(key=lambda z: z[0])
+    gh, gl, idx = gaps[0]
+    return {"found": True, "target": round(gh, 2), "gap_low": round(gl, 2), "age_bars": len(w)-1-idx}
+
+
+def _base_formation_score(df: pd.DataFrame, support: float) -> Dict[str, Any]:
+    if len(df) < 12:
+        return {"valid": False, "score": 0.0}
+    w = df.tail(15)
+    price = _num(w.iloc[-1].get("Close"))
+    hi = _num(w["High"].max(), price)
+    lo = _num(w["Low"].min(), price)
+    depth = (hi - lo) / max((hi + lo) / 2, 1e-9)
+    atr = max(_num(w.iloc[-1].get("ATR14"), price * .03), price * .005)
+    support_hold = abs(price - support) <= max(1.0 * atr, price * .025) if support > 0 else False
+    depth_score = _clamp((0.16 - depth) / 0.12 * 100.0)
+    adx = _num(w.iloc[-1].get("ADX14"), 18)
+    compression = _clamp((28 - adx) / 18 * 100.0)
+    score = .50 * depth_score + .25 * compression + .25 * (100.0 if support_hold else 35.0)
+    return {"valid": bool(score >= 58 and depth <= .16 and support_hold), "score": round(score,1), "depth_pct": round(depth*100,2)}
+
+
 def _volume_character(df: pd.DataFrame, mode: str) -> Dict[str, Any]:
     x = df.iloc[-1]
     vr = max(_num(x.get("Volume_ratio"), 1.0), 0.0)
@@ -259,6 +342,10 @@ def _adaptive_analyst_score(setup: str, setup_quality: float, location: float, v
         weights = {"setup": .17, "location": .20, "volume": .05, "macd": .17, "stoch": .15, "rejection": .08, "pullback": .05, "trendline": .10, "rr": .03}
     elif setup == "BASE RETEST":
         weights = {"setup": .24, "location": .23, "volume": .12, "macd": .10, "stoch": .06, "rejection": .10, "pullback": .08, "trendline": .00, "rr": .07}
+    elif setup == "SUPPORT REVERSAL":
+        weights = {"setup": .20, "location": .24, "volume": .05, "macd": .08, "stoch": .18, "rejection": .20, "pullback": .02, "trendline": .00, "rr": .03}
+    elif setup == "BASE FORMATION":
+        weights = {"setup": .25, "location": .24, "volume": .06, "macd": .08, "stoch": .16, "rejection": .07, "pullback": .03, "trendline": .00, "rr": .11}
     else:
         weights = {"setup": .24, "location": .22, "volume": .12, "macd": .12, "stoch": .08, "rejection": .08, "pullback": .05, "trendline": .00, "rr": .09}
     values = {
@@ -354,8 +441,11 @@ def build_analyst_intelligence(
     macd = _macd_state(df)
     stoch = _stoch_state(df)
     rejection = _candle_rejection_score(df)
+    candle = _candle_state(df)
     pullback = _normal_pullback_score(df)
     trendline = _trendline_support(df)
+    psych = _nearest_psychological_level(price)
+    gap = _open_gap_above(df)
 
     supply = entry_plan.get("nearest_supply")
     supply_low = _num((supply or {}).get("zone_low_exec"))
@@ -364,7 +454,8 @@ def build_analyst_intelligence(
     candidates: List[Dict[str, Any]] = []
 
     def add(setup: str, low_raw: float, high_raw: float, trigger_raw: float | None, confirmation_raw: float | None,
-            stop_raw: float, setup_quality: float, entry_style: str, note: str, volume_mode: str = "pullback"):
+            stop_raw: float, setup_quality: float, entry_style: str, note: str, volume_mode: str = "pullback",
+            target_hints: List[float] | None = None):
         low = int(ceil_to_tick(max(low_raw, 1)))
         high = int(floor_to_tick(max(high_raw, low_raw)))
         if high < low:
@@ -378,7 +469,8 @@ def build_analyst_intelligence(
         targets = _next_targets(trade_plan, entry, stop, confirm, atr)
         # Respect existing structural targets when they are sensible and higher.
         base_tps = [_num(trade_plan.get("tp1")), _num(trade_plan.get("tp2"))]
-        merged = sorted(set([t for t in targets if t > entry] + [int(floor_to_tick(t)) for t in base_tps if t > entry]))
+        hints = [int(floor_to_tick(_num(t))) for t in (target_hints or []) if _num(t) > entry]
+        merged = sorted(set([t for t in targets if t > entry] + [int(floor_to_tick(t)) for t in base_tps if t > entry] + hints))
         tp1, tp2, tp3 = (merged + list(targets))[:3]
         if tp2 <= tp1:
             tp2 = targets[1]
@@ -407,12 +499,21 @@ def build_analyst_intelligence(
             conviction = min(conviction, 62.0); penalties.append("supply too close")
         conviction = round(conviction, 1)
         status = _trade_status(price, low, high, analyst_score, conviction, setup, stop, phase)
+        if setup == "BASE FORMATION" and (confirm is None or price < confirm):
+            trade_class = "SPECULATIVE"
+        elif status == "READY" and conviction >= 78:
+            trade_class = "TRADING BUY CANDIDATE"
+        elif entry_style == "EARLY":
+            trade_class = "EARLY SETUP"
+        else:
+            trade_class = "WATCH"
         candidates.append({
             "setup": setup, "analyst_score": analyst_score, "edge_score": edge_score, "conviction": conviction,
-            "status": status, "entry_style": entry_style, "entry": entry, "entry_low": low, "entry_high": high,
+            "status": status, "trade_class": trade_class, "entry_style": entry_style, "entry": entry, "entry_low": low, "entry_high": high,
             "trigger": trigger, "major_confirmation": confirm, "stop": stop, "tp1": int(tp1), "tp2": int(tp2), "tp3": int(tp3),
             "rr_tp2": round(rr2, 2), "distance_pct": dist, "volume": volume, "macd": macd, "stoch": stoch,
-            "rejection_score": rejection, "pullback_score": pullback, "trendline": trendline,
+            "rejection_score": rejection, "candle": candle, "pullback_score": pullback, "trendline": trendline,
+            "psychological": psych, "gap": gap,
             "analyst_components": analyst_components, "edge_components": edge_components,
             "supply_headroom_pct": supply_headroom, "penalties": penalties, "note": note,
         })
@@ -440,6 +541,7 @@ def build_analyst_intelligence(
     support = _num(trade_plan.get("support1"))
     support_low = _num(trade_plan.get("support1_zone_low"), support - .25 * atr)
     resistance = _nearest_overhead_level(trade_plan, price)
+    recent_high = _num(df["High"].tail(10).max(), price) if "High" in df else price
     support_dist = (price / support - 1) if support > 0 else 99
     if support > 0 and -0.008 <= support_dist <= 0.04 and structure != "Bearish" and pullback >= 58:
         setup_q = _clamp(0.35 * _num(technical.get("trade_quality"), 50) + 0.25 * pullback + 0.20 * rejection + 0.20 * macd["score"])
@@ -449,8 +551,31 @@ def build_analyst_intelligence(
             "EARLY", "Normal pullback held near structural support; momentum is confirmation, not the trigger.", "pullback"
         )
 
+    # Support reversal with candlestick + oversold momentum (HRTA-like logic).
+    if support > 0 and -0.010 <= support_dist <= 0.035 and structure != "Bearish" and candle["score"] >= 74 and stoch["oversold"]:
+        setup_q = _clamp(0.30 * candle["score"] + 0.25 * stoch["score"] + 0.25 * rejection + 0.20 * _num(technical.get("trade_quality"), 50))
+        target_hints = [gap["target"]] if gap.get("found") else []
+        add(
+            "SUPPORT REVERSAL", support, support + max(.35 * atr, support * .010), None, resistance,
+            min(_num(trade_plan.get("stop_loss"), support_low - .35 * atr), support_low - .20 * atr), setup_q,
+            "EARLY", f'{candle["label"]} formed near structural support with Stoch RSI oversold; price location is the primary thesis.',
+            "pullback", target_hints=target_hints,
+        )
+
+    # Early base formation near structural/psychological support (PIPA-like logic).
+    base = _base_formation_score(df, support)
+    psych_confluence = bool(psych.get("near") and support > 0 and abs(_num(psych.get("level")) / support - 1) <= .025)
+    if base.get("valid") and structure != "Bearish" and support > 0 and -0.010 <= support_dist <= .035 and stoch["oversold"]:
+        confirmation = resistance or recent_high
+        setup_q = _clamp(0.38 * _num(base.get("score")) + 0.22 * stoch["score"] + 0.15 * rejection + 0.15 * _num(technical.get("trade_quality"), 50) + (10 if psych_confluence else 0))
+        add(
+            "BASE FORMATION", support, support + max(.30 * atr, support * .010), None, confirmation,
+            min(_num(trade_plan.get("stop_loss"), support_low - .35 * atr), support_low - .20 * atr), setup_q,
+            "EARLY", "Short consolidation is holding above structural support" + (" with psychological-level confluence." if psych_confluence else "."),
+            "pullback",
+        )
+
     # Pullback pivot-hold after a recent resistance test (BUVA-like logic).
-    recent_high = _num(df["High"].tail(10).max(), price) if "High" in df else price
     if support > 0 and recent_high >= price * 1.035 and -0.008 <= support_dist <= 0.035 and pullback >= 65:
         confirmation = max(resistance or 0, recent_high)
         setup_q = _clamp(0.30 * pullback + 0.25 * rejection + 0.25 * macd["score"] + 0.20 * _num(technical.get("trade_quality"), 50))
@@ -475,7 +600,7 @@ def build_analyst_intelligence(
         return {
             "eligible": False, "conviction": 0.0, "analyst_score": 0.0, "edge_score": 0.0,
             "setup": "NONE", "status": "NO SETUP", "reason": "No setup-adaptive analyst thesis close enough to current price.",
-            "candidates": [], "macd": macd, "stoch": stoch, "trendline": trendline,
+            "candidates": [], "macd": macd, "stoch": stoch, "trendline": trendline, "candle": candle, "psychological": psych, "gap": gap,
         }
 
     status_rank = {"READY": 7, "NEAR ENTRY": 6, "WAIT BREAKOUT": 5, "WAIT RECLAIM": 5, "WAIT SUPPORT": 4, "WAIT RETEST": 3, "TOO EXTENDED": 1, "INVALIDATED": 0}
@@ -495,12 +620,13 @@ def build_analyst_intelligence(
     return {
         "eligible": eligible,
         "conviction": best["conviction"], "analyst_score": best["analyst_score"], "edge_score": best["edge_score"],
-        "setup": best["setup"], "status": best["status"], "entry_style": best["entry_style"],
+        "setup": best["setup"], "status": best["status"], "trade_class": best.get("trade_class","WATCH"), "entry_style": best["entry_style"],
         "entry": best["entry"], "entry_low": best["entry_low"], "entry_high": best["entry_high"],
         "trigger": best["trigger"], "major_confirmation": best["major_confirmation"], "stop": best["stop"],
         "tp1": best["tp1"], "tp2": best["tp2"], "tp3": best["tp3"], "rr_tp2": best["rr_tp2"],
         "distance_pct": best["distance_pct"], "volume": best["volume"], "macd": best["macd"], "stoch": best["stoch"],
-        "trendline": best["trendline"], "rejection_score": best["rejection_score"], "pullback_score": best["pullback_score"],
+        "trendline": best["trendline"], "candle": best.get("candle", candle), "psychological": best.get("psychological", psych), "gap": best.get("gap", gap),
+        "rejection_score": best["rejection_score"], "pullback_score": best["pullback_score"],
         "analyst_components": best["analyst_components"], "edge_components": best["edge_components"],
         "supply_headroom_pct": best["supply_headroom_pct"], "penalties": best["penalties"], "note": best["note"],
         "reason": reason, "candidates": candidates,

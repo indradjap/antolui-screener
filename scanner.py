@@ -59,8 +59,8 @@ def analyze_frame(
         return None, f"liquidity < Rp{min_avg_value/1e9:.1f}B/day"
 
     try:
-        stock = add_indicators(raw_df).dropna()
-        if len(stock) < 20:
+        stock = add_indicators(raw_df).dropna(subset=["Close","ATR14","RSI14","MACD","MACD_signal","Volume_ratio"])
+        if len(stock) < 35:
             return None, "insufficient post-indicator history"
 
         technical = run_engine(stock)
@@ -196,6 +196,7 @@ def analyze_frame(
             "Edge Score": analyst_ai.get("edge_score", 0),
             "AI Setup": analyst_ai.get("setup", "NONE"),
             "AI Status": analyst_ai.get("status", "NO SETUP"),
+            "AI Trade Class": analyst_ai.get("trade_class", "WATCH"),
             "Entry Style": analyst_ai.get("entry_style", "N/A"),
             "AI Entry": analyst_ai.get("entry"),
             "AI Entry Low": analyst_ai.get("entry_low"),
@@ -213,6 +214,9 @@ def analyze_frame(
             "Trendline Score": (analyst_ai.get("trendline") or {}).get("score", 0),
             "Trendline Support": (analyst_ai.get("trendline") or {}).get("support"),
             "Rejection Score": analyst_ai.get("rejection_score", 0),
+            "Candle Signal": (analyst_ai.get("candle") or {}).get("label", "NONE"),
+            "Psych Level": (analyst_ai.get("psychological") or {}).get("level"),
+            "Gap Target": (analyst_ai.get("gap") or {}).get("target"),
             "Pullback Score": analyst_ai.get("pullback_score", 0),
             "AI Reason": analyst_ai.get("reason", ""),
             "AI Note": analyst_ai.get("note", ""),

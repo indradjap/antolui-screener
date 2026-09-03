@@ -3,13 +3,13 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 
-from data import load_stock, load_benchmark, download_universe
+from data import load_stock, load_benchmark, download_universe, data_health
 from indicators import add_indicators
 from engine import run_engine
 from strategy import build_trade_plan
 from entry_engine import build_entry_plan
 from timing_engine import build_timing_plan
-from market_context import build_market_context, trend_health
+from market_context import build_market_context, trend_health, volume_flow
 from decision import combine_decision
 from scanner import scan_frames
 from universe import load_seed_universe, load_quality_200, parse_ticker_text, parse_uploaded_csv
@@ -25,7 +25,7 @@ from sector_data import (
 )
 
 
-APP_VERSION = "6.0"
+APP_VERSION = "6.1"
 
 st.set_page_config(
     page_title=f"Antolui Screener V{APP_VERSION}",
@@ -330,12 +330,73 @@ def cached_news_bundle(symbol: str):
     return fetch_news_bundle(symbol)
 
 
+def _prepare_indicators(raw: pd.DataFrame) -> pd.DataFrame:
+    # Do not drop a newer listing only because MA200 is not available yet.
+    ind = add_indicators(raw)
+    core = ["Close", "ATR14", "RSI14", "MACD", "MACD_signal", "Volume_ratio"]
+    return ind.dropna(subset=[c for c in core if c in ind.columns]).copy()
+
+
+def _neutral_market_context(stock: pd.DataFrame, benchmark_name: str, reason: str) -> dict:
+    flow = volume_flow(stock)
+    neutral_rs = {"score": 50.0, "label": "N/A", "metrics": {"excess_return_20d": None, "excess_return_60d": None, "excess_return_120d": None}}
+    return {
+        "score": round(0.80 * 50.0 + 0.20 * float(flow.get("score", 50)), 1),
+        "label": "Mixed",
+        "relative_strength": neutral_rs,
+        "market_relative_strength": neutral_rs,
+        "sector_relative_strength": None,
+        "combined_relative_strength": {"score": 50.0, "label": "N/A", "market_weight": 0.0, "sector_weight": 0.0},
+        "benchmark": {"name": benchmark_name, "score": 50.0, "label": "Unavailable", "close": None, "rsi": None},
+        "sector": None,
+        "volume_flow": flow,
+        "component_weights": {"Volume Flow": 1.0},
+        "market_headwind": False,
+        "sector_headwind": False,
+        "rs_series": None,
+        "degraded": True,
+        "degraded_reason": reason,
+    }
+
+
+def _equal_weight_market_proxy(frames: dict) -> pd.DataFrame | None:
+    closes = []
+    for symbol, raw in frames.items():
+        if raw is None or raw.empty or "Close" not in raw:
+            continue
+        closes.append(raw["Close"].astype(float).rename(symbol))
+    if len(closes) < 3:
+        return None
+    panel = pd.concat(closes, axis=1).sort_index()
+    rets = panel.pct_change(fill_method=None).replace([float("inf"), float("-inf")], pd.NA)
+    ew = rets.mean(axis=1, skipna=True).fillna(0.0)
+    close = (1.0 + ew).cumprod() * 100.0
+    proxy = pd.DataFrame(index=close.index)
+    proxy["Close"] = close
+    proxy["Open"] = close.shift(1).fillna(close)
+    proxy["High"] = proxy[["Open", "Close"]].max(axis=1)
+    proxy["Low"] = proxy[["Open", "Close"]].min(axis=1)
+    proxy["Volume"] = 1.0
+    return proxy.dropna()
+
+
 def run_single_analysis(ticker, benchmark_symbol):
     ticker_full, stock_raw = cached_stock(ticker)
-    benchmark_full, bench_raw = cached_benchmark(benchmark_symbol)
+    stock = _prepare_indicators(stock_raw)
+    if len(stock) < 35:
+        raise ValueError(f"Data {ticker_full} ada, tetapi history usable setelah indikator terlalu pendek ({len(stock)} bars).")
 
-    stock = add_indicators(stock_raw).dropna()
-    benchmark = add_indicators(bench_raw).dropna()
+    benchmark_full = benchmark_symbol
+    benchmark = None
+    benchmark_error = None
+    try:
+        benchmark_full, bench_raw = cached_benchmark(benchmark_symbol)
+        benchmark = _prepare_indicators(bench_raw)
+        if len(benchmark) < 65:
+            benchmark_error = f"Benchmark only has {len(benchmark)} usable bars"
+            benchmark = None
+    except Exception as exc:
+        benchmark_error = str(exc)
 
     directory, sector_dir_source = cached_idx_sector_directory()
     sector_info = resolve_sector_info(ticker_full, directory, source_label=sector_dir_source)
@@ -346,18 +407,21 @@ def run_single_analysis(ticker, benchmark_symbol):
         sector_history_symbol, sector_raw = cached_sector_index_history(sector_info.sector_index)
         if sector_raw is not None:
             try:
-                sector = add_indicators(sector_raw).dropna()
+                sector = _prepare_indicators(sector_raw)
             except Exception:
                 sector = None
 
     technical = run_engine(stock)
     plan = build_trade_plan(stock, technical["phase"]["label"])
     pattern = detect_patterns(stock)
-    context = build_market_context(
-        stock, benchmark, sector_df=sector,
-        benchmark_name=benchmark_full,
-        sector_name=(f"{sector_info.sector} ({sector_info.sector_index})" if sector is not None else sector_info.sector),
-    )
+    if benchmark is not None:
+        context = build_market_context(
+            stock, benchmark, sector_df=sector,
+            benchmark_name=benchmark_full,
+            sector_name=(f"{sector_info.sector} ({sector_info.sector_index})" if sector is not None else sector_info.sector),
+        )
+    else:
+        context = _neutral_market_context(stock, benchmark_full, benchmark_error or "Benchmark unavailable")
     decision = combine_decision(technical, context)
     entry_plan = build_entry_plan(stock, technical, context, pattern, plan)
     timing_plan = build_timing_plan(stock, technical, context, pattern, plan, entry_plan)
@@ -379,6 +443,7 @@ def run_single_analysis(ticker, benchmark_symbol):
         "sector_info": sector_info.to_dict(),
         "sector_history_symbol": sector_history_symbol,
         "sector_directory_source": sector_dir_source,
+        "data_health": {"stock": data_health(stock_raw), "benchmark_available": benchmark is not None, "benchmark_error": benchmark_error},
     }
 
 
@@ -397,7 +462,14 @@ def render_single_stock():
             if st.session_state.get("single_news_ticker") != st.session_state["single_result"]["ticker"]:
                 st.session_state.pop("single_news_bundle", None)
         except Exception as e:
-            st.exception(e)
+            # Do not expose a full traceback for transient market-data failures.
+            msg = str(e)
+            if "sementara tidak dapat diambil" in msg or "tidak ditemukan" in msg:
+                st.error("Market data sedang gagal diambil dari Yahoo Finance. Ini biasanya masalah data-provider/cloud connection, bukan berarti tickernya salah. Coba Analyze lagi dalam 1–2 menit.")
+                with st.expander("Technical detail", expanded=False):
+                    st.code(msg)
+            else:
+                st.error(f"Analysis failed: {msg}")
 
     data = st.session_state.get("single_result")
     if not data:
@@ -453,6 +525,13 @@ def render_single_stock():
         </div>''',
         unsafe_allow_html=True,
     )
+    _dh = data.get("data_health") or {}
+    _stock_h = _dh.get("stock") or {}
+    if _stock_h:
+        _health_text = f'Data: **{_stock_h.get("provider","Yahoo Finance")}** • **{_stock_h.get("bars",0)} bars** • history **{_stock_h.get("history_quality","N/A")}**'
+        if not _dh.get("benchmark_available", True):
+            _health_text += " • market context **DEGRADED (benchmark unavailable)**"
+        st.caption(_health_text)
 
     section("Entry Plan")
     zone_text = "N/A" if entry_low is None or entry_high is None else f"{fmt_price(entry_low)}–{fmt_price(entry_high)}"
@@ -478,6 +557,11 @@ def render_single_stock():
     a4.metric("Setup", analyst_ai.get("setup","NONE"))
     a5.metric("Status", analyst_ai.get("status","NO SETUP"))
     a6.metric("RR", f'{float(analyst_ai.get("rr_tp2",0) or 0):.2f}x')
+    _candle = (analyst_ai.get("candle") or {}).get("label", "NONE")
+    _psych = (analyst_ai.get("psychological") or {}).get("level")
+    _gap = (analyst_ai.get("gap") or {}).get("target")
+    st.caption(f'Price action **{_candle}** • Psychological level **{fmt_price(_psych)}** • Gap-fill target **{fmt_price(_gap)}**')
+    st.caption(f'Trade class **{analyst_ai.get("trade_class","WATCH")}** • Entry style **{analyst_ai.get("entry_style","N/A")}**')
     if analyst_ai.get("setup") not in {None, "NONE"}:
         st.caption(
             f'Style **{analyst_ai.get("entry_style","N/A")}** • Entry **{fmt_price(analyst_ai.get("entry_low"))}–{fmt_price(analyst_ai.get("entry_high"))}** • '
@@ -681,7 +765,7 @@ def render_scanner():
     if scanner_mode == "Quick Pick":
         st.markdown(
             '<div class="ss-action ss-good"><strong>QUICK PICK • ANALYST INTELLIGENCE</strong> &nbsp; '
-            'Setup-first reasoning + independent Antolui edge checks. Breakout, support rebound, MA20 reclaim, pivot pullback, trendline rebound, dan base retest memakai confirmation yang berbeda.</div>',
+            'Setup-first reasoning + independent Antolui edge checks. Breakout, support rebound, MA20 reclaim, pivot pullback, trendline rebound, support reversal, base formation, dan base retest memakai confirmation yang berbeda.</div>',
             unsafe_allow_html=True,
         )
         _research = research_summary()
@@ -739,13 +823,26 @@ def render_scanner():
 
     if scan_clicked:
         try:
-            bench_full, bench_raw = cached_benchmark(benchmark_symbol)
-            benchmark = add_indicators(bench_raw).dropna()
-            bench_health = trend_health(benchmark, bench_full)
-
             status = st.empty(); progress = st.progress(0.0)
             status.caption(f"Downloading {len(tickers)} symbols...")
             frames, download_errors = cached_universe_download(tuple(tickers), "2y", int(chunk_size))
+            if not frames:
+                raise ValueError("Tidak ada market data universe yang berhasil diambil.")
+
+            benchmark_source = "Official benchmark"
+            try:
+                bench_full, bench_raw = cached_benchmark(benchmark_symbol)
+                benchmark = _prepare_indicators(bench_raw)
+                if len(benchmark) < 65:
+                    raise ValueError(f"benchmark only has {len(benchmark)} usable bars")
+            except Exception:
+                proxy_raw = _equal_weight_market_proxy(frames)
+                if proxy_raw is None:
+                    raise
+                bench_full = "Equal-Weight Scan Proxy"
+                benchmark = _prepare_indicators(proxy_raw)
+                benchmark_source = "Fallback equal-weight proxy"
+            bench_health = trend_health(benchmark, bench_full)
 
             status.caption("Loading IDX-IC sectors and building sector proxies...")
             sector_directory, sector_source = cached_idx_sector_directory()
@@ -754,7 +851,7 @@ def render_scanner():
             sector_proxies = {}
             for sector_code, proxy_raw in raw_sector_proxies.items():
                 try:
-                    proxy_ind = add_indicators(proxy_raw).dropna()
+                    proxy_ind = _prepare_indicators(proxy_raw)
                     if len(proxy_ind) >= 65:
                         sector_proxies[sector_code] = proxy_ind
                 except Exception:
@@ -785,14 +882,16 @@ def render_scanner():
             st.session_state["scan_meta"] = {
                 "universe": len(tickers), "downloaded": len(frames), "passed": len(result),
                 "benchmark": bench_full, "benchmark_label": bench_health["label"],
-                "benchmark_score": bench_health["score"], "strict_tier": strict_tier,
+                "benchmark_score": bench_health["score"], "benchmark_source": benchmark_source, "strict_tier": strict_tier,
                 "sector_source": sector_source,
                 "sector_mapped": sum(1 for v in scan_sector_map.values() if v.get("sector_code")),
                 "sector_proxies": len(sector_proxies),
                 "scanner_mode": scanner_mode,
             }
         except Exception as e:
-            st.exception(e)
+            st.error(f"Scan gagal diselesaikan: {e}")
+            with st.expander("Technical detail", expanded=False):
+                st.code(str(e))
 
     result = st.session_state.get("scan_result")
     skipped = st.session_state.get("scan_skipped")
@@ -958,9 +1057,9 @@ def render_scanner():
                 lambda r: f'{fmt_price(r.get("AI Entry Low"))}–{fmt_price(r.get("AI Entry High"))}', axis=1
             )
             compact_cols = [
-                "Quick Rank", "Ticker", "Sector", "Conviction Score", "Analyst Score", "Edge Score", "AI Setup", "AI Status", "Entry Style",
+                "Quick Rank", "Ticker", "Sector", "Conviction Score", "Analyst Score", "Edge Score", "AI Setup", "AI Status", "AI Trade Class", "Entry Style",
                 "Entry Zone", "AI Trigger", "AI Major Confirm", "AI Stop", "AI TP1", "AI TP2", "AI TP3",
-                "MACD State", "Stoch State", "Combined RS Score", "AI RR"
+                "MACD State", "Stoch State", "Candle Signal", "Gap Target", "Combined RS Score", "AI RR"
             ]
             compact_cols = [c for c in compact_cols if c in quick_view.columns]
             compact = quick_view[compact_cols]
@@ -987,6 +1086,7 @@ def render_scanner():
                 "Edge Score": st.column_config.NumberColumn("Edge", width="small", format="%.0f"),
                 "AI Setup": st.column_config.TextColumn("Setup", width="medium"),
                 "AI Status": st.column_config.TextColumn("Status", width="medium"),
+                "AI Trade Class": st.column_config.TextColumn("Class", width="medium"),
                 "Entry Style": st.column_config.TextColumn("Style", width="small"),
                 "AI Trigger": st.column_config.NumberColumn("Trigger", width="small", format="%.0f"),
                 "AI Major Confirm": st.column_config.NumberColumn("Confirm", width="small", format="%.0f"),
