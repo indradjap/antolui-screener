@@ -10,7 +10,7 @@ from engine import run_engine
 from strategy import build_trade_plan
 from entry_engine import build_entry_plan
 from timing_engine import build_timing_plan
-from market_context import build_market_context
+from market_context import build_market_context, volume_flow
 from decision import combine_decision
 from scanner_scoring import liquidity_score, rank_candidate
 from patterns import detect_patterns
@@ -36,6 +36,33 @@ def liquidity_metrics(raw_df: pd.DataFrame) -> Dict[str, Any]:
         "score": liquidity_score(avg, med, active),
     }
 
+
+
+
+def _degraded_context(stock: pd.DataFrame, benchmark_name: str, reason: str) -> Dict[str, Any]:
+    flow = volume_flow(stock)
+    neutral_rs = {
+        "score": 50.0, "label": "N/A",
+        "metrics": {"excess_return_20d": None, "excess_return_60d": None, "excess_return_120d": None},
+        "degraded": True, "degraded_reason": reason,
+    }
+    return {
+        "score": round(0.80 * 50.0 + 0.20 * float(flow.get("score", 50)), 1),
+        "label": "Mixed",
+        "relative_strength": neutral_rs,
+        "market_relative_strength": neutral_rs,
+        "sector_relative_strength": None,
+        "combined_relative_strength": {"score": 50.0, "label": "N/A", "market_weight": 0.0, "sector_weight": 0.0},
+        "benchmark": {"name": benchmark_name, "score": 50.0, "label": "Unavailable", "close": None, "rsi": None},
+        "sector": None,
+        "volume_flow": flow,
+        "component_weights": {"Volume Flow": 1.0},
+        "market_headwind": False,
+        "sector_headwind": False,
+        "rs_series": None,
+        "degraded": True,
+        "degraded_reason": reason,
+    }
 
 def _distance_to_trigger_pct(price: float, trigger: float) -> float:
     if price <= 0:
@@ -83,10 +110,13 @@ def analyze_frame(
         sector_name = sector_info.get("sector", "Unknown")
         sector_context_name = f"{sector_name} EW Proxy" if sector_df is not None else sector_name
 
-        context = build_market_context(
-            stock, benchmark_ind, benchmark_name="^JKSE",
-            sector_df=sector_df, sector_name=sector_context_name,
-        )
+        try:
+            context = build_market_context(
+                stock, benchmark_ind, benchmark_name="^JKSE",
+                sector_df=sector_df, sector_name=sector_context_name,
+            )
+        except Exception as exc:
+            context = _degraded_context(stock, "^JKSE", f"context degraded: {exc}")
         decision = combine_decision(technical, context)
         pattern = detect_patterns(stock)
         entry_plan = build_entry_plan(stock, technical, context, pattern, plan)

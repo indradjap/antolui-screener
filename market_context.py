@@ -27,17 +27,82 @@ def _ret(series: pd.Series, n: int) -> float:
     return b / a - 1.0
 
 
-def relative_strength_metrics(stock_df: pd.DataFrame, benchmark_df: pd.DataFrame) -> Dict[str, Any]:
-    aligned = pd.concat(
-        [stock_df["Close"].rename("stock"), benchmark_df["Close"].rename("benchmark")],
-        axis=1,
-        join="inner",
-    ).dropna()
+def _daily_close(df: pd.DataFrame, column_name: str) -> pd.Series:
+    """Return a date-normalized Close series for IDX daily-bar alignment.
 
-    if len(aligned) < 65:
-        raise ValueError("Minimal sekitar 65 bar overlap diperlukan untuk relative strength.")
+    Yahoo/yfinance versions can return daily indexes with different timezone
+    representations for .JK equities and ^JKSE. Exact timestamp joins can then
+    produce a tiny/empty overlap even when the trading dates are the same.
+    Normalize both to Jakarta calendar dates before relative-strength math.
+    """
+    if df is None or df.empty or "Close" not in df.columns:
+        return pd.Series(dtype="float64", name=column_name)
+
+    s = pd.to_numeric(df["Close"], errors="coerce").dropna().copy()
+    idx = pd.to_datetime(s.index, errors="coerce")
+    valid = ~pd.isna(idx)
+    s = s.loc[valid]
+    idx = pd.DatetimeIndex(idx[valid])
+
+    # Daily IDX bars should be compared by local trading date, not by the exact
+    # timezone-aware timestamp returned by a particular yfinance build.
+    try:
+        if idx.tz is not None:
+            idx = idx.tz_convert("Asia/Jakarta").tz_localize(None)
+    except Exception:
+        try:
+            idx = idx.tz_localize(None)
+        except Exception:
+            pass
+    idx = idx.normalize()
+    s.index = idx
+    s = s[~s.index.duplicated(keep="last")].sort_index()
+    s.name = column_name
+    return s
+
+
+def _neutral_rs(reason: str, aligned: pd.DataFrame | None = None) -> Dict[str, Any]:
+    ratio = pd.Series(dtype="float64", name="rs_ratio")
+    overlap = 0
+    if aligned is not None and not aligned.empty:
+        overlap = int(len(aligned))
+        try:
+            ratio = (aligned["stock"] / aligned["benchmark"]).replace([np.inf, -np.inf], np.nan).dropna()
+            if not ratio.empty:
+                ratio = ratio / ratio.iloc[0] * 100.0
+        except Exception:
+            ratio = pd.Series(dtype="float64", name="rs_ratio")
+    return {
+        "score": 50.0,
+        "label": "N/A",
+        "metrics": {
+            "stock_return_20d": None, "benchmark_return_20d": None, "excess_return_20d": None,
+            "stock_return_60d": None, "benchmark_return_60d": None, "excess_return_60d": None,
+            "stock_return_120d": None, "benchmark_return_120d": None, "excess_return_120d": None,
+            "rs_ratio": None if ratio.empty else round(float(ratio.iloc[-1]), 6),
+            "rs_ma20": None, "rs_ma50": None, "rs_slope_10d": None,
+        },
+        "series": ratio,
+        "degraded": True,
+        "degraded_reason": reason,
+        "overlap_bars": overlap,
+        "available_horizons": [],
+    }
+
+
+def relative_strength_metrics(stock_df: pd.DataFrame, benchmark_df: pd.DataFrame) -> Dict[str, Any]:
+    stock_close = _daily_close(stock_df, "stock")
+    benchmark_close = _daily_close(benchmark_df, "benchmark")
+    aligned = pd.concat([stock_close, benchmark_close], axis=1, join="inner").dropna()
+
+    # RS is context, not a reason to kill the entire stock analysis. With fewer
+    # than 21 common sessions there is not enough information for 20D RS, so use
+    # a neutral degraded state and let structure/entry analysis continue.
+    if len(aligned) < 21:
+        return _neutral_rs(f"Only {len(aligned)} common trading bars for relative strength", aligned)
 
     metrics = {}
+    available_horizons = []
     for n in (20, 60, 120):
         if len(aligned) > n:
             sr = _ret(aligned["stock"], n)
@@ -45,24 +110,30 @@ def relative_strength_metrics(stock_df: pd.DataFrame, benchmark_df: pd.DataFrame
             metrics[f"stock_return_{n}d"] = sr
             metrics[f"benchmark_return_{n}d"] = br
             metrics[f"excess_return_{n}d"] = sr - br
+            available_horizons.append(n)
         else:
             metrics[f"stock_return_{n}d"] = np.nan
             metrics[f"benchmark_return_{n}d"] = np.nan
             metrics[f"excess_return_{n}d"] = np.nan
 
-    ratio = aligned["stock"] / aligned["benchmark"]
+    ratio = (aligned["stock"] / aligned["benchmark"]).replace([np.inf, -np.inf], np.nan).dropna()
+    if ratio.empty:
+        return _neutral_rs("Relative-strength ratio could not be constructed", aligned)
     ratio = ratio / ratio.iloc[0] * 100.0
     rs_ma20 = ratio.rolling(20).mean()
     rs_ma50 = ratio.rolling(50).mean()
     metrics["rs_ratio"] = _safe(ratio.iloc[-1], 100.0)
-    metrics["rs_ma20"] = _safe(rs_ma20.iloc[-1], metrics["rs_ratio"])
-    metrics["rs_ma50"] = _safe(rs_ma50.iloc[-1], metrics["rs_ratio"])
+    metrics["rs_ma20"] = _safe(rs_ma20.iloc[-1], metrics["rs_ratio"]) if len(ratio) >= 20 else np.nan
+    metrics["rs_ma50"] = _safe(rs_ma50.iloc[-1], metrics["rs_ratio"]) if len(ratio) >= 50 else np.nan
 
     if len(ratio) >= 11 and _safe(ratio.iloc[-11], 0) != 0:
         metrics["rs_slope_10d"] = _safe(ratio.iloc[-1] / ratio.iloc[-11] - 1.0)
     else:
-        metrics["rs_slope_10d"] = 0.0
+        metrics["rs_slope_10d"] = np.nan
 
+    # Preserve the original 100-point scoring when all horizons exist. Missing
+    # horizons are neutral (half of their weight) instead of silently penalizing
+    # newer listings or temporary benchmark gaps.
     score = 0.0
     ex20 = metrics.get("excess_return_20d", np.nan)
     ex60 = metrics.get("excess_return_60d", np.nan)
@@ -71,23 +142,49 @@ def relative_strength_metrics(stock_df: pd.DataFrame, benchmark_df: pd.DataFrame
     if np.isfinite(ex20):
         score += 15 if ex20 > 0 else 0
         score += 10 if ex20 > 0.05 else 0
+    else:
+        score += 12.5
+
     if np.isfinite(ex60):
         score += 20 if ex60 > 0 else 0
         score += 10 if ex60 > 0.10 else 0
+    else:
+        score += 15.0
+
     if np.isfinite(ex120):
         score += 10 if ex120 > 0 else 0
-    score += 15 if metrics["rs_ratio"] > metrics["rs_ma20"] else 0
-    score += 10 if metrics["rs_ma20"] > metrics["rs_ma50"] else 0
-    score += 10 if metrics["rs_slope_10d"] > 0 else 0
+    else:
+        score += 5.0
+
+    if np.isfinite(metrics.get("rs_ma20", np.nan)):
+        score += 15 if metrics["rs_ratio"] > metrics["rs_ma20"] else 0
+    else:
+        score += 7.5
+
+    if np.isfinite(metrics.get("rs_ma20", np.nan)) and np.isfinite(metrics.get("rs_ma50", np.nan)):
+        score += 10 if metrics["rs_ma20"] > metrics["rs_ma50"] else 0
+    else:
+        score += 5.0
+
+    if np.isfinite(metrics.get("rs_slope_10d", np.nan)):
+        score += 10 if metrics["rs_slope_10d"] > 0 else 0
+    else:
+        score += 5.0
 
     score = _clamp(score)
     label = "Outperforming" if score >= 70 else "Neutral" if score >= 45 else "Underperforming"
+    degraded = len(available_horizons) < 3
+    reason = None if not degraded else f"RS calculated from {len(aligned)} common bars; available horizons: {available_horizons}"
 
     return {
         "score": round(score, 1),
         "label": label,
         "metrics": {k: (round(float(v), 6) if np.isfinite(v) else None) for k, v in metrics.items()},
         "series": ratio,
+        "degraded": degraded,
+        "degraded_reason": reason,
+        "overlap_bars": int(len(aligned)),
+        "available_horizons": available_horizons,
     }
 
 
@@ -238,4 +335,6 @@ def build_market_context(
         "market_headwind": bool(market_headwind),
         "sector_headwind": bool(sector_headwind),
         "rs_series": market_rs["series"],
+        "degraded": bool(market_rs.get("degraded", False)),
+        "degraded_reason": market_rs.get("degraded_reason"),
     }

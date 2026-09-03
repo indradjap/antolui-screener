@@ -25,7 +25,7 @@ from sector_data import (
 )
 
 
-APP_VERSION = "6.1"
+APP_VERSION = "6.2"
 
 st.set_page_config(
     page_title=f"Antolui Screener V{APP_VERSION}",
@@ -404,22 +404,32 @@ def run_single_analysis(ticker, benchmark_symbol):
     sector = None
     sector_history_symbol = None
     if sector_info.sector_index:
-        sector_history_symbol, sector_raw = cached_sector_index_history(sector_info.sector_index)
-        if sector_raw is not None:
-            try:
-                sector = _prepare_indicators(sector_raw)
-            except Exception:
-                sector = None
+        try:
+            sector_history_symbol, sector_raw = cached_sector_index_history(sector_info.sector_index)
+            if sector_raw is not None:
+                try:
+                    sector = _prepare_indicators(sector_raw)
+                except Exception:
+                    sector = None
+        except Exception:
+            # Sector history is additive context and must never block core analysis.
+            sector = None
+            sector_history_symbol = None
 
     technical = run_engine(stock)
     plan = build_trade_plan(stock, technical["phase"]["label"])
     pattern = detect_patterns(stock)
     if benchmark is not None:
-        context = build_market_context(
-            stock, benchmark, sector_df=sector,
-            benchmark_name=benchmark_full,
-            sector_name=(f"{sector_info.sector} ({sector_info.sector_index})" if sector is not None else sector_info.sector),
-        )
+        try:
+            context = build_market_context(
+                stock, benchmark, sector_df=sector,
+                benchmark_name=benchmark_full,
+                sector_name=(f"{sector_info.sector} ({sector_info.sector_index})" if sector is not None else sector_info.sector),
+            )
+        except Exception as exc:
+            # Market context is a second-opinion layer. A provider/calendar mismatch
+            # must not prevent price structure, levels and execution from rendering.
+            context = _neutral_market_context(stock, benchmark_full, f"Context degraded: {exc}")
     else:
         context = _neutral_market_context(stock, benchmark_full, benchmark_error or "Benchmark unavailable")
     decision = combine_decision(technical, context)
@@ -529,8 +539,9 @@ def render_single_stock():
     _stock_h = _dh.get("stock") or {}
     if _stock_h:
         _health_text = f'Data: **{_stock_h.get("provider","Yahoo Finance")}** • **{_stock_h.get("bars",0)} bars** • history **{_stock_h.get("history_quality","N/A")}**'
-        if not _dh.get("benchmark_available", True):
-            _health_text += " • market context **DEGRADED (benchmark unavailable)**"
+        if context.get("degraded"):
+            _reason = context.get("degraded_reason") or _dh.get("benchmark_error") or "limited benchmark overlap"
+            _health_text += f" • market context **DEGRADED** ({_reason})"
         st.caption(_health_text)
 
     section("Entry Plan")
