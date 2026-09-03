@@ -25,7 +25,7 @@ from sector_data import (
 )
 
 
-APP_VERSION = "6.2"
+APP_VERSION = "6.2.3"
 
 st.set_page_config(
     page_title=f"Antolui Screener V{APP_VERSION}",
@@ -475,7 +475,8 @@ def render_single_stock():
             # Do not expose a full traceback for transient market-data failures.
             msg = str(e)
             if "sementara tidak dapat diambil" in msg or "tidak ditemukan" in msg:
-                st.error("Market data sedang gagal diambil dari Yahoo Finance. Ini biasanya masalah data-provider/cloud connection, bukan berarti tickernya salah. Coba Analyze lagi dalam 1–2 menit.")
+                st.error("Market data belum berhasil diambil. Antolui sudah mencoba Yahoo Chart API + yfinance fallback. Ini bukan otomatis berarti tickernya salah.")
+                st.caption("Buka Technical detail di bawah. Jika semua jalur menunjukkan HTTP 429/401/timeout, masalahnya ada pada akses Yahoo dari cloud deployment, bukan pada logic analisis.")
                 with st.expander("Technical detail", expanded=False):
                     st.code(msg)
             else:

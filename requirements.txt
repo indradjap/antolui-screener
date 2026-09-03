@@ -1,11 +1,9 @@
-pandas>=2.2,<3
-numpy>=2.0,<3
-yfinance==1.7.0
-ta>=0.11,<0.12
-streamlit>=1.40,<2
-plotly>=5.24,<7
-scipy>=1.13,<2
-requests>=2.31,<3
-curl_cffi>=0.7,<1
-
-# Runtime note: pinned to current yfinance because Yahoo endpoints changed after 0.2.x.
+pandas
+numpy
+yfinance
+ta
+streamlit
+plotly
+scipy
+requests
+curl_cffi
