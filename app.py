@@ -25,7 +25,7 @@ from sector_data import (
 )
 
 
-APP_VERSION = "6.2.3"
+APP_VERSION = "6.2.4"
 
 st.set_page_config(
     page_title=f"Antolui Screener V{APP_VERSION}",
@@ -1060,7 +1060,14 @@ def render_scanner():
         st.warning("Tidak ada kandidat untuk preset/filter ini.")
     else:
         max_top = min(100, len(view))
-        top_n = st.slider("Rows", 5, max(5, max_top), min(20, max(5, max_top)), 5) if max_top >= 5 else max_top
+        # Streamlit sliders require min_value < max_value.
+        # When exactly 5 rows survive the filters, V6.2.3 produced
+        # min=5 and max=5 which raises StreamlitInvalidMinMaxError.
+        if max_top <= 5:
+            top_n = max_top
+            st.caption(f"Showing all {top_n} candidate{'s' if top_n != 1 else ''}.")
+        else:
+            top_n = st.slider("Rows", min_value=5, max_value=max_top, value=min(20, max_top), step=5)
 
         if scanner_mode == "Quick Pick":
             quick_view = view.head(top_n).copy()
